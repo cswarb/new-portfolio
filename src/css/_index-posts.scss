@@ -1,0 +1,137 @@
+.jumbo_text {
+	font-family: 'Avenir Next';
+	margin: 30rem 9rem;
+	transition: all 0.2s ease-in-out;
+	background-position: 95% 95%;
+	position: relative;
+	margin: 30rem 13rem 30rem 13rem;
+    max-width: 50rem;
+}
+
+.jumbo_text a:before {
+	/*content: attr(data-bg-text);
+    font-family: "TF Opicular Bold";
+    color: #f7f7f7;
+    font-size: 23rem;
+    line-height: 1;
+    position: absolute;
+    width: 500%;
+    top: 100%;
+    left: -50%;
+    transform: translateY(-50%) ;
+    z-index: -1;*/
+        content: attr(data-bg-text);
+    font-family: "TF Opicular Bold";
+    color: #f7f7f7;
+    font-size: 10rem;
+    line-height: 1;
+    position: absolute;
+    width: 80%;
+    overflow: hidden;
+    top: 0%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    left: -78%;
+    transform: translateY(-50%) rotate(270deg);
+    z-index: -1;
+}
+
+.jumbo_text a:after {
+    content: "";
+    color: #f32d00;
+    font-size: 10rem;
+    line-height: 1;
+    position: absolute;
+    width: 50%;
+    border-bottom: 4px solid #000;
+    overflow: hidden;
+    top: 10%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    left: -55%;
+    -webkit-transform: translateY(-50%) rotate(329deg);
+    transform: translateY(-50%);
+    z-index: -2;
+}
+
+.jumbo_text a {
+    margin: 0.5rem 0 0 0;
+    display: block;
+    font-size: 2.1rem;
+    letter-spacing: 0.4px;
+    line-height: 1.5;
+    color: #6b6e71;
+    text-decoration: none;
+    position: relative;
+
+}
+
+.jumbo_text > a > h2 {
+	opacity: 0.9;
+	margin: 0;
+	line-height: 1;
+	color: #000000;
+	    /*font-family: 'Native';*/
+	    font-family: 'TF Opicular Bold';
+    /*letter-spacing: 4.5px;*/
+    font-weight: 400;
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+    /*transition: color 0.3s ease-in-out;*/
+}
+
+.jumbo_text > a > p {
+	/*opacity: 0.7;*/
+	margin: 0.3rem 0 0 0;
+	    font-family: 'TF Opicular Regular';
+    font-size: 1.6rem;
+    line-height: 1.8;
+        /*font-size: 1.8rem;
+    line-height: 1.65;
+    letter-spacing: 1px;
+    font-family: "Calibre Regular";*/
+    font-weight: 400;
+    /*margin-left: 3rem;*/
+    /*transition: all 0.3s ease-in-out;*/
+}
+
+.jumbo_text:hover a h2, .jumbo_text:hover a p {
+	opacity: 1;
+	/*background: url(./img/cursor-filled.svg);*/
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    background-size: 2rem;
+}
+
+
+
+.jumbo_text a:hover:after {
+	/*animation: blendColour 1s infinite forwards ease-in-out;*/
+	animation: blendColour 1.25s steps(1, end) infinite;
+}
+
+.jumbo_text a:focus {
+	color: #00e872; /*#FD5654*/
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

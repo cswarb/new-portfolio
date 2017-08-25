@@ -12,6 +12,7 @@ import { AboutComponent } from "./about/about.component";
 import { PostComponent } from "./post/post.component";
 import { NavigationComponent } from "./navigation/navigation.component";
 import { FiltersComponent } from './filters/filters.component';
+import { SuggestionComponent } from './suggestion/suggestion.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FiltersComponent } from './filters/filters.component';
     AboutComponent,
     PostComponent,
     NavigationComponent,
-    FiltersComponent
+    FiltersComponent,
+    SuggestionComponent
   ],
   imports: [
     BrowserModule,

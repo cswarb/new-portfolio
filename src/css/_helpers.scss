@@ -1,0 +1,63 @@
+.strikethrough {
+	text-decoration: line-through;
+	display: inline;
+}
+
+.splitter {
+	border-bottom: 1px solid #e9ebef;
+    width: 100%;
+    position: absolute;
+}
+
+.horizontal-rule {
+    background-color: transparent;
+    color: transparent;
+    border: 0;
+    border-bottom: 1px solid rgba(0,0,0,.05);
+}
+
+.no-margin-top {
+	margin-top: 0;
+}
+
+.underline {
+    &:before {
+        content: "";
+        width: 100%;
+        display: block;
+        border: solid 1px #D5D5D5;
+        position: absolute;
+        bottom: 0.4rem;
+        left: 0;
+    }
+}
+
+.text-wipe {
+	overflow: hidden;
+	position: relative;
+    &:before {
+        animation: blockRevealRight 1s ease-in-out 0.3s 1 normal both running;
+        background-color: #000;
+        content: "";
+        display: block;
+        height: 100%;
+        left: 0;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+    &:after {
+        animation: blockRevealLeft 1s ease-in-out 0.3s 1 normal both running;
+        background-color: #000;
+        content: "";
+        display: block;
+        height: 100%;
+        left: 0;
+        overflow: hidden;
+        position: absolute;
+        top: 0;
+        width: 0;
+        width: 100%;
+    }
+}

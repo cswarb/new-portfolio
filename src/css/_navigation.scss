@@ -1,0 +1,85 @@
+.nav {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5.7rem;
+    font-family: 'Neue Haas Unica Pro';
+    margin: 0 0 23rem 0;
+    padding-top: 5rem;
+    &__title {
+        margin: 0;
+        font-size: 1.2rem;
+        position: relative;
+        letter-spacing: 0.2px;
+        font-weight: 400;
+        color: #000;
+        overflow: hidden;
+        display: inline-block;
+    }
+    &__sub-title {
+        margin: 0;
+        color: #9ea4ab;
+        font-size: 1.2rem;
+        letter-spacing: 0.2px;
+        font-weight: 400;
+    }
+    &__link {
+        text-decoration: none;
+        position: relative;
+        display: block;
+        &:before {
+            content: "";
+            // background: url("./assets/img/logo.svg");
+            opacity: 0.2;
+            background-position: center;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            width: 40px;
+            height: 40px;
+            display: inline-block;
+            position: absolute;
+            top: -3px;
+            /* -webkit-transform: translateY(-48%); */
+            /* transform: translateY(-48%); */
+            left: -45%;
+        }
+    }
+    &__list {
+        &_container {
+            list-style: none;
+            display: flex;
+        }
+        &_item {
+            display: inline-block;
+            font-size: 1.2rem;
+            position: relative;
+            // &:before {
+            //     content: "";
+            //     width: 0%;
+            //     height: 10px;
+            //     background-color: rgba(0, 245, 166, 0.4);
+            //     display: block;
+            //     position: absolute;
+            //     top: 50%;
+            //     left: -5%;
+            //     z-index: -1;
+            //     transition: width 0.2s ease-in-out;
+            // }
+            &:hover:before {
+                width: 50%;
+            }
+            &:last-child {
+                margin-left: 4rem;
+            }
+            &__link {
+                color: #ACAEB1;
+                text-decoration: none;
+                transition: color 0.3s ease-in-out;
+                &:hover {
+                    color: #888B8F;
+                }
+            }
+        }
+    }
+}
