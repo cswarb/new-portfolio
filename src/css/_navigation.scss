@@ -5,7 +5,7 @@
     align-items: center;
     padding-top: 5.7rem;
     font-family: 'Neue Haas Unica Pro';
-    margin: 0 0 23rem 0;
+    margin: 0 7rem 23rem 7rem;
     padding-top: 5rem;
     &__title {
         margin: 0;
@@ -13,7 +13,7 @@
         position: relative;
         letter-spacing: 0.2px;
         font-weight: 400;
-        color: #000;
+        color: #3b3e44;
         overflow: hidden;
         display: inline-block;
     }
@@ -73,11 +73,11 @@
                 margin-left: 4rem;
             }
             &__link {
-                color: #ACAEB1;
+                color: #3b3e44;
                 text-decoration: none;
                 transition: color 0.3s ease-in-out;
                 &:hover {
-                    color: #888B8F;
+                    border-bottom: 2px solid black;
                 }
             }
         }

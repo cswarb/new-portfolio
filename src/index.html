@@ -56,6 +56,19 @@
 
 <script type="text/javascript">
     (function() {
+        var path = '//easy.myfonts.net/v2/js?sid=275845(font-family=Hudson+NY)&key=wyz7eJvmqq',
+            protocol = ('https:' == document.location.protocol ? 'https:' : 'http:'),
+            trial = document.createElement('script');
+        trial.type = 'text/javascript';
+        trial.async = true;
+        trial.src = protocol + path;
+        var head = document.getElementsByTagName("head")[0];
+        head.appendChild(trial);
+    })();
+</script>
+
+<script type="text/javascript">
+    (function() {
         var path = '//easy.myfonts.net/v2/js?sid=171339(font-family=Decima+Mono+Bold)&sid=171340(font-family=Decima+Mono+Light)&sid=171345(font-family=Decima+Mono)&key=M2SGolj8cv',
             protocol = ('https:' == document.location.protocol ? 'https:' : 'http:'),
             trial = document.createElement('script');

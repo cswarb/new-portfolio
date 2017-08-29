@@ -18,7 +18,7 @@
 /*https://images.unsplash.com/photo-1496849858694-9c2a93479df2?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=*/
     /*https://images.unsplash.com/36/fVSwTG05QIaE9FN7tLQ5_IMG_1122.jpg?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=*/
     &__credit {
-        color: rgba(255,255,255,0.5);
+        color: #31343F;
         font-size: 0.7rem;
         margin: 0;
         letter-spacing: 1px;
@@ -28,7 +28,7 @@
         right: 0;
         bottom: 8rem;
         &__author {
-            color: rgba(255,255,255,0.9);
+            color: #31343F;
             text-decoration: none;
             padding: 0;
         }
@@ -37,14 +37,14 @@
         content: "";
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 20, 255, 0.8);
+        background-color: #FFF710;
         display: block;
         position: absolute;
         top: 0;
         left: 0;
     }
     &__stamp {
-        color: rgba(255,255,255,0.6); /*rgba(255,255,255,0.4);*/
+        color: #31343F; /*rgba(255,255,255,0.4);*/
         position: relative;
         top: 6rem;
         /*left: -7.8rem;*/
@@ -73,7 +73,7 @@
         letter-spacing: 1px;
         &__link {
             text-decoration: none;
-            color:rgba(255,255,255,1);
+            color: #31343F;
             font-weight: 400;
             position: relative;
             transition: all 0.2s ease-in-out;
@@ -82,7 +82,7 @@
                 content: "";
                 width: 10px;
                 height: 10px;
-                border: 2px solid rgba(255,255,255,0.7);
+                border: 2px solid #31343F;
                 border-radius: 50%;
                 position: absolute;
                 left: -4rem;
