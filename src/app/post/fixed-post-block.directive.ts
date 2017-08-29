@@ -1,4 +1,4 @@
-import { Directive, ElementRef, HostListener, OnInit } from '@angular/core';
+import { Directive, ElementRef, HostListener, HostBinding, OnInit } from '@angular/core';
 import { DOCUMENT } from "@angular/platform-browser";
 
 @Directive({
@@ -6,38 +6,68 @@ import { DOCUMENT } from "@angular/platform-browser";
 })
 export class FixedPostBlockDirective implements OnInit {
 
-	private anchorPoint;
-	private isFixed = false;
+	private anchorPointStartElement;
+	private anchorPointStart;
+	private anchorPointEndElement;
+	private anchorPointEnd;
+	private anchorStartRef;
 
-	@HostListener("window:scroll", [])
-	onWindowScroll() {
-		console.log(document.body.scrollTop + " " + this.anchorPoint);
-		if(document.body.scrollTop >= this.anchorPoint) {
-			this.element.nativeElement.style.position = "fixed";
-			this.element.nativeElement.style.top = "39px";
-			this.element.nativeElement.style.left = "64px";
-			this.element.nativeElement.style.width = "43rem";
+	@HostBinding('class.resting') resting: any = false;
+	@HostBinding('class.fixed') fixed: any = false;
+	@HostBinding('class.end') end: any = false;
+
+	@HostListener("window:scroll", this.onWindowScroll)
+	public onWindowScroll() {
+		if(document.body.scrollTop >= (this.anchorPointStart.top - this.vhToPixel(5))) {
+			this.resting = false;
+			this.fixed = true;
+			this.end = false;
+			this.element.nativeElement.style.left = (this.anchorPointStart.left + "px");
+			this.element.nativeElement.style.width = (this.anchorPointStartElement.offsetWidth.toString() + "px");
 		} else {
-			this.element.nativeElement.style.position = "relative";
-			this.element.nativeElement.style.top = "0";
-			this.element.nativeElement.style.left = "0";
-			this.element.nativeElement.style.width = "auto";
+			this.resting = true;
+			this.fixed = false;
+			this.end = false;
 		}
+
+		// console.log(window.pageYOffset >= this.anchorPointStart.top);
+		//Makes sure it sticks at the last paragraph element
+		if(window.pageYOffset >= (this.anchorPointEnd.top - this.vhToPixel(5))) {
+			this.resting = false;
+			this.fixed = false;
+			this.end = true;
+			this.element.nativeElement.style.top = ((this.anchorPointEnd.top - this.anchorPointStart.top) + "px");
+			this.element.nativeElement.style.width = (this.anchorPointStartElement.offsetWidth.toString() + "px");
+		}
+
+		
+
 	}
 
 	constructor(private element: ElementRef) { 
-		this.element.nativeElement.style.background = "url('../assets/img/1.jpg')";
+		this.element.nativeElement.style.background = "url('../assets/img/snow.png')";
 		this.element.nativeElement.style["background-size"] = "cover";
-
-		// position: fixed;
-	  //   left: 64px;
-	  //   top: 30px;
-	  //   width: 43rem;
-
 	}
 
 	ngOnInit() {
-		this.anchorPoint = this.element.nativeElement.getBoundingClientRect().top;
+		this.anchorPointStartElement = document.getElementById("scroll-anchor-ref");
+		this.anchorPointEndElement = document.getElementById("scroll-anchor-ref-end");
+
+		this.anchorPointStart = this.getOffset(this.anchorPointStartElement);
+		this.anchorPointEnd = this.getOffset(this.anchorPointEndElement);
+	}
+
+	public getOffset(el: any) {
+		if(!el) return;
+		el = el.getBoundingClientRect();
+		return {
+			left: el.left + window.scrollX,
+			top: el.top + window.scrollY
+		}
+	}
+
+	public vhToPixel(multiplier: number): number {
+		return (window.innerHeight / 100) * multiplier;
 	}
 
 }
