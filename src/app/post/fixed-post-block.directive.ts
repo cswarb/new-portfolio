@@ -11,6 +11,7 @@ export class FixedPostBlockDirective implements OnInit {
 	private anchorPointEndElement;
 	private anchorPointEnd;
 	private anchorStartRef;
+	private images: any = [];
 
 	@HostBinding("class.resting") resting: any = false;
 	@HostBinding("class.fixed") fixed: any = false;
@@ -19,6 +20,7 @@ export class FixedPostBlockDirective implements OnInit {
 	@HostListener("window:scroll", this.onWindowScroll)
 	public onWindowScroll() {
 		this.initialiseScrollingLogic();
+		this.initialiseSwitchingLogic();
 	}
 
 	@HostListener("window:resize", this.onWindowResize)
@@ -37,6 +39,28 @@ export class FixedPostBlockDirective implements OnInit {
 		this.anchorPointEndElement = document.getElementById("scroll-anchor-ref-end");
 		this.anchorPointStart = this.getOffset(this.anchorPointStartElement);
 		this.anchorPointEnd = this.getOffset(this.anchorPointEndElement);
+		this.detectImageSwitchTriggers();
+	}
+
+	public detectImageSwitchTriggers(): void {
+		let images = Array.from(document.querySelectorAll("[data-image-trigger]"));
+		for (var i = 0; i < images.length; i++) {
+			let image = images[i];
+			this.images.push({
+				"id": i,
+				"imageSrc": image.getAttribute("data-image-trigger"),
+				"offsetTop": this.getOffset(image).top, 
+			});
+		};
+	}
+
+	public initialiseSwitchingLogic() {
+		this.images.forEach((image) => {
+			if(document.body.scrollTop >= image.offsetTop) {
+				console.log("switch image to: ", image.imageSrc);
+				this.element.nativeElement.style.background = image.imageSrc;
+			};
+		});
 	}
 
 	public initialiseScrollingLogic(): void {
