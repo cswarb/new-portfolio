@@ -429,59 +429,6 @@ list-style: none;
 
 
 
-.post-info {
-    &__hook {
-        background-color: #FFF710;
-        padding: 3rem;
-        min-height: 60vh;
-        &__title {
-            margin: 0;
-            font-family: 'TF Opicular Regular';
-            max-width: 80%;
-            color: #31343F;
-            line-height: 1.25;
-            font-size: 3.1rem;
-            letter-spacing: 0.8px;
-            margin-bottom: 2rem;
-        }
-    }
-    &__meta {
-        display: flex;
-        flex-flow: row nowrap;
-        border: 1px solid black;
-        padding: 2rem;
-        &__item {
-            flex: 1;
-            padding: 0 1.7rem;
-            justify-content: space-between;
-            align-items: flex-start;
-            display: flex;
-            flex-flow: column nowrap;
-            &:first-child {
-                margin-left: 0;
-                border-right: 1px solid black;
-            }
-            &:last-child {
-                margin-right: 0;
-                border-left: 1px solid black;
-            }
-            &__title {
-                margin: 0;
-                font-family: 'TF Opicular Regular';
-                font-size: 1.7rem;
-                margin: 0 0 1rem 0;
-            }
-            &__detail {
-                font-size: 1.2rem;
-                font-family: 'TF Opicular Regular';
-                line-height: 1.6;
-                margin: 0;
-            }
-        }
-    }
-}
-
-
 
 
 

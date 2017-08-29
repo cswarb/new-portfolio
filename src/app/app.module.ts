@@ -13,6 +13,8 @@ import { PostComponent } from "./post/post.component";
 import { NavigationComponent } from "./navigation/navigation.component";
 import { FiltersComponent } from './filters/filters.component';
 import { SuggestionComponent } from './suggestion/suggestion.component';
+import { PostInfoComponent } from './post/post-info/post-info.component';
+import { FixedPostBlockDirective } from './post/fixed-post-block.directive';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { SuggestionComponent } from './suggestion/suggestion.component';
     PostComponent,
     NavigationComponent,
     FiltersComponent,
-    SuggestionComponent
+    SuggestionComponent,
+    PostInfoComponent,
+    FixedPostBlockDirective
   ],
   imports: [
     BrowserModule,
