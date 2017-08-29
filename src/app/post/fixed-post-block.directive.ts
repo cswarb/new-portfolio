@@ -29,9 +29,7 @@ export class FixedPostBlockDirective implements OnInit {
 		this.anchorPointEnd = this.getOffset(this.anchorPointEndElement);
 	}
 
-	constructor(private element: ElementRef) { 
-		this.element.nativeElement.style.background = "url('../assets/img/snow.png')";
-		this.element.nativeElement.style["background-size"] = "cover";
+	constructor(private element: ElementRef) {
 	}
 
 	ngOnInit() {
@@ -57,8 +55,7 @@ export class FixedPostBlockDirective implements OnInit {
 	public initialiseSwitchingLogic() {
 		this.images.forEach((image) => {
 			if(document.body.scrollTop >= image.offsetTop) {
-				console.log("switch image to: ", image.imageSrc);
-				this.element.nativeElement.style.background = image.imageSrc;
+				this.element.nativeElement.style.background = `url("${image.imageSrc}")`;
 			};
 		});
 	}

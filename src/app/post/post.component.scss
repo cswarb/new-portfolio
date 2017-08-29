@@ -4,13 +4,22 @@
 		position: relative!important;
 		top: 0!important;
 		width: auto!important;
+		background-size: cover!important;
+		background-repeat: no-repeat!important;
+		background-position: center!important;
 	}
 	&.fixed {
 		position: fixed!important;
 		top: 5vh!important;
+		background-size: cover!important;
+		background-repeat: no-repeat!important;
+		background-position: center!important;
 	}
 	&.end {
 		left: 0!important;
 		position: absolute!important;
+		background-size: cover!important;
+		background-repeat: no-repeat!important;
+		background-position: center!important;
 	}
 }
