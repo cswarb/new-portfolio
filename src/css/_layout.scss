@@ -24,7 +24,10 @@
 .article {
     margin: 10rem 2rem;
     &__hero {
-    	margin: 0 0 5rem 31rem;
+    	margin: 0 0 15rem 30rem;
+    }
+    &__inner {
+    	margin: 10rem 0;
     }
 }
 
