@@ -7,6 +7,7 @@
 		background-size: cover!important;
 		background-repeat: no-repeat!important;
 		background-position: center!important;
+		animation: background 0.1s ease-in-out!important;
 	}
 	&.fixed {
 		position: fixed!important;
@@ -14,6 +15,7 @@
 		background-size: cover!important;
 		background-repeat: no-repeat!important;
 		background-position: center!important;
+		animation: background 0.1s ease-in-out!important;
 	}
 	&.end {
 		left: 0!important;
@@ -21,5 +23,54 @@
 		background-size: cover!important;
 		background-repeat: no-repeat!important;
 		background-position: center!important;
+		animation: background 0.1s ease-in-out!important;
 	}
+}
+
+
+
+.post-content__title {
+    // font-size: 5.1rem;
+    // margin: 0;
+    //     font-weight: 400;
+    // font-family: "Calibre Regular";
+    font-size: 3.1rem;
+    line-height: 1.25;
+    font-family: "TF Opicular Regular";
+    font-weight: 400;
+    letter-spacing: 0.8px;
+    margin: 0 0 1rem 0;
+    color: #35363a;       
+}
+
+.post-content__link {
+    color: #31343F;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+}
+
+.flex .post-content {
+    &__wrapper {
+        height: auto;
+        margin-bottom: 5rem;
+        min-height: 100vh;
+    }
+    &__title {
+        flex: 3;
+        letter-spacing: 1px;
+        align-self: flex-end;
+        display: inline-block;
+        color: #35363a;
+        font-family: "TF Opicular Bold";
+        font-weight: 400;
+        font-size: 1.5rem;
+        margin: 0 0 2rem 0;
+        line-height: 1.3;
+    }
+    &__paragraph {
+        margin: 0 0 1rem 0;
+        flex: 1;
+        line-height: 1.5;
+        font-size: 1.3rem;
+    }
 }

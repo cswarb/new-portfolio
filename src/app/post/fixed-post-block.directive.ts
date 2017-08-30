@@ -1,8 +1,8 @@
-import { Directive, ElementRef, HostListener, HostBinding, OnInit } from '@angular/core';
+import { Directive, ElementRef, HostListener, HostBinding, OnInit } from "@angular/core";
 import { DOCUMENT } from "@angular/platform-browser";
 
 @Directive({
-  selector: '[data-dir-fixed-block]'
+  selector: "[data-dir-fixed-block]"
 })
 export class FixedPostBlockDirective implements OnInit {
 
@@ -19,12 +19,14 @@ export class FixedPostBlockDirective implements OnInit {
 
 	@HostListener("window:scroll", this.onWindowScroll)
 	public onWindowScroll() {
+		//Initialise the scrolling logic and image switching logic
 		this.initialiseScrollingLogic();
 		this.initialiseSwitchingLogic();
 	}
 
 	@HostListener("window:resize", this.onWindowResize)
 	public onWindowResize() {
+		//Reset the offsets
 		this.anchorPointStart = this.getOffset(this.anchorPointStartElement);
 		this.anchorPointEnd = this.getOffset(this.anchorPointEndElement);
 	}
@@ -33,11 +35,17 @@ export class FixedPostBlockDirective implements OnInit {
 	}
 
 	ngOnInit() {
+		//Store the references we need
 		this.anchorPointStartElement = document.getElementById("scroll-anchor-ref");
 		this.anchorPointEndElement = document.getElementById("scroll-anchor-ref-end");
 		this.anchorPointStart = this.getOffset(this.anchorPointStartElement);
 		this.anchorPointEnd = this.getOffset(this.anchorPointEndElement);
+
+		//Create an object with our images and offsets in
 		this.detectImageSwitchTriggers();
+
+		//Set the default image fro thr block
+		this.element.nativeElement.style.background = `url("${this.anchorPointStartElement.getAttribute('data-image-default')}")`;
 	}
 
 	public detectImageSwitchTriggers(): void {
@@ -54,7 +62,7 @@ export class FixedPostBlockDirective implements OnInit {
 
 	public initialiseSwitchingLogic() {
 		this.images.forEach((image) => {
-			if(document.body.scrollTop >= image.offsetTop) {
+			if(document.body.scrollTop >= (image.offsetTop - this.vhToPixel(50))) {
 				this.element.nativeElement.style.background = `url("${image.imageSrc}")`;
 			};
 		});

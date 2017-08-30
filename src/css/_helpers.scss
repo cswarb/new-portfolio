@@ -32,6 +32,16 @@
     }
 }
 
+.link {
+    color: #35363a;
+    text-decoration: none;
+    position: relative;
+}
+
+.link.underline:hover:before {
+    border-color: #909396;
+}
+
 .text-wipe {
 	overflow: hidden;
 	position: relative;

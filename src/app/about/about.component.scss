@@ -1,0 +1,83 @@
+.text_section {
+    max-width: 45rem;
+    &__header {
+        color: #9A9A9A;
+        font-size: 1.25rem;
+        margin: 0;
+        font-family: "Calibre Light";
+        letter-spacing: 0.6px;
+        margin-bottom: 0.5rem;
+    }
+    &__content {
+        margin: 0;
+        font-size: 2.8rem; /*2.8rem*/
+        line-height: 1.35;
+        font-family: "Calibre Regular";
+        font-weight: 400;
+        letter-spacing: 0.8px;
+        margin-bottom: 2rem;
+        color:#35363a;
+    }
+    &__meta {
+        margin:0;
+        text-transform: uppercase;
+        color: #9A9A9A;
+        font-family: "Calibre Regular";
+        margin-top:2rem;
+        display: flex;
+        &__item {
+            margin: 0;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            margin: 0 1rem;
+            text-decoration: none;
+            border-bottom: 1px solid #e8e8e8;
+            &:hover {
+                border-color: #909396;
+            }
+            &:first-child {
+                margin-left: 0;
+            }
+            p {
+                margin: 0;
+                color: #b7b9bb;
+                vertical-align: middle;
+                align-self: center;
+                line-height: 1;
+                padding-top: 2px;
+                text-transform: lowercase;
+            }
+        }
+    }
+}
+
+.full-height__section {
+    height: auto;
+    min-height: 100vh;
+    background-color: #fff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 10rem 0 0 0;
+    .primary__item {
+        margin: 0;
+        font-weight: 400;
+        flex: 5;
+        font-size: 2.3rem;
+        line-height: 1.35;
+        font-family: "TF Opicular Regular";
+        letter-spacing: 0.8px;
+        color: #35363a;
+    }
+    .secondary__item {
+        margin: 0 3rem;
+        font-family: "Calibre Light";
+        font-size: 1.3rem;
+        letter-spacing: 1.05px;
+        line-height: 2.4;
+        color: #9d9fa5;
+        text-align: left;
+        flex: 3;
+    }
+}
