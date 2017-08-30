@@ -1,10 +1,12 @@
-import { Directive, ElementRef, HostListener, HostBinding, OnInit } from "@angular/core";
+import { Component, Directive, ElementRef, HostListener, HostBinding, OnInit } from "@angular/core";
 import { DOCUMENT } from "@angular/platform-browser";
 
-@Directive({
-  selector: "[data-dir-fixed-block]"
+@Component({
+  selector: "[data-cmp-fixed-block]",
+  templateUrl: "./fixed-post-block.component.html",
+  styleUrls: ["./fixed-post-block.component.scss"]
 })
-export class FixedPostBlockDirective implements OnInit {
+export class FixedPostBlockComponent implements OnInit {
 
 	private anchorPointStartElement;
 	private anchorPointStart;
@@ -12,6 +14,7 @@ export class FixedPostBlockDirective implements OnInit {
 	private anchorPointEnd;
 	private anchorStartRef;
 	private images: any = [];
+	private number: string = "01";
 
 	@HostBinding("class.resting") resting: any = false;
 	@HostBinding("class.fixed") fixed: any = false;
@@ -35,17 +38,20 @@ export class FixedPostBlockDirective implements OnInit {
 	}
 
 	ngOnInit() {
-		//Store the references we need
-		this.anchorPointStartElement = document.getElementById("scroll-anchor-ref");
-		this.anchorPointEndElement = document.getElementById("scroll-anchor-ref-end");
-		this.anchorPointStart = this.getOffset(this.anchorPointStartElement);
-		this.anchorPointEnd = this.getOffset(this.anchorPointEndElement);
+		//Ensure the post info component has rendered - Needs better implementation
+		setTimeout(() => {
+			//Store the references we need
+			this.anchorPointStartElement = document.getElementById("scroll-anchor-ref");
+			this.anchorPointEndElement = document.getElementById("scroll-anchor-ref-end");
+			this.anchorPointStart = this.getOffset(this.anchorPointStartElement);
+			this.anchorPointEnd = this.getOffset(this.anchorPointEndElement);
 
-		//Create an object with our images and offsets in
-		this.detectImageSwitchTriggers();
+			//Create an object with our images and offsets in
+			this.detectImageSwitchTriggers();
 
-		//Set the default image fro thr block
-		this.element.nativeElement.style.background = `url("${this.anchorPointStartElement.getAttribute('data-image-default')}")`;
+			//Set the default image fro thr block
+			this.element.nativeElement.style.background = `url("${this.anchorPointStartElement.getAttribute('data-image-default')}")`;
+		}, 0);
 	}
 
 	public detectImageSwitchTriggers(): void {

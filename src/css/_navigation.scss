@@ -2,11 +2,14 @@
     display: flex;
     position: relative;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     padding-top: 5.7rem;
     font-family: 'Neue Haas Unica Pro';
     margin: 0 7rem 23rem 7rem;
     padding-top: 5rem;
+    @media (max-width: 55rem) {
+        margin: 0 0 10rem 0;
+    }
     &__title {
         margin: 0;
         font-size: 1.2rem;
@@ -49,6 +52,7 @@
         &_container {
             list-style: none;
             display: flex;
+            margin: 0;
         }
         &_item {
             display: inline-block;

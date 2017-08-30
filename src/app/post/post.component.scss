@@ -28,27 +28,6 @@
 }
 
 
-
-.post-content__title {
-    // font-size: 5.1rem;
-    // margin: 0;
-    //     font-weight: 400;
-    // font-family: "Calibre Regular";
-    font-size: 3.1rem;
-    line-height: 1.25;
-    font-family: "TF Opicular Regular";
-    font-weight: 400;
-    letter-spacing: 0.8px;
-    margin: 0 0 1rem 0;
-    color: #35363a;       
-}
-
-.post-content__link {
-    color: #31343F;
-    letter-spacing: 1px;
-    font-size: 1.2rem;
-}
-
 .post-content {
     &__wrapper {
         height: auto;
@@ -73,4 +52,21 @@
         line-height: 1.5;
         font-size: 1.3rem;
     }
+    &__link {
+	    color: #31343F;
+	    letter-spacing: 1px;
+	    font-size: 1.2rem;
+	}
+	&__hero-title {
+	    font-size: 3.1rem;
+	    line-height: 1.25;
+	    font-family: "TF Opicular Regular";
+	    font-weight: 400;
+	    letter-spacing: 0.8px;
+	    margin: 0 0 1rem 0;
+	    color: #35363a;       
+	}
+	&__image {
+		filter: grayscale(1);
+	}
 }

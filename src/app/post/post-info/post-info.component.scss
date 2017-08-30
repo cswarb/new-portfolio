@@ -3,7 +3,7 @@
         background-color: #FFF710;
         padding: 3rem 3rem 10rem 3rem;
         height: auto;
-        min-height: 28rem;
+        min-height: 28rem;        
         &__title {
             margin: 0;
             font-family: 'TF Opicular Regular';
@@ -13,16 +13,22 @@
             font-size: 3.1rem;
             letter-spacing: 0.8px;
             margin-bottom: 2rem;
+            @media (max-width: 55rem) {
+                max-width: 100%;
+            }
         }
     }
     &__meta {
         display: flex;
         flex-flow: row nowrap;
         border: 1px solid black;
-        padding: 2rem;
+        // padding: 2rem;
+        @media (max-width: 55rem) {
+            flex-flow: column nowrap;
+        }
         &__item {
             flex: 1;
-            padding: 0 1.7rem;
+            padding: 3rem;
             justify-content: space-between;
             align-items: flex-start;
             display: flex;
@@ -30,10 +36,18 @@
             &:first-child {
                 margin-left: 0;
                 border-right: 1px solid black;
+                @media (max-width: 55rem) {
+                    border-right: 0;
+                    border-bottom: 1px solid black;
+                }
             }
             &:last-child {
                 margin-right: 0;
                 border-left: 1px solid black;
+                @media (max-width: 55rem) {
+                    border-left: 0;
+                    border-top: 1px solid black;
+                }
             }
             &__title {
                 margin: 0;

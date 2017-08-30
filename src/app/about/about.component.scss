@@ -10,19 +10,19 @@
     }
     &__content {
         margin: 0;
-        font-size: 2.8rem; /*2.8rem*/
-        line-height: 1.35;
-        font-family: "Calibre Regular";
+        font-family: "TF Opicular Regular";
         font-weight: 400;
+        color: #31343F;
+        line-height: 1.5;
+        font-size: 2.3rem;
         letter-spacing: 0.8px;
         margin-bottom: 2rem;
-        color:#35363a;
     }
     &__meta {
         margin:0;
         text-transform: uppercase;
         color: #9A9A9A;
-        font-family: "Calibre Regular";
+         font-family: "TF Opicular Regular";
         margin-top:2rem;
         display: flex;
         &__item {

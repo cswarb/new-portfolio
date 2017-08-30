@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Input } from "@angular/core";
 
 @Component({
   selector: "[data-cmp-post-info]",
@@ -7,9 +7,14 @@ import { Component, OnInit } from "@angular/core";
 })
 export class PostInfoComponent implements OnInit {
 
-  constructor() { }
+	@Input() splashText: string = "";
+	@Input() year: string = "";
+	@Input() role: string = "";
+	@Input() technologies: any = [];
 
-  ngOnInit() {
-  }
+	constructor() { }
+
+	ngOnInit() {
+	}
 
 }

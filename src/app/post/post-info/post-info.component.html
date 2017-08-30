@@ -1,30 +1,26 @@
 <div class="post-info">
 	<article class="post-info__hook">
-		<h3 class="post-info__hook__title">The TFL tube finder app was a self-initiated work. One of my goals was to use the opportunity to help me learn the new Angular 2+ framework.</h3>
+		<h3 class="post-info__hook__title">{{splashText}}</h3>
 	</article>
 	<div class="post-info__meta">
 		<section class="post-info__meta__item">
 			<header>
 				<h6 class="post-info__meta__item__title">Year</h6>
 			</header>
-			<p class="post-info__meta__item__detail">2017</p>
+			<p class="post-info__meta__item__detail">{{year}}</p>
 		</section>
 		<section class="post-info__meta__item">
 			<header>
 				<h6 class="post-info__meta__item__title">Role</h6>
 			</header>
-			<p class="post-info__meta__item__detail">I created the front-end design, experience, and did the complete development including api integration</p>
+			<p class="post-info__meta__item__detail">{{role}}</p>
 		</section>
 		<section class="post-info__meta__item">
 			<header>
 				<h6 class="post-info__meta__item__title">Technologies Used</h6>
 			</header>
 			<ul class="post-info__meta__item__detail">
-				<li class="post-info__meta__item__detail__item--list">Angular 4</li>
-				<li class="post-info__meta__item__detail__item--list">HTML</li>
-				<li class="post-info__meta__item__detail__item--list">SASS</li>
-				<li class="post-info__meta__item__detail__item--list">Git + Github</li>
-				<li class="post-info__meta__item__detail__item--list">TFL Unified API</li>
+				<li *ngFor="let technology of technologies" class="post-info__meta__item__detail__item--list">{{technology}}</li>
 			</ul>
 		</section>
 	</div>

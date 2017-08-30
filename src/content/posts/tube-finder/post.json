@@ -1,0 +1,50 @@
+{
+	"title": "Checking a tube status has never been so modern.",
+	"url": "http://www.project.com/dashboard",
+	"meta": {
+		"splashText": "The TFL tube finder app was a self-initiated work. One of my goals was to use the opportunity to help me learn the new Angular 2+ framework.",
+		"role": "I created the front-end design, experience, and did the complete development including api integration",
+		"year": "2017",
+		"technologies": [
+			{
+				"name": "Angular 4"
+			},
+			{
+				"name": "HTML"
+			},
+			{
+				"name": "SASS"
+			},
+			{
+				"name": "Git + Github"
+			},
+			{
+				"name": "TFL Unified API"
+			}
+		]
+	},
+	"introduction": {
+		"title": "How can checking a tube status be sublime? Responsive UI, clear application flow, and built for speed. These were the 3 key points I kept in mind when building my version of a tube checker",
+		"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima officia qui commodi? Dignissimos laudantium rerum facilis vitae nulla eaque minima molestiae officia atque perferendis quae pariatur, illo nesciunt quisquam sunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima officia qui commodi? Dignissimos laudantium rerum facilis vitae nulla eaque minima molestiae officia atque perferendis quae pariatur, illo nesciunt quisquam sunt."
+	},
+	"sections": [
+		{
+			"id": 0,
+			"imageUrl": "./images/1.jpg",
+			"title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+			"content": "Lorem content." 
+		},
+		{
+			"id": 1,
+			"imageUrl": "./images/2.jpg",
+			"title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+			"content": "Lorem content." 
+		},
+		{
+			"id": 2,
+			"imageUrl": "./images/3.jpg",
+			"title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+			"content": "Lorem content." 
+		}
+	]
+}

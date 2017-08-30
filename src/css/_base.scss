@@ -53,9 +53,6 @@
   src: url("./assets/fonts/./gtamerica/GT-America-Mono-Regular-v1.otf") format("opentype");
 }
 
-
-
-
 *, *:before, *:after {
 	box-sizing: border-box;
 }
@@ -64,11 +61,6 @@
 	background-color: #0000ff;
 	color: #fff;
 }
-
-
-// a:focus, button:focus {
-//     outline: 2.5px solid orange;
-// }
 
 body {
 	margin: 0;
@@ -80,4 +72,11 @@ body {
 
 img {
     max-width: 100%;
+}
+
+noscript {
+    font-family: "TF Opicular Regular";
+    font-size: 1.25rem;
+    line-height: 1.2;
+    letter-spacing: 0.8px;
 }
