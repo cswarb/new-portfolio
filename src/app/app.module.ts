@@ -16,6 +16,11 @@ import { SuggestionComponent } from './suggestion/suggestion.component';
 import { PostInfoComponent } from './post/post-info/post-info.component';
 import { FixedPostBlockComponent } from './post/fixed-post-block/fixed-post-block.component';
 
+import { HeadersService } from './shared/headers/headers.service';
+import { PostResolverService } from './post/post-resolver.service';
+import { PostService } from './post/post.service';
+import { AppConstants } from './app.constants';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +39,7 @@ import { FixedPostBlockComponent } from './post/fixed-post-block/fixed-post-bloc
     RouterModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [AppConstants, HeadersService, PostService, PostResolverService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

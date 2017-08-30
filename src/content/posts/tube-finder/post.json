@@ -1,6 +1,9 @@
 {
+	"type": "POST",
+	"tag": "Design/Development Project",
 	"title": "Checking a tube status has never been so modern.",
 	"url": "http://www.project.com/dashboard",
+	"imageUrl": "/content/posts/tube-finder/img/1.jpg",
 	"meta": {
 		"splashText": "The TFL tube finder app was a self-initiated work. One of my goals was to use the opportunity to help me learn the new Angular 2+ framework.",
 		"role": "I created the front-end design, experience, and did the complete development including api integration",
@@ -30,19 +33,19 @@
 	"sections": [
 		{
 			"id": 0,
-			"imageUrl": "./images/1.jpg",
+			"imageUrl": "/content/posts/tube-finder/img/1.jpg",
 			"title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
 			"content": "Lorem content." 
 		},
 		{
 			"id": 1,
-			"imageUrl": "./images/2.jpg",
+			"imageUrl": "/content/posts/tube-finder/img/2.jpg",
 			"title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
 			"content": "Lorem content." 
 		},
 		{
 			"id": 2,
-			"imageUrl": "./images/3.jpg",
+			"imageUrl": "/content/posts/tube-finder/img/3.png",
 			"title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
 			"content": "Lorem content." 
 		}

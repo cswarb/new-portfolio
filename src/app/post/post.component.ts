@@ -1,5 +1,5 @@
 import { Component, OnInit, HostListener } from "@angular/core";
-import { Router } from "@angular/router";
+import { Router, ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: "[data-cmp-post]",
@@ -8,22 +8,26 @@ import { Router } from "@angular/router";
 })
 export class PostComponent implements OnInit {
 
+	private post: any = {};
+
 	@HostListener("window:resize", this.onWindowResize)
 	public onWindowResize() {
 		this.isMobile();
 	}
 
-	constructor() { }
+	constructor(private route: ActivatedRoute) { }
 
 	ngOnInit() {
+		this.post = this.route.snapshot.data["post"];
+		console.log(this.post);
 		this.isMobile();
 	}
 
 	public isMobile(): boolean {
 		if (window.matchMedia("(max-width: 55rem)").matches) {
-			return false
+			return true
 		};
-		return true;
+		return false;
 	}
 
 }

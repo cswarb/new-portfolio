@@ -14,7 +14,7 @@ export class FixedPostBlockComponent implements OnInit {
 	private anchorPointEnd;
 	private anchorStartRef;
 	private images: any = [];
-	private number: string = "01";
+	private number: number = 1;
 
 	@HostBinding("class.resting") resting: any = false;
 	@HostBinding("class.fixed") fixed: any = false;
@@ -59,7 +59,7 @@ export class FixedPostBlockComponent implements OnInit {
 		for (var i = 0; i < images.length; i++) {
 			let image = images[i];
 			this.images.push({
-				"id": i,
+				"id": i+1,
 				"imageSrc": image.getAttribute("data-image-trigger"),
 				"offsetTop": this.getOffset(image).top, 
 			});
@@ -70,6 +70,7 @@ export class FixedPostBlockComponent implements OnInit {
 		this.images.forEach((image) => {
 			if(document.body.scrollTop >= (image.offsetTop - this.vhToPixel(50))) {
 				this.element.nativeElement.style.background = `url("${image.imageSrc}")`;
+				this.number = image.id;
 			};
 		});
 	}

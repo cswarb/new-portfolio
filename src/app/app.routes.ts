@@ -8,13 +8,12 @@ import { IndexComponent } from "./index/index.component";
 import { AboutComponent } from "./about/about.component";
 import { PostComponent } from "./post/post.component";
 
+import { PostResolverService } from "./post/post-resolver.service";
+
 //Either configure routes in this Routing Module or within the module itself but not in both.
 @NgModule({
 	imports: [
 		RouterModule.forRoot([
-			/* Define app module routes here, e.g., to lazily load a module
-		    (do not place feature module routes here, use an own -routing.module.ts in the feature instead)
-		    */
 			{
 				path: "",
 				redirectTo: "index",
@@ -30,11 +29,14 @@ import { PostComponent } from "./post/post.component";
 			},
 			{
 				path: "post/:id",
-				component: PostComponent
+				component: PostComponent,
+				resolve: {
+					post: PostResolverService
+				}
 			},
 			{
 				path: "**",
-				component: IndexComponent
+				redirectTo: "index"
 			}
 		])
 	],

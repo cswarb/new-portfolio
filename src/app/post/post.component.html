@@ -1,9 +1,11 @@
+
 <div class="article article__hero">
-	<h3 class="post-content__hero-title">Checking a tube status has never been so modern.</h3>
-	<a class="post-content__link" href="#" target="_BLANK">http://www.project.com/dashboard</a>
+	<p class="post-content__type">{{post.tag}}</p>
+	<h3 class="post-content__hero-title">{{post.title}}</h3>
+	<a class="post-content__link" href="#" target="_BLANK">{{post.url}}</a>
 </div>
 
-<div data-cmp-post-info [splashText]="'The TFL tube finder app was a self-initiated work. One of my goals was to use the opportunity to help me learn the new Angular 2+ framework.'" [year]="'2017'" [role]="'I created the front-end design, experience, and did the complete development including api integration'" [technologies]="['Angular 4', 'HTML', 'SASS', 'Git & Github', 'TFL Unified API']"></div>
+<div data-cmp-post-info [splashText]="post.meta.splashText" [year]="post.meta.year" [role]="post.meta.role" [technologies]="post.meta.technologies"></div>
 
 <article class="flex article__inner">
 	<div class="left-side">
@@ -11,54 +13,34 @@
 	</div>
 	<div class="right-side">
 		<section class="post-content__wrapper">
-			<h4 class="post-content__title">How can checking a tube status be sublime? Responsive UI, clear application flow, and built for speed. These were the 3 key points I kept in mind when building my version of a tube checker</h4>
-			<p class="post-content__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima officia qui commodi? Dignissimos laudantium rerum facilis vitae nulla eaque minima molestiae officia atque perferendis quae pariatur, illo nesciunt quisquam sunt.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima officia qui commodi? Dignissimos laudantium rerum facilis vitae nulla eaque minima molestiae officia atque perferendis quae pariatur, illo nesciunt quisquam sunt.</p>
+			<h4 class="post-content__title">{{post.introduction.title}}</h4>
+			<p class="post-content__paragraph">{{post.introduction.content}}</p>
 		</section>
 	</div>
 </article>
-
-<article *ngIf="isMobile()" class="flex article__inner">
-	<div class="left-side blank" id="scroll-anchor-ref" data-image-default="../assets/img/small-city.jpg" data-image-trigger="../assets/img/small-city.jpg">
-		<div class="scroll-anchor post-content__image" data-cmp-fixed-block></div>
-	</div>
-	<div class="right-side">
-		<section class="post-content__wrapper" id="scroll-anchor-ref" data-image-default="../assets/img/small-city.jpg" data-image-trigger="../assets/img/small-city.jpg">
-			<h4 class="post-content__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
-			<p class="post-content__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima officia qui commodi? Dignissimos laudantium rerum facilis vitae nulla eaque minima molestiae officia atque perferendis quae pariatur, illo nesciunt quisquam sunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima officia qui commodi? Dignissimos laudantium rerum facilis vitae nulla eaque minima molestiae officia atque perferendis quae pariatur, illo nesciunt quisquam sunt.</p>
-		</section>
-
-		<section class="post-content__wrapper" data-image-trigger="../assets/img/6.jpg">
-			<h4 class="post-content__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
-			<p class="post-content__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima officia qui commodi? Dignissimos laudantium rerum facilis vitae nulla eaque minima molestiae officia atque perferendis quae pariatur, illo nesciunt quisquam sunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima officia qui commodi? Dignissimos laudantium rerum facilis vitae nulla eaque minima molestiae officia atque perferendis quae pariatur, illo nesciunt quisquam sunt.</p>
-		</section>
-
-		<section class="post-content__wrapper" id="scroll-anchor-ref-end" data-image-trigger="../assets/img/5.jpg">
-			<h4 class="post-content__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
-			<p class="post-content__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima officia qui commodi? Dignissimos laudantium rerum facilis vitae nulla eaque minima molestiae officia atque perferendis quae pariatur, illo nesciunt quisquam sunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima officia qui commodi? Dignissimos laudantium rerum facilis vitae nulla eaque minima molestiae officia atque perferendis quae pariatur, illo nesciunt quisquam sunt.</p>
-		</section>
-	</div>
-</article>
-
 
 <article *ngIf="!isMobile()" class="flex article__inner">
-	<!-- <div class="left-side blank" id="scroll-anchor-ref" data-image-default="../assets/img/small-city.jpg" data-image-trigger="../assets/img/small-city.jpg">
+	<div class="left-side blank" id="scroll-anchor-ref" [attr.data-image-default]="post.imageUrl">
 		<div class="scroll-anchor post-content__image" data-cmp-fixed-block></div>
-	</div> -->
+	</div>
 	<div class="right-side">
-		<section class="post-content__wrapper">
-			<h4 class="post-content__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
-			<p class="post-content__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima officia qui commodi? Dignissimos laudantium rerum facilis vitae nulla eaque minima molestiae officia atque perferendis quae pariatur, illo nesciunt quisquam sunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima officia qui commodi? Dignissimos laudantium rerum facilis vitae nulla eaque minima molestiae officia atque perferendis quae pariatur, illo nesciunt quisquam sunt.</p>
+		<section 
+			*ngFor="let section of post.sections; let i = index" 
+			[id]="i === post.sections.length - 1 ? 'scroll-anchor-ref-end' : ''" 
+			class="post-content__wrapper" 
+			id="scroll-anchor-ref" [attr.data-image-trigger]="section.imageUrl">
+			<h4 class="post-content__title">{{section.title}}</h4>
+			<p class="post-content__paragraph">{{section.content}}</p>
 		</section>
+	</div>
+</article>
 
-		<section class="post-content__wrapper">
-			<h4 class="post-content__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
-			<p class="post-content__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima officia qui commodi? Dignissimos laudantium rerum facilis vitae nulla eaque minima molestiae officia atque perferendis quae pariatur, illo nesciunt quisquam sunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima officia qui commodi? Dignissimos laudantium rerum facilis vitae nulla eaque minima molestiae officia atque perferendis quae pariatur, illo nesciunt quisquam sunt.</p>
-		</section>
 
-		<section class="post-content__wrapper" id="scroll-anchor-ref-end">
-			<h4 class="post-content__title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
-			<p class="post-content__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima officia qui commodi? Dignissimos laudantium rerum facilis vitae nulla eaque minima molestiae officia atque perferendis quae pariatur, illo nesciunt quisquam sunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima officia qui commodi? Dignissimos laudantium rerum facilis vitae nulla eaque minima molestiae officia atque perferendis quae pariatur, illo nesciunt quisquam sunt.</p>
+<article *ngIf="isMobile()" class="flex article__inner">
+	<div class="right-side">
+		<section *ngFor="let section of post.sections" class="post-content__wrapper">
+			<h4 class="post-content__title">{{section.title}}</h4>
+			<p class="post-content__paragraph">{{section.content}}</p>
 		</section>
 	</div>
 </article>
