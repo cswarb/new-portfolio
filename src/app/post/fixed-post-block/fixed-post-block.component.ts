@@ -1,4 +1,4 @@
-import { Component, Directive, ElementRef, HostListener, Input, HostBinding, OnInit, AfterViewInit, trigger, transition, style, animate } from "@angular/core";
+import { Component, Directive, ElementRef, HostListener, Input, HostBinding, OnInit, AfterViewInit } from "@angular/core";
 import { DOCUMENT } from "@angular/platform-browser";
 import { Post, Section } from "../post.model";
 import { ImageData } from "./image.model";
@@ -6,16 +6,6 @@ import { ImageData } from "./image.model";
 @Component({
   selector: "[data-cmp-fixed-block]",
   templateUrl: "./fixed-post-block.component.html",
-  animations: [
-    trigger(
-      "fadeInAnimation", [
-        transition(":enter", [
-          style({opacity: 0}),
-          animate("500ms", style({opacity: 1}))
-        ])
-      ]
-    )
-  ],
   styleUrls: ["./fixed-post-block.component.scss"]
 })
 export class FixedPostBlockComponent implements AfterViewInit  {
@@ -25,23 +15,20 @@ export class FixedPostBlockComponent implements AfterViewInit  {
 	private anchorPointEndElement;
 	private anchorPointEnd;
 	private anchorStartRef;
-
-	private images: ImageData[] = [];
-	private activeNumber: number = 1;
+	
 	private anchorProps = {
 		"width": "",
 		"top": ""
 	};
-	private activeImage: number = 1;
+
 	private state: string = "";
 	@Input() defaultImageUrl: string = "";
 	@Input() sectionData: Section[] = [];
 
 	@HostListener("window:scroll", this.onWindowScroll)
 	public onWindowScroll() {
-		//Initialise the scrolling logic and image switching logic
+		//Initialise the scrolling logic
 		this.initialiseAnchor();
-		this.initialiseImageSwitching();
 	}
 
 	@HostListener("window:resize", this.onWindowResize)
@@ -49,7 +36,6 @@ export class FixedPostBlockComponent implements AfterViewInit  {
 		//Reset the offsets
 		this.anchorPointStart = this.getOffset(this.anchorPointStartElement);
 		this.anchorPointEnd = this.getOffset(this.anchorPointEndElement);
-		this.createImageObject();
 	}
 
 	constructor(private element: ElementRef) {
@@ -63,43 +49,7 @@ export class FixedPostBlockComponent implements AfterViewInit  {
 			this.anchorPointEndElement = document.getElementById("scroll-anchor-ref-end");
 			this.anchorPointStart = this.getOffset(this.anchorPointStartElement);
 			this.anchorPointEnd = this.getOffset(this.anchorPointEndElement);
-
-			//Create an object with our images and offsets in
-			this.createImageObject();
 		});
-	}
-
-	public createImageObject(): void {
-		//Empty it if we resize the viewport
-		this.images.length = 0;
-		//Create an array from NodeList
-		let images = Array.from(document.querySelectorAll("[data-image-trigger]"));
-		//Create an object based off the NodeList data we can use later on
-		for(var i = 0; i < images.length; i++) {
-			let image = images[i];
-			this.images.push(
-				new ImageData(
-					i+1,
-					image.getAttribute("data-image-trigger"),
-					this.getOffset(image).top
-				)
-			);
-		};
-	}
-
-	public initialiseImageSwitching() {
-		let newImage = null;
-		this.images.forEach((image: ImageData) => {
-			//Check the offset
-			if(document.body.scrollTop >= (image.offsetTop - this.vhToPixel(50))) {
-				//Don't assign the props to the view yet - it will cause a jarring switch between multiple images
-				newImage = image;
-			};
-		});
-		//Loop is done, no assign the activeImage the correct index
-		if(newImage) {
-			this.activeImage = this.activeNumber = newImage.id;
-		};
 	}
 
 	public initialiseAnchor(): void {

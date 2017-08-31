@@ -1,13 +1,6 @@
-<div class="post-content__image scroll-anchor"
+<div class="post-content__image"
     id="scroll-anchor-ref"
     [ngStyle]="anchorProps"
 	[ngClass]="state">
-	<span class="post-content__image__wrapper" *ngFor="let section of sectionData">
-		<div *ngIf="activeImage === section?.id + 1"
-			[@fadeInAnimation]
-			style.background="url({{section?.imageUrl}})"
-			class="post-content__image__content">
-		</div>
-	</span>
-	<span class="post-content__image__number">0{{activeNumber}}</span>	
+	<div data-cmp-post-image [sectionData]="sectionData"></div>
 </div>

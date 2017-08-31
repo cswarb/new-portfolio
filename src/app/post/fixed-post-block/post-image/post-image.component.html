@@ -1,0 +1,8 @@
+<span class="post-content__image__wrapper" *ngFor="let section of sectionData">
+	<div *ngIf="activeImage === section?.id + 1"
+		[@fadeInAnimation]
+		style.background="url({{section?.imageUrl}})"
+		class="post-content__image__content">
+	</div>
+	<span class="post-content__image__number">{{activeNumber}}</span>	
+</span>

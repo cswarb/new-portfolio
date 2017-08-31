@@ -21,6 +21,7 @@ import { HeadersService } from './shared/headers/headers.service';
 import { PostResolverService } from './post/post-resolver.service';
 import { PostService } from './post/post.service';
 import { AppConstants } from './app.constants';
+import { PostImageComponent } from './post/fixed-post-block/post-image/post-image.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { AppConstants } from './app.constants';
     FiltersComponent,
     SuggestionComponent,
     PostInfoComponent,
-    FixedPostBlockComponent
+    FixedPostBlockComponent,
+    PostImageComponent
   ],
   imports: [
     BrowserAnimationsModule,
