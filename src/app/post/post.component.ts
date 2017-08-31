@@ -1,5 +1,6 @@
 import { Component, OnInit, HostListener } from "@angular/core";
 import { Router, ActivatedRoute } from "@angular/router";
+import { Post } from "./post.model";
 
 @Component({
   selector: "[data-cmp-post]",
@@ -8,7 +9,7 @@ import { Router, ActivatedRoute } from "@angular/router";
 })
 export class PostComponent implements OnInit {
 
-	private post: any = {};
+	private post: Post = new Post();
 
 	@HostListener("window:resize", this.onWindowResize)
 	public onWindowResize() {
