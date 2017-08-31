@@ -1,33 +1,3 @@
-.scroll-anchor {
-	&.resting {
-		left: 0!important;
-		position: relative!important;
-		top: 0!important;
-		width: auto!important;
-		background-size: cover!important;
-		background-repeat: no-repeat!important;
-		background-position: center!important;
-		animation: background 0.1s ease-in-out!important;
-	}
-	&.fixed {
-		position: fixed!important;
-		top: 5vh!important;
-		background-size: cover!important;
-		background-repeat: no-repeat!important;
-		background-position: center!important;
-		animation: background 0.1s ease-in-out!important;
-	}
-	&.end {
-		left: 0!important;
-		position: absolute!important;
-		background-size: cover!important;
-		background-repeat: no-repeat!important;
-		background-position: center!important;
-		animation: background 0.1s ease-in-out!important;
-	}
-}
-
-
 .post-content {
     &__wrapper {
         height: auto;
@@ -76,8 +46,5 @@
 	    letter-spacing: 0.8px;
 	    margin: 0 0 3rem 0;
 	    color: #35363a;       
-	}
-	&__image {
-		filter: grayscale(1);
 	}
 }

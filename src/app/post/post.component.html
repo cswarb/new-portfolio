@@ -20,8 +20,8 @@
 </article>
 
 <article *ngIf="!isMobile()" class="flex article__inner">
-	<div class="left-side blank" id="scroll-anchor-ref" [attr.data-image-default]="post.imageUrl">
-		<div class="scroll-anchor post-content__image" data-cmp-fixed-block></div>
+	<div class="left-side blank">
+		<div data-cmp-fixed-block [defaultImageUrl]="post.imageUrl"></div>
 	</div>
 	<div class="right-side">
 		<section 

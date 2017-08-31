@@ -1,15 +1,23 @@
-.post-content__image__number {
-	position: absolute;
-	font-family: "TF Opicular Bold";
-	color: #000;
-	font-size: 2.5rem;
-	margin: 0;
-	top: 2.5rem;
-	left: -1.5rem;
+.post-content {
+	&__image {
+		filter: grayscale(1);
+		width: 100%;
+    	height: 100%;
+    	background-color: #f5f5f5;
+		&__number {
+			position: absolute;
+			font-family: "TF Opicular Bold";
+			color: #000;
+			font-size: 2.5rem;
+			margin: 0;
+			top: 2.5rem;
+			left: -1.5rem;
+		}
+	}
 }
 
-
 .scroll-anchor {
+	height: 90vh!important;
 	&.resting {
 		left: 0!important;
 		position: relative!important;

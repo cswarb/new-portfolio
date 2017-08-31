@@ -1,4 +1,4 @@
-import { Component, Directive, ElementRef, HostListener, HostBinding, OnInit, AfterViewInit } from "@angular/core";
+import { Component, Directive, ElementRef, HostListener, Input, HostBinding, OnInit, AfterViewInit } from "@angular/core";
 import { DOCUMENT } from "@angular/platform-browser";
 
 @Component({
@@ -13,12 +13,20 @@ export class FixedPostBlockComponent implements AfterViewInit  {
 	private anchorPointEndElement;
 	private anchorPointEnd;
 	private anchorStartRef;
-	private images: any = [];
-	private number: number = 1;
 
-	@HostBinding("class.resting") resting: any = false;
-	@HostBinding("class.fixed") fixed: any = false;
-	@HostBinding("class.end") end: any = false;
+	private images: any = [];
+
+	private activeNumber: number = 1;
+	private activeImage = {
+		"backgroundImage": "",
+		"left": "",
+		"width": "",
+		"top": ""
+	};
+
+	private state: any = false;
+
+	@Input() defaultImageUrl = "";
 
 	@HostListener("window:scroll", this.onWindowScroll)
 	public onWindowScroll() {
@@ -50,7 +58,7 @@ export class FixedPostBlockComponent implements AfterViewInit  {
 			this.detectImageSwitchTriggers();
 
 			//Set the default image fro thr block
-			this.element.nativeElement.style.background = `url("${this.anchorPointStartElement.getAttribute('data-image-default')}")`;
+			this.activeImage["backgroundImage"] = `url("${this.anchorPointStartElement.getAttribute('data-image-default')}")`;
 		});
 	}
 
@@ -67,24 +75,24 @@ export class FixedPostBlockComponent implements AfterViewInit  {
 	}
 
 	public initialiseSwitchingLogic() {
-		let activeImage = null;
+		let newImage = null;
 		this.images.forEach((image) => {
 			//Check the offset
 			if(document.body.scrollTop >= (image.offsetTop - this.vhToPixel(50))) {
-				this.number = image.id;
-				activeImage = image;
+				this.activeNumber = image.id;
+				//Don't assign the image to the view yet - it will cause a jarring switch between multiple images
+				newImage = image;
 			};
 		});
-		if(activeImage) {
-			this.element.nativeElement.style.background = `url("${activeImage.imageSrc}")`;
+		if(newImage) {
+			this.activeImage["backgroundImage"] = `url("${newImage.imageSrc}")`;
 		};
 	}
 
 	public initialiseScrollingLogic(): void {
 		if(document.body.scrollTop >= (this.anchorPointStart.top - this.vhToPixel(5))) {
 			this.setState("fixed");
-			this.element.nativeElement.style.left = this.pxString(this.anchorPointStart.left);
-			this.element.nativeElement.style.width = this.pxString(this.anchorPointStartElement.offsetWidth);
+			this.activeImage["width"] = this.pxString(this.anchorPointStartElement.offsetWidth);
 		} else {
 			this.setState("resting");
 		};
@@ -92,8 +100,8 @@ export class FixedPostBlockComponent implements AfterViewInit  {
 		//Makes sure it stops at the last paragraph element
 		if(window.pageYOffset >= (this.anchorPointEnd.top - this.vhToPixel(5))) {
 			this.setState("end");
-			this.element.nativeElement.style.top = (this.pxString(this.anchorPointEnd.top - this.anchorPointStart.top));
-			this.element.nativeElement.style.width = this.pxString(this.anchorPointStartElement.offsetWidth);
+			this.activeImage["top"] = (this.pxString(this.anchorPointEnd.top - this.anchorPointStart.top));
+			this.activeImage["width"] = this.pxString(this.anchorPointStartElement.offsetWidth);
 		};
 	}
 
@@ -107,7 +115,7 @@ export class FixedPostBlockComponent implements AfterViewInit  {
 	}
 
 	public vhToPixel(multiplier: number): number {
-		return (window.innerHeight / 100) * multiplier;
+		return (window.innerHeight / 100) * (multiplier ? multiplier : 1);
 	}
 
 	public pxString(value: number): string {
@@ -115,17 +123,7 @@ export class FixedPostBlockComponent implements AfterViewInit  {
 	}
 
 	public setState(state: string): void {
-		switch(state) {
-			case "fixed":
-				this.resting = this.end = false; this.fixed = true;
-			break;
-			case "resting":
-				this.resting = true; this.fixed = this.end = false;
-			break;
-			case "end":
-				this.resting = this.fixed = false; this.end = true;
-			break;
-		};
+		this.state = state ? state : "resting";
 	}
 
 }

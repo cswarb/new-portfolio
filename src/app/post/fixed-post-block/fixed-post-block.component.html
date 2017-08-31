@@ -1,1 +1,7 @@
-<span class="post-content__image__number">0{{number}}</span>
+<div class="scroll-anchor post-content__image"
+    id="scroll-anchor-ref"
+    [attr.data-image-default]="defaultImageUrl" 
+    [ngStyle]="activeImage"
+	[ngClass]="state">
+	<span class="post-content__image__number">0{{activeNumber}}</span>	
+</div>
