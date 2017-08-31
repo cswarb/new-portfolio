@@ -3,6 +3,7 @@ import { NgModule } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HttpModule, Http, JsonpModule } from "@angular/http";
 import { Routes, RouterModule } from "@angular/router";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 import { AppRoutingModule } from "./app.routes";
 
@@ -34,6 +35,7 @@ import { AppConstants } from './app.constants';
     FixedPostBlockComponent
   ],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
     HttpModule,
     RouterModule,

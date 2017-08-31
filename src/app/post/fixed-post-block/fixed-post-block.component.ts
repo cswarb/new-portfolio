@@ -1,4 +1,4 @@
-import { Component, Directive, ElementRef, HostListener, Input, HostBinding, OnInit, AfterViewInit } from "@angular/core";
+import { Component, Directive, ElementRef, HostListener, Input, HostBinding, OnInit, AfterViewInit, trigger, transition, style, animate } from "@angular/core";
 import { DOCUMENT } from "@angular/platform-browser";
 import { Post, Section } from "../post.model";
 import { ImageData } from "./image.model";
@@ -6,6 +6,16 @@ import { ImageData } from "./image.model";
 @Component({
   selector: "[data-cmp-fixed-block]",
   templateUrl: "./fixed-post-block.component.html",
+  animations: [
+    trigger(
+      "fadeInAnimation", [
+        transition(":enter", [
+          style({opacity: 0}),
+          animate("500ms", style({opacity: 1}))
+        ])
+      ]
+    )
+  ],
   styleUrls: ["./fixed-post-block.component.scss"]
 })
 export class FixedPostBlockComponent implements AfterViewInit  {
