@@ -36,6 +36,9 @@
     }
     &__inner {
     	margin: 10rem 0;
+    	@media (max-width: 55rem) {
+        	margin: 0;
+        }
     }
 }
 
@@ -52,6 +55,9 @@
     > div {
     	position: relative;  	
 	    height: 90vh;
+    }
+    @media (max-width: 55rem) {
+        margin: 5rem 0 1rem 0;  
     }
 }
 
