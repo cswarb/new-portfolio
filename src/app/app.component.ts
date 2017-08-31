@@ -13,11 +13,14 @@ export class AppComponent implements OnInit {
   constructor(
   	private route: ActivatedRoute,
     private router: Router
-  ) {
-
-  }
+  ) { }
 
   public ngOnInit(): void {
 
   }
+
+  public onDeactivate(): void {
+    document.body.scrollTop = 0;
+  }
+
 }

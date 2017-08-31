@@ -1,7 +1,7 @@
 <div class="wrapper">
   <div data-cmp-navigation></div>
     
-  <router-outlet></router-outlet>
+  <router-outlet (deactivate)="onDeactivate()"></router-outlet>
 </div>
 
 <div data-cmp-suggestion></div>
