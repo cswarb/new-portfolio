@@ -1,7 +1,12 @@
-<div class="scroll-anchor post-content__image"
+<div class="post-content__image scroll-anchor"
     id="scroll-anchor-ref"
-    [attr.data-image-default]="defaultImageUrl" 
-    [ngStyle]="activeImage"
+    [ngStyle]="anchorProps"
 	[ngClass]="state">
+	<span class="post-content__image__wrapper" *ngFor="let section of sectionData">
+		<div *ngIf="activeImage === section.id + 1"
+			style.background="url({{section.imageUrl}})"
+			class="post-content__image__content">
+		</div>
+	</span>
 	<span class="post-content__image__number">0{{activeNumber}}</span>	
 </div>

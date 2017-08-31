@@ -3,7 +3,23 @@
 		filter: grayscale(1);
 		width: 100%;
     	height: 100%;
+		height: 90vh!important;
     	background-color: #f5f5f5;
+    	&__content {
+    		z-index: 1;
+    		position: absolute;
+	    	top: 0;
+	    	left:0;
+	    	width: 100%;
+    		height: 100%;
+    	}
+    	&__wrapper {
+    		position: absolute;
+	    	top: 0;
+	    	left:0;
+	    	width: 100%;
+    		height: 100%;
+    	}
 		&__number {
 			position: absolute;
 			font-family: "TF Opicular Bold";
@@ -12,36 +28,48 @@
 			margin: 0;
 			top: 2.5rem;
 			left: -1.5rem;
+			z-index: 99;
 		}
 	}
 }
 
 .scroll-anchor {
-	height: 90vh!important;
 	&.resting {
 		left: 0!important;
 		position: relative!important;
 		top: 0!important;
 		width: auto!important;
-		background-size: cover!important;
-		background-repeat: no-repeat!important;
-		background-position: center!important;
-		transition: background-image 0.25s ease-in-out!important;
+		> .post-content__image__wrapper {
+			> .post-content__image__content {
+				background-size: cover!important;
+				background-repeat: no-repeat!important;
+				background-position: center!important;
+				transition: background-image 0.25s ease-in-out!important;
+			}
+		}
 	}
 	&.fixed {
 		position: fixed!important;
 		top: 5vh!important;
-		background-size: cover!important;
-		background-repeat: no-repeat!important;
-		background-position: center!important;
-		transition: background-image 0.25s ease-in-out!important;
+		> .post-content__image__wrapper {
+			> .post-content__image__content {
+				background-size: cover!important;
+				background-repeat: no-repeat!important;
+				background-position: center!important;
+				transition: background-image 0.25s ease-in-out!important;
+			}
+		}
 	}
 	&.end {
 		left: 0!important;
 		position: absolute!important;
-		background-size: cover!important;
-		background-repeat: no-repeat!important;
-		background-position: center!important;
-		transition: background-image 0.25s ease-in-out!important;
+		> .post-content__image__wrapper {
+			> .post-content__image__content {
+				background-size: cover!important;
+				background-repeat: no-repeat!important;
+				background-position: center!important;
+				transition: background-image 0.25s ease-in-out!important;
+			}
+		}
 	}
 }

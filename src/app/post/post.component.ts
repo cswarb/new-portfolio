@@ -19,7 +19,6 @@ export class PostComponent implements OnInit {
 
 	ngOnInit() {
 		this.post = this.route.snapshot.data["post"];
-		console.log(this.post);
 		this.isMobile();
 	}
 

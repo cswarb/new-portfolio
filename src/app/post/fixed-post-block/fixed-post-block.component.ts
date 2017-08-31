@@ -17,22 +17,22 @@ export class FixedPostBlockComponent implements AfterViewInit  {
 	private images: any = [];
 
 	private activeNumber: number = 1;
-	private activeImage = {
-		"backgroundImage": "",
-		"left": "",
+	private anchorProps = {
 		"width": "",
 		"top": ""
 	};
+	private activeImage = 1;
 
 	private state: any = false;
 
 	@Input() defaultImageUrl = "";
+	@Input() sectionData = [];
 
 	@HostListener("window:scroll", this.onWindowScroll)
 	public onWindowScroll() {
 		//Initialise the scrolling logic and image switching logic
-		this.initialiseScrollingLogic();
-		this.initialiseSwitchingLogic();
+		this.initialiseAnchor();
+		this.initialiseImageSwitching();
 	}
 
 	@HostListener("window:resize", this.onWindowResize)
@@ -40,6 +40,7 @@ export class FixedPostBlockComponent implements AfterViewInit  {
 		//Reset the offsets
 		this.anchorPointStart = this.getOffset(this.anchorPointStartElement);
 		this.anchorPointEnd = this.getOffset(this.anchorPointEndElement);
+		this.createImageObject();
 	}
 
 	constructor(private element: ElementRef) {
@@ -55,14 +56,12 @@ export class FixedPostBlockComponent implements AfterViewInit  {
 			this.anchorPointEnd = this.getOffset(this.anchorPointEndElement);
 
 			//Create an object with our images and offsets in
-			this.detectImageSwitchTriggers();
-
-			//Set the default image fro thr block
-			this.activeImage["backgroundImage"] = `url("${this.anchorPointStartElement.getAttribute('data-image-default')}")`;
+			this.createImageObject();
 		});
 	}
 
-	public detectImageSwitchTriggers(): void {
+	public createImageObject(): void {
+		this.images.length = 0;
 		let images = Array.from(document.querySelectorAll("[data-image-trigger]"));
 		for (var i = 0; i < images.length; i++) {
 			let image = images[i];
@@ -74,25 +73,24 @@ export class FixedPostBlockComponent implements AfterViewInit  {
 		};
 	}
 
-	public initialiseSwitchingLogic() {
+	public initialiseImageSwitching() {
 		let newImage = null;
 		this.images.forEach((image) => {
 			//Check the offset
 			if(document.body.scrollTop >= (image.offsetTop - this.vhToPixel(50))) {
-				this.activeNumber = image.id;
-				//Don't assign the image to the view yet - it will cause a jarring switch between multiple images
+				//Don't assign the props to the view yet - it will cause a jarring switch between multiple images
 				newImage = image;
 			};
 		});
 		if(newImage) {
-			this.activeImage["backgroundImage"] = `url("${newImage.imageSrc}")`;
+			this.activeImage = this.activeNumber = newImage.id;
 		};
 	}
 
-	public initialiseScrollingLogic(): void {
+	public initialiseAnchor(): void {
 		if(document.body.scrollTop >= (this.anchorPointStart.top - this.vhToPixel(5))) {
 			this.setState("fixed");
-			this.activeImage["width"] = this.pxString(this.anchorPointStartElement.offsetWidth);
+			this.anchorProps["width"] = this.pxString(this.anchorPointStartElement.offsetWidth);
 		} else {
 			this.setState("resting");
 		};
@@ -100,8 +98,8 @@ export class FixedPostBlockComponent implements AfterViewInit  {
 		//Makes sure it stops at the last paragraph element
 		if(window.pageYOffset >= (this.anchorPointEnd.top - this.vhToPixel(5))) {
 			this.setState("end");
-			this.activeImage["top"] = (this.pxString(this.anchorPointEnd.top - this.anchorPointStart.top));
-			this.activeImage["width"] = this.pxString(this.anchorPointStartElement.offsetWidth);
+			this.anchorProps["top"] = (this.pxString(this.anchorPointEnd.top - this.anchorPointStart.top));
+			this.anchorProps["width"] = this.pxString(this.anchorPointStartElement.offsetWidth);
 		};
 	}
 
