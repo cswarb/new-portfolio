@@ -21,13 +21,14 @@
 }
 
 .underline {
+    display: inline-block;
     &:before {
         content: "";
         width: 100%;
         display: block;
         border: solid 1px #D5D5D5;
         position: absolute;
-        bottom: 0.4rem;
+        bottom: 0.5rem;
         left: 0;
     }
 }

@@ -26,7 +26,7 @@
 	<div class="right-side">
 		<section 
 			*ngFor="let section of post.sections; let i = index" 
-			[id]="i === post.sections.length - 1 ? 'scroll-anchor-ref-end' : ''" 
+			[id]="i === post.sections.length - 1 ? 'scroll-anchor-ref-end' : ''"
 			class="post-content__wrapper" 
 			id="scroll-anchor-ref" [attr.data-image-trigger]="section.imageUrl">
 			<h4 class="post-content__title">{{section.title}}</h4>

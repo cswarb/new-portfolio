@@ -1,4 +1,4 @@
-import { Component, Directive, ElementRef, HostListener, HostBinding, OnInit } from "@angular/core";
+import { Component, Directive, ElementRef, HostListener, HostBinding, OnInit, AfterViewInit } from "@angular/core";
 import { DOCUMENT } from "@angular/platform-browser";
 
 @Component({
@@ -6,7 +6,7 @@ import { DOCUMENT } from "@angular/platform-browser";
   templateUrl: "./fixed-post-block.component.html",
   styleUrls: ["./fixed-post-block.component.scss"]
 })
-export class FixedPostBlockComponent implements OnInit {
+export class FixedPostBlockComponent implements AfterViewInit  {
 
 	private anchorPointStartElement;
 	private anchorPointStart;
@@ -37,7 +37,7 @@ export class FixedPostBlockComponent implements OnInit {
 	constructor(private element: ElementRef) {
 	}
 
-	ngOnInit() {
+	ngAfterViewInit() {
 		//Ensure the post info component has rendered - Needs better implementation
 		setTimeout(() => {
 			//Store the references we need
@@ -51,7 +51,7 @@ export class FixedPostBlockComponent implements OnInit {
 
 			//Set the default image fro thr block
 			this.element.nativeElement.style.background = `url("${this.anchorPointStartElement.getAttribute('data-image-default')}")`;
-		}, 0);
+		});
 	}
 
 	public detectImageSwitchTriggers(): void {
@@ -67,12 +67,17 @@ export class FixedPostBlockComponent implements OnInit {
 	}
 
 	public initialiseSwitchingLogic() {
+		let activeImage = null;
 		this.images.forEach((image) => {
+			//Check the offset
 			if(document.body.scrollTop >= (image.offsetTop - this.vhToPixel(50))) {
-				this.element.nativeElement.style.background = `url("${image.imageSrc}")`;
 				this.number = image.id;
+				activeImage = image;
 			};
 		});
+		if(activeImage) {
+			this.element.nativeElement.style.background = `url("${activeImage.imageSrc}")`;
+		};
 	}
 
 	public initialiseScrollingLogic(): void {
