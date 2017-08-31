@@ -53,6 +53,7 @@ export class FixedPostBlockComponent implements AfterViewInit  {
 	}
 
 	public initialiseAnchor(): void {
+		if(!this.anchorPointStart.hasOwnProperty("top")) return;
 		if(document.body.scrollTop >= (this.anchorPointStart.top - this.vhToPixel(5))) {
 			this.setState("fixed");
 			this.anchorProps["width"] = this.pxString(this.anchorPointStartElement.offsetWidth);
