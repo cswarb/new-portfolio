@@ -50,7 +50,12 @@
 
 @font-face {
   font-family: "GT";
-  src: url("./assets/fonts/./gtamerica/GT-America-Mono-Regular-v1.otf") format("opentype");
+  src: url("./assets/fonts/gtamerica/GT-America-Mono-Regular-v1.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "GT Regular";
+  src: url("./assets/fonts/gtamerica/GT-America-Regular.woff") format("woff");
 }
 
 *, *:before, *:after {

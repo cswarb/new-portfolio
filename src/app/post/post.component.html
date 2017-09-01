@@ -1,51 +1,50 @@
-
-<div class="article article__hero">
-	<p class="post-content__type">{{post?.tag}}</p>
-	<h3 class="post-content__hero-title">{{post?.title}}</h3>
-	<a class="post-content__link" href="#" target="_BLANK">{{post?.url}}</a>
-</div>
-
-<div data-cmp-post-info [splashText]="post?.meta?.splashText" [year]="post?.meta?.year" [role]="post?.meta?.role" [technologies]="post?.meta?.technologies"></div>
-
-<article class="flex article__inner">
-	<div class="left-side">
-		<!-- <img src="./assets/img/snow.png" alt=""> -->
+<div class="container">
+	<div class="article article__hero">
+		<p class="post-content__type">{{post?.tag}}</p>
+		<h3 class="post-content__hero-title">{{post?.title}}</h3>
+		<a class="post-content__link" href="#" target="_BLANK">{{post?.url}}</a>
 	</div>
-	<div class="right-side">
-		<section class="post-content__wrapper">
-			<h4 class="post-content__title">{{post?.introduction?.title}}</h4>
-			<p class="post-content__paragraph">{{post?.introduction?.content}}</p>
-		</section>
-	</div>
-</article>
 
-<article *ngIf="!isMobile()" class="flex article__inner">
-	<div class="left-side blank">
-		<div data-cmp-fixed-block [sectionData]="post?.sections" [defaultImageUrl]="post.imageUrl"></div>
-	</div>
-	<div class="right-side">
-		<section 
-			*ngFor="let section of post?.sections; let i = index" 
-			[id]="i === post.sections.length - 1 ? 'scroll-anchor-ref-end' : ''"
-			[attr.data-image-trigger]="section?.imageUrl"
-			class="post-content__wrapper" 
-			id="scroll-anchor-ref">
-			<h4 class="post-content__title">{{section?.title}}</h4>
-			<p class="post-content__paragraph">{{section?.content}}</p>
-		</section>
-	</div>
-</article>
+	<div data-cmp-post-info [splashText]="post?.meta?.splashText" [year]="post?.meta?.year" [role]="post?.meta?.role" [technologies]="post?.meta?.technologies"></div>
+
+	<article class="flex article__inner">
+		<div class="left-side"></div>
+		<div class="right-side">
+			<section class="post-content__wrapper">
+				<h4 class="post-content__title">{{post?.introduction?.title}}</h4>
+				<p class="post-content__paragraph">{{post?.introduction?.content}}</p>
+			</section>
+		</div>
+	</article>
+
+	<article *ngIf="!isMobile()" class="flex article__inner">
+		<div class="left-side blank">
+			<div data-cmp-fixed-block [sectionData]="post?.sections" [defaultImageUrl]="post.imageUrl"></div>
+		</div>
+		<div class="right-side">
+			<section 
+				*ngFor="let section of post?.sections; let i = index" 
+				[id]="i === post.sections.length - 1 ? 'scroll-anchor-ref-end' : ''"
+				[attr.data-image-trigger]="section?.imageUrl"
+				class="post-content__wrapper" 
+				id="scroll-anchor-ref">
+				<h4 class="post-content__title">{{section?.title}}</h4>
+				<p class="post-content__paragraph">{{section?.content}}</p>
+			</section>
+		</div>
+	</article>
 
 
-<article *ngIf="isMobile()" class="flex article__inner">
-	<div class="right-side">
-		<section *ngFor="let section of post?.sections" class="post-content__wrapper">
-			<h4 class="post-content__title">{{section?.title}}</h4>
-			<p class="post-content__paragraph">{{section?.content}}</p>
-		</section>
-	</div>
-</article>
+	<article *ngIf="isMobile()" class="flex article__inner">
+		<div class="right-side">
+			<section *ngFor="let section of post?.sections" class="post-content__wrapper">
+				<h4 class="post-content__title">{{section?.title}}</h4>
+				<p class="post-content__paragraph">{{section?.content}}</p>
+			</section>
+		</div>
+	</article>
 
-<div class="post-content__images">
-	<h1>Images</h1>
+	<div class="post-content__images">
+		<h1>Images</h1>
+	</div>
 </div>

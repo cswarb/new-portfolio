@@ -13,9 +13,9 @@
         font-family: "TF Opicular Regular";
         font-weight: 400;
         color: #31343F;
-        line-height: 1.5;
-        font-size: 2.3rem;
-        letter-spacing: 0.5px;
+        line-height: 1.6;
+        font-size: 2.4rem;
+        letter-spacing: 0.1px;
         z-index: 2;
         // margin-bottom: 2rem;
     }
@@ -54,7 +54,7 @@
 }
 
 .full-height__section {
-    padding: 3rem 10rem;
+    padding: 3rem 12.5rem;
     height: auto;
     min-height: 100vh;
     background-color: transparent;
@@ -63,8 +63,11 @@
     align-items: center;
     margin: 10rem 0 0 0;
     position: relative;
+    &.align-start {
+        align-items: flex-start;
+    }
     &.full {
-        padding: 3rem 0;
+        padding: 10rem 0 0 0;
     }
     &.celestial {
         &:before {
@@ -73,7 +76,7 @@
             width: 20rem;
             height: 20rem;
             display: block;
-            background-color: #FFF710;
+            background-color: #FFAF1B;
             position: absolute;
             top: 5rem;
             left: -1rem;

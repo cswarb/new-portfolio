@@ -1,15 +1,17 @@
-<nav class="nav">
-	<div>
-		<a [routerLink]="['index']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav__link">
-			<h5 class="nav__title">Chris Swarbrick</h5>
-			<h5 class="nav__sub-title">Digital Designer — Developer</h5>
-		</a>
-	</div>
-	<div>
-		<ul class="nav__list_container">
-			<li class="nav__list_item">
-				<a [routerLink]="['about-contact']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav__list_item__link">About + Contact <span class="icon maximize"></span></a>
-			</li>
-		</ul>
-	</div>
-</nav>
+<div class="container">
+	<nav class="nav">
+		<div>
+			<a [routerLink]="['index']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav__link">
+				<h5 class="nav__title">Chris Swarbrick</h5>
+				<h5 class="nav__sub-title">Digital Designer — Developer</h5>
+			</a>
+		</div>
+		<div>
+			<ul class="nav__list_container">
+				<li class="nav__list_item">
+					<a [routerLink]="['about-contact']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav__list_item__link">About + Contact <span class="icon maximize"></span></a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+</div>
