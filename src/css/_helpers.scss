@@ -33,6 +33,10 @@
     }
 }
 
+.active {
+    border-bottom: 2px solid black;
+}
+
 .contrast-block {
     display: inline-block;
     background-color: #000;
