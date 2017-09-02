@@ -52,24 +52,20 @@
 	],
 	"images": [
 		{
-			"title": "Test Title",
+			"title": "Initial prototypes",
 			"imageUrl": "/content/posts/tube-finder/img/1.jpg"
 		},
 		{
-			"title": "Test Title",
+			"title": "The final navigation design",
 			"imageUrl": "/content/posts/tube-finder/img/2.jpg"
 		},
 		{
-			"title": "Test Title",
+			"title": "Auto-complete component",
 			"imageUrl": "/content/posts/tube-finder/img/3.jpg"
 		},
 		{
-			"title": "Test Title",
+			"title": "Screen overview",
 			"imageUrl": "/content/posts/tube-finder/img/4.jpg"
-		},
-		{
-			"title": "Test Title",
-			"imageUrl": "/content/posts/tube-finder/img/5.jpg"
 		}
 	]
 }

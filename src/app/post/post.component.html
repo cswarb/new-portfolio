@@ -44,15 +44,19 @@
 		</div>
 	</article>
 
-	<div class="post-content__images">
-		<h5 class="post-content__section-title">Images</h5>
-		<div class="post-content__image-meta__wrapper">
-			<figure class="post-content__image-meta" *ngFor="let image of post?.images">
-				<div class="post-content__image-meta__item">
-					<img [src]="image.imageUrl" [alt]="image.title">
-				</div>
-				<figcaption class="post-content__image-meta__title">{{image.title}}</figcaption>
-			</figure>
+	<hr class="post-content__separator">
+
+	<div class="article__inner">
+		<div class="post-content__images">
+			<div class="post-content__image-meta__wrapper">
+				<figure class="post-content__image-meta" *ngFor="let image of post?.images">
+					<figcaption class="post-content__image-meta__title">{{image.title}}</figcaption>
+					<div class="post-content__image-meta__item" [ngStyle]="createImage(image.imageUrl)">
+						<!-- <img [src]="image.imageUrl" [alt]="image.title"> -->
+					</div>
+				</figure>
+			</div>
 		</div>
 	</div>
+
 </div>
