@@ -14,7 +14,7 @@
         align-self: flex-end;
         display: inline-block;
         color: #35363a;
-        font-family: "TF Opicular Bold";
+        font-family: $bold-font-stack;
         font-weight: 400;
         font-size: 1.5rem;
         margin: 0 0 2rem 0;
@@ -162,6 +162,28 @@
 
 //Fixed post block
 .post-content {
+    &__section-title {
+        font-size: 2rem;
+        margin: 0 0 2rem 0;
+        font-family: $bold-font-stack;
+    }
+    &__image-meta {
+        margin: 0;
+        // display: flex;
+        // flex-flow: row nowrap;
+        margin-bottom: 5rem;
+        text-align: center;
+        &__wrapper {
+        }
+        &__item {
+            margin: 0 0 1rem 0;
+            // flex : 5;
+        }
+        &__title {
+            // flex: 1;
+            font-size: 1.5rem;
+        }
+    }
     &__image {
         filter: grayscale(1);
         width: 100%;
@@ -190,43 +212,9 @@
             width: 100%;
             height: 100%;
             opacity: 1;
-            // transition: opacity 0.5s ease-in-out;
-            // &.fadein {
-            //  opacity: 1;
-            // }
-        }
-        &__wrapper {
-            position: absolute;
-            top: 0;
-            left:0;
-            width: 100%;
-            height: 100%;
-        }
-    }
-}
-
-
-
-
-
-//post image
-.post-content {
-    &__image {
-        &__content {
-            z-index: 1;
-            position: absolute;
-            top: 0;
-            left:0;
-            width: 100%;
-            height: 100%;
-            opacity: 1;
             background-size: cover!important;
             background-repeat: no-repeat!important;
             background-position: center!important;
-            // transition: opacity 0.5s ease-in-out;
-            // &.fadein {
-            //  opacity: 1;
-            // }
         }
         &__wrapper {
             position: absolute;
@@ -237,7 +225,7 @@
         }
         &__number {
             position: absolute;
-            font-family: "TF Opicular Bold";
+            font-family: $bold-font-stack;
             color: #000;
             font-size: 2.5rem;
             margin: 0;

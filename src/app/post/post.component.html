@@ -45,6 +45,14 @@
 	</article>
 
 	<div class="post-content__images">
-		<h1>Images</h1>
+		<h5 class="post-content__section-title">Images</h5>
+		<div class="post-content__image-meta__wrapper">
+			<figure class="post-content__image-meta" *ngFor="let image of post?.images">
+				<div class="post-content__image-meta__item">
+					<img [src]="image.imageUrl" [alt]="image.title">
+				</div>
+				<figcaption class="post-content__image-meta__title">{{image.title}}</figcaption>
+			</figure>
+		</div>
 	</div>
 </div>

@@ -7,6 +7,7 @@ export class Post {
 	"meta": Meta;
 	"introduction": Introduction;
 	"sections": Section[];
+	"images": Images[];
 }
 
 export class Meta {
@@ -30,4 +31,9 @@ export class Section {
 	"imageUrl": string;
 	"title": string;
 	"content": string;
+}
+
+export class Images {
+	"title": string;
+	"imageUrl": string;
 }

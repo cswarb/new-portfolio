@@ -49,5 +49,27 @@
 			"title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
 			"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla odio dignissimos rem cum consequatur ea, sit modi ab veniam eveniet, eum, maiores odit. Similique inventore culpa, eius fuga odio officiis?" 
 		}
+	],
+	"images": [
+		{
+			"title": "Test Title",
+			"imageUrl": "/content/posts/tube-finder/img/1.jpg"
+		},
+		{
+			"title": "Test Title",
+			"imageUrl": "/content/posts/tube-finder/img/2.jpg"
+		},
+		{
+			"title": "Test Title",
+			"imageUrl": "/content/posts/tube-finder/img/3.jpg"
+		},
+		{
+			"title": "Test Title",
+			"imageUrl": "/content/posts/tube-finder/img/4.jpg"
+		},
+		{
+			"title": "Test Title",
+			"imageUrl": "/content/posts/tube-finder/img/5.jpg"
+		}
 	]
 }
