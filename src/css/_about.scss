@@ -30,6 +30,19 @@
             margin: 1rem 0 0 0;
         }
     }
+    &__email {
+        position: fixed;
+        right: 0;
+        transform: rotate(270deg);
+        bottom: 13rem;
+        z-index: -1;
+        margin: 0;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        font-family: "GT";
+        letter-spacing: 1px;
+        font-weight: 400;
+    }
     &__meta {
         margin:0;
         text-transform: uppercase;
@@ -94,7 +107,7 @@
             position: absolute;
             top: -8rem;
             left: 2rem;
-            z-index: 2;
+            z-index: -1;
         }
         // &:after {
         //     content: "";
