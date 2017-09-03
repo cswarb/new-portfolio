@@ -9,6 +9,7 @@ import { AboutComponent } from "./about/about.component";
 import { PostComponent } from "./post/post.component";
 
 import { PostResolverService } from "./post/post-resolver.service";
+import { IndexResolverService } from "./index/index-resolver.service";
 
 //Either configure routes in this Routing Module or within the module itself but not in both.
 @NgModule({
@@ -21,7 +22,10 @@ import { PostResolverService } from "./post/post-resolver.service";
 			},
 			{
 				path: "index",
-				component: IndexComponent
+				component: IndexComponent,
+				resolve: {
+					posts: IndexResolverService
+				}
 			},
 			{
 				path: "about-contact",

@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { Router, ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: "[data-cmp-index]",
@@ -7,9 +8,12 @@ import { Component, OnInit } from "@angular/core";
 })
 export class IndexComponent implements OnInit {
 
-  constructor() { }
+	private posts: any;
 
-  ngOnInit() {
-  }
+	constructor(private route: ActivatedRoute) { }
+
+	ngOnInit() {
+		this.posts = this.route.snapshot.data["posts"];
+	}
 
 }

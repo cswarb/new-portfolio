@@ -19,6 +19,7 @@ import { FixedPostBlockComponent } from './post/fixed-post-block/fixed-post-bloc
 
 import { HeadersService } from './shared/headers/headers.service';
 import { PostResolverService } from './post/post-resolver.service';
+import { IndexResolverService } from './index/index-resolver.service';
 import { PostService } from './post/post.service';
 import { AppConstants } from './app.constants';
 import { PostImageComponent } from './post/fixed-post-block/post-image/post-image.component';
@@ -43,7 +44,13 @@ import { PostImageComponent } from './post/fixed-post-block/post-image/post-imag
     RouterModule,
     AppRoutingModule
   ],
-  providers: [AppConstants, HeadersService, PostService, PostResolverService],
+  providers: [
+    AppConstants,
+    HeadersService,
+    PostService,
+    PostResolverService,
+    IndexResolverService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

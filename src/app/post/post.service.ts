@@ -27,4 +27,18 @@ export class PostService {
 			});
 	}
 
+	getPosts(): Promise<any> {
+		return this._Http
+			.get(this._AppConstants.BASE_URL + this._AppConstants.CONTENT_DIR + "/posts.json", {
+				headers: this._HeadersService.getHeaders()
+			})
+			.toPromise()
+			.then((response: any) => {
+				return Promise.resolve(response.json());
+			})
+			.catch((error: any) => {
+				return Promise.reject(error);
+			});
+	}
+
 }

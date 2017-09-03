@@ -45,27 +45,14 @@
     </div> -->
 
     <div class="article__inner">
-      <div class="jumbo_text no-margin-top">
-        <a [routerLink]="['/post/', 'tube-finder']" data-bg-text="Tu.">
-          <h2>TFL Tube Finder.</h2>
-          <p class="text-wipe">How can checking a tube status be <span class="strikethrough">bearable</span> sublime? <span class="contrast-text">Responsive UI, clear application flow, and built for speed.</span> These were the 3 key points I kept in mind when building my version of a tube checker</p>
+
+      <div *ngFor="let post of posts.posts" class="jumbo_text no-margin-top">
+        <a [routerLink]="['/post/', post.link]">
+          <h2>{{post?.title}}</h2>
+          <p class="text-wipe" [innerHTML]="post?.description"></p>
         </a>
       </div>
 
-      <div class="jumbo_text">
-        <a [routerLink]="['/post/', 'watch-icons']" data-bg-text="Wa.">
-          <h2>Watch Icons.</h2>
-          <p class="text-wipe">I’ll reserve my most <span class="contrast-text">severe critque</span> for the folding clasp, which added neither comfort nor functionality to my enjoyment of this watch</p>
-        </a>
-      </div>
-
-      <div class="jumbo_text">
-        <a [routerLink]="['/post/', 'chris-makes-web']" data-bg-text="Wa.">
-          <h2>Chris Makes Web.</h2>
-          <p class="text-wipe">I’ll reserve my most severe critque for the folding clasp, which added neither comfort nor functionality to my enjoyment of this watch</p>
-        </a>
-      </div>
     </div>
-
     
 </div>
