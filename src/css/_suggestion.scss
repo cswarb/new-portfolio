@@ -66,6 +66,8 @@
         padding: 0;
         position: absolute;
         bottom: 3rem;
+        min-width: 40rem;
+        max-width: 90vw;
     }
     &__item {
         font-size: 3.5rem;
@@ -78,27 +80,28 @@
             position: relative;
             transition: all 0.2s ease-in-out;
             font-family: $primary-font-stack;
-            &:before {
-                content: "";
-                width: 10px;
-                height: 10px;
-                border: 2px solid #31343F;
-                border-radius: 50%;
-                position: absolute;
-                left: -4rem;
-                top: 1.1rem;
-                /*transition: all 0.2s linear;*/
-                animation: pulse 1.75s cubic-bezier(0.79, 0.58, 0.54, 0.76) forwards infinite;
-            }
+            width: 100%;
+            display: block;
+            // &:before {
+            //     content: "";
+            //     width: 10px;
+            //     height: 10px;
+            //     border: 2px solid #31343F;
+            //     border-radius: 50%;
+            //     position: absolute;
+            //     left: -4rem;
+            //     top: 1.1rem;
+            //     /*transition: all 0.2s linear;*/
+            //     animation: pulse 1.75s cubic-bezier(0.79, 0.58, 0.54, 0.76) forwards infinite;
+            // }
             &:hover {
-                text-decoration: underline;
                 &:after {
                     content: "";
                     width: 25px;
                     height: 10px;
                     position: absolute;
-                    right: -4rem;
-                    top: 1.4rem;
+                    right: 0;
+                    top: 50%;
                     opacity:0.6;
                     background: url("./assets/img/right-arrow.svg");
                     background-repeat: no-repeat;

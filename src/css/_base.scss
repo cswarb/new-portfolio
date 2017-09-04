@@ -90,3 +90,25 @@ noscript {
     line-height: 1.2;
     letter-spacing: 0.8px;
 }
+
+
+svg {
+  display: inline-block;
+  width: 100%;
+}
+
+svg path {
+  fill: none;
+}
+
+svg text {
+  font-family: $primary-font-stack;
+  &.font {
+    &-medium {
+      font-size: 2.3rem;
+    }
+    &-large {
+      font-size: 3.5rem;
+    }
+  }
+}

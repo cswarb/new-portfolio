@@ -34,8 +34,8 @@ export class PostComponent implements OnInit {
 		return {
 			"background": `url(${imageUrl})`,
 			"backgroundSize": "cover",
-			"width": "45rem",
-			"height": "35rem"
+			"width": "100%",
+			"height": "auto"
 		}
 	}
 

@@ -2,7 +2,10 @@
 	"type": "POST",
 	"tag": "Design/Development Project",
 	"title": "Checking a tube status has never been so modern.",
-	"url": "http://www.project.com/dashboard",
+	"outbound": {
+		"alive": true,
+		"url": "http://www.project.com/dashboard"
+	},
 	"imageUrl": "/content/posts/tube-finder/img/1.jpg",
 	"meta": {
 		"splashText": "The TFL tube finder app was a self-initiated work. One of my goals was to use the opportunity to help me learn the new Angular 2+ framework.",

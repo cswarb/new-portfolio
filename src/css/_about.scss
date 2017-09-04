@@ -9,7 +9,7 @@
         margin-bottom: 0.5rem;
     }
     &__content {
-        margin: 0;
+        margin: 0 auto;
         font-family: $primary-font-stack;
         font-weight: 400;
         color: #000;
@@ -18,16 +18,18 @@
         letter-spacing: -0.5px;
         z-index: 2;
         max-width: 50rem;
+        text-align: center;
         // margin-bottom: 2rem;
         &--sub {
-            max-width: 50rem;
+            max-width: 45rem;
             line-height: 1.8;
             letter-spacing: 0.5px;
             font-size: 1.3rem;
             color: grey;
-            font-family: "GT";
+            // font-family: "GT";
             font-weight: 400;
-            margin: 1rem 0 0 0;
+            text-align: center;
+            margin: 1rem auto 0 auto;
         }
     }
     &__email {
@@ -126,7 +128,7 @@
                 background-color: rgba(7, 14, 62, 0.55);
                 left: auto;
                 right: 16rem;
-                z-index: 9999;
+                z-index: 1;
                 top: 5rem;
             }
             &:after {

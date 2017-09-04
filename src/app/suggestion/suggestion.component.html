@@ -11,6 +11,18 @@
   </div> -->
   <div class="suggestion__stamp">Not sure what to read first? Try this —</div>
   <ul class="suggestion__wrapper">
-    <li class="suggestion__item"><a class="suggestion__item__link" [routerLink]="['/post/', 'tube-finder']">TFL Tube Finder</a></li>
+    <li class="suggestion__item">
+      <a class="suggestion__item__link" [routerLink]="['/post/', 'tube-finder']">
+        <svg height="80">
+          <title>TFL Tube Finder</title>
+          <path id="swoosh" d="M0,68.8886719 C63.6250036,59.703776 133.460159,59.703776 209.505465,68.8886719 C285.550772,78.0735677 395.361357,78.0735677 538.93722,68.8886719"></path>
+          <text class="font-large" letter-spacing="1">
+          <textPath xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#swoosh">
+            <tspan x="0" dx="35%" text-anchor="middle">TFL Tube Finder</tspan>
+          </textPath>
+          </text>
+        </svg>
+      </a>
+    </li>
   </ul>
 </div>

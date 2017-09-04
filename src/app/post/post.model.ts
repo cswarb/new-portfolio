@@ -2,12 +2,17 @@ export class Post {
 	"type": string;
 	"tag": string;
 	"title": string;
-	"url": string;
+	"outbond": OutboundMeta;
 	"imageUrl": string;
 	"meta": Meta;
 	"introduction": Introduction;
 	"sections": Section[];
 	"images": Images[];
+}
+
+export class OutboundMeta {
+	"alive": boolean;
+	"url": string;
 }
 
 export class Meta {
