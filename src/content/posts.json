@@ -2,21 +2,31 @@
 	"posts": [
 		{
 			"title": "TFL Tube Finder.",
-			"description": "How can checking a tube status be <span class='strikethrough'>bearable</span> sublime? <span class='contrast-text'>Responsive UI, clear application flow, and built for speed.</span> These were the 3 key points I kept in mind when building my version of a tube checker",
+			"status": true,
+			"description": "How can checking a tube status be <span class='strikethrough'>bearable</span> awesome? <span class='contrast-text'>Responsive UI, clear application flow, and built for speed.</span> These were the 3 key points I kept in mind when building my version of a tube checker",
 			"imageUrl": "/content/posts/tube-finder/img/1.jpg",
 			"link": "tube-finder"
 		},
 		{
 			"title": "Watch Icons.",
-			"description": "I’ll reserve my most <span class='contrast-text'>severe critque</span> for the folding clasp, which added neither comfort nor functionality to my enjoyment of this watch",
-			"imageUrl": "/content/posts/tube-finder/img/1.jpg",
+			"status": false,
+			"description": "— I’ll reserve my most <span class='contrast-text'>severe critque</span> for the folding clasp, which added neither comfort nor functionality to my enjoyment of this watch",
+			"imageUrl": "/content/posts/watch-icons/img/1.jpg",
 			"link": "watch-icons"
 		},
 		{
 			"title": "Chris Makes Web.",
-			"description": "I’ll reserve my most <span class='contrast-text'>severe critque</span> for the folding clasp, which added neither comfort nor functionality to my enjoyment of this watch",
-			"imageUrl": "/content/posts/tube-finder/img/1.jpg",
+			"status": false,
+			"description": "Making something for youself requires a lot of patience, time + effort. Version 17 turned out best",
+			"imageUrl": "/content/posts/chris-makes-web/img/1.jpg",
 			"link": "chris-makes-web"
+		},
+		{
+			"title": "Elliott & Cooper.",
+			"status": false,
+			"description": "Property management made simple",
+			"imageUrl": "/content/posts/elliott-cooper/img/1.jpg",
+			"link": "elliott-cooper"
 		}
 	]
 }

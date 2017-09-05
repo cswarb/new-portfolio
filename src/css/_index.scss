@@ -9,10 +9,44 @@
     font-size: 2.3rem;
     letter-spacing: 0.8px;
     margin: 20rem 0;
+    position: relative;
     color: #000;
+    &--inactive {
+        opacity: 0.5;
+        pointer-events: none;
+        &:hover {
+            cursor: not-allowed;
+        }
+        &:before {
+            content: "Coming Soon";
+            position: absolute;
+            top: 5rem;
+            transform: rotate(270deg);
+            right: 0;
+            font-size: 0.8rem;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+        }
+    }
     a {
+        display: block;
         color: #000;
         text-decoration: none;
+        position: relative;
+        // &:before {
+        //     content: "";
+        //     background: url("./assets/img/2.jpg");
+        //     background-size: cover;
+        //     background-position: center;
+        //     width: 30rem;
+        //     height: 30rem;
+        //     position: absolute;
+        //     right: 0;
+        //     top: 0;
+        //     z-index: -1;
+        // }
         h2 {
             margin: 0 0 1rem 0;
             font-size: 1.6rem;
@@ -26,6 +60,7 @@
             line-height: 1.2;
             letter-spacing: -0.8px;
             color: #000;
+            max-width: 90%;
         }
     }
 }

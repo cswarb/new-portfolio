@@ -59,6 +59,9 @@
         letter-spacing: 1.8px;
         font-family: $primary-font-stack;
         text-transform: uppercase;
+        border-bottom: 2px solid black;
+        display: inline-block;
+        width: 4rem;
     }
     &__wrapper {
         margin: 0;
@@ -82,6 +85,11 @@
             font-family: $primary-font-stack;
             width: 100%;
             display: block;
+            svg {
+                text {
+                    fill: #000;
+                }
+            }
             // &:before {
             //     content: "";
             //     width: 10px;
@@ -107,7 +115,6 @@
                     background-repeat: no-repeat;
                     background-size: 1rem;
                     background-position: center;
-                    transition: all 0.2s linear;
                 }
             }
         }

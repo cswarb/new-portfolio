@@ -5,6 +5,7 @@ export class Post {
 	"outbond": OutboundMeta;
 	"imageUrl": string;
 	"meta": Meta;
+	"finalThoughts": string;
 	"introduction": Introduction;
 	"sections": Section[];
 	"images": Images[];
