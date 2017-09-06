@@ -17,12 +17,11 @@ export class AppComponent implements OnInit {
 
   public ngOnInit(): void {
     this.router.events.subscribe((val) => {
-        console.log(val);
-        if(val instanceof NavigationEnd && val.url === "/index") {
+        if(val instanceof NavigationEnd && (val.url === "/index" || val.url === "/")) {
           this.index = true;
         } else {
           this.index = false;
-        }
+        };
     });
   }
 
