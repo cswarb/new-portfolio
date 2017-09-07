@@ -47,6 +47,11 @@
         //     top: 0;
         //     z-index: -1;
         // }
+        &:hover {
+            .contrast-text {
+                color: #e8d91c;
+            }
+        }
         h2 {
             margin: 0 0 1rem 0;
             font-size: 1.6rem;
@@ -61,6 +66,9 @@
             letter-spacing: -0.8px;
             color: #000;
             max-width: 90%;
+            .contrast-text {
+                transition: color 0.2s ease-in-out;
+            }
         }
     }
 }

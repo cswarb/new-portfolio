@@ -1,42 +1,41 @@
 .icon {
     display: inline-block;
     position: relative;
-        width: 14px;
-    height: 14px;
-    margin-right: 0.3rem;
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
 .icon.maximize {
     background: url("./assets/img/maximize.svg");
-    background-size: 0.9rem;
+    background-size: 1.5rem;
     background-repeat: no-repeat;
     background-position: top left;
 }
 
 .icon.instagram {
     background: url("./assets/img/insta.svg");
-    background-size: 0.9rem;
+    background-size: 1.5rem;
     background-repeat: no-repeat;
     background-position: top left;
 }
 
 .icon.linkedin {
         background: url("./assets/img/linkedin.svg");
-    background-size: 0.9rem;
+    background-size: 1.5rem;
     background-repeat: no-repeat;
     background-position: top left;
 }
 
 .icon.dribbble {
         background: url("./assets/img/dribbble.svg");
-    background-size: 0.9rem;
+    background-size: 1.5rem;
     background-repeat: no-repeat;
     background-position: top left;
 }
 
 .icon.github {
         background: url("./assets/img/github.svg");
-    background-size: 0.9rem;
+    background-size: 1.5rem;
     background-repeat: no-repeat;
     background-position: top left;
 }

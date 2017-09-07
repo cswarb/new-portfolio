@@ -37,6 +37,9 @@
 	position: relative;
 	min-height: 90vh;
 	flex-flow: row nowrap;
+	&--column {
+		flex-flow: column nowrap;
+	}
 	@media (max-width: 55rem) {
 		flex-flow: column nowrap;
 	}
