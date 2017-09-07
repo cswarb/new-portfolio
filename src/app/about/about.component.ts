@@ -14,8 +14,4 @@ export class AboutComponent implements OnInit {
 	ngOnInit() {
 	}
 
-	public copyEmail(): void {
-
-	}
-
 }

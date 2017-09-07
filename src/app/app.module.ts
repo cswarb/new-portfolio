@@ -23,6 +23,7 @@ import { IndexResolverService } from './index/index-resolver.service';
 import { PostService } from './post/post.service';
 import { AppConstants } from './app.constants';
 import { PostImageComponent } from './post/fixed-post-block/post-image/post-image.component';
+import { CopyToClipboardDirective } from './copy-to-clipboard/copy-to-clipboard.directive';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { PostImageComponent } from './post/fixed-post-block/post-image/post-imag
     SuggestionComponent,
     PostInfoComponent,
     FixedPostBlockComponent,
-    PostImageComponent
+    PostImageComponent,
+    CopyToClipboardDirective
   ],
   imports: [
     BrowserAnimationsModule,
