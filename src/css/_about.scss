@@ -42,18 +42,35 @@
     }
     &__email {
         z-index: 1;
-        margin: 0 auto;
+        margin: 0 auto 0.4rem auto;
         font-size: 3rem;
         position: relative;
         display: inline-block;
         border: 0;
-        border-bottom: 1px solid #d7d8d8;
+        // border-bottom: 1px solid #d7d8d8;
         letter-spacing: 1px;
         font-weight: 400;
         background: none;
         outline: 0;
+        width: 100%;
+        &__helper {
+            display: block;
+            position: relative;
+            font-size: 1rem;
+            letter-spacing: 1px;
+            line-height: 1;
+            color: #000;
+            text-transform: uppercase;
+            opacity: 0;
+        }
         &:hover {
             cursor: pointer;
+            + .text_section__email__helper {
+                opacity: 1;                
+            }
+        }
+        &.copied {
+            color: #e8d91c;
         }
     }
     &__meta {
