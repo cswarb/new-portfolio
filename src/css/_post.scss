@@ -283,6 +283,7 @@
         }
         &.fixed {
             position: fixed!important;
+            transform: translateZ(0);
             top: 5vh!important;
         }
         &.end {
