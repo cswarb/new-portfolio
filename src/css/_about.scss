@@ -149,11 +149,11 @@
         }
         &:after {
             content: "";
-            border-radius: 50%;
+            border-radius: 0;
             width: 2rem;
             height: 2rem;
             display: block;
-            background-color: rgba(0, 224, 121, 0.8);
+            border: 0.3rem solid rgba(0, 224, 121, 0.8);
             position: absolute;
             bottom: 20rem;
             right: 32rem;
@@ -168,7 +168,7 @@
                 top: 15rem;
             }
             &:after {
-                background-color: transparent;
+                border: none;
             }
         }
     }

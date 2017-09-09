@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, Router, NavigationEnd } from "@angular/router";
-import { RollTop } from "./router-animation";
+import { RollTop, Jelly } from "./router-animation";
 import { trigger, stagger, animate, style, group, query, transition } from "@angular/animations";
 
 @Component({

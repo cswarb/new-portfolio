@@ -12,18 +12,19 @@ import { IndexComponent } from "./index/index.component";
 import { AboutComponent } from "./about/about.component";
 import { PostComponent } from "./post/post.component";
 import { NavigationComponent } from "./navigation/navigation.component";
-import { FiltersComponent } from './filters/filters.component';
-import { SuggestionComponent } from './suggestion/suggestion.component';
-import { PostInfoComponent } from './post/post-info/post-info.component';
-import { FixedPostBlockComponent } from './post/fixed-post-block/fixed-post-block.component';
+import { FiltersComponent } from "./filters/filters.component";
+import { SuggestionComponent } from "./suggestion/suggestion.component";
+import { PostInfoComponent } from "./post/post-info/post-info.component";
+import { FixedPostBlockComponent } from "./post/fixed-post-block/fixed-post-block.component";
 
-import { HeadersService } from './shared/headers/headers.service';
-import { PostResolverService } from './post/post-resolver.service';
-import { IndexResolverService } from './index/index-resolver.service';
-import { PostService } from './post/post.service';
-import { AppConstants } from './app.constants';
-import { PostImageComponent } from './post/fixed-post-block/post-image/post-image.component';
-import { CopyToClipboardDirective } from './copy-to-clipboard/copy-to-clipboard.directive';
+import { HeadersService } from "./shared/headers/headers.service";
+import { PostResolverService } from "./post/post-resolver.service";
+import { IndexResolverService } from "./index/index-resolver.service";
+import { PostService } from "./post/post.service";
+import { AppConstants } from "./app.constants";
+import { PostImageComponent } from "./post/fixed-post-block/post-image/post-image.component";
+import { CopyToClipboardDirective } from "./copy-to-clipboard/copy-to-clipboard.directive";
+import { BurstDirective } from "./motion/burst.directive";
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { CopyToClipboardDirective } from './copy-to-clipboard/copy-to-clipboard.
     PostInfoComponent,
     FixedPostBlockComponent,
     PostImageComponent,
-    CopyToClipboardDirective
+    CopyToClipboardDirective,
+    BurstDirective
   ],
   imports: [
     BrowserAnimationsModule,
