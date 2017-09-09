@@ -1,8 +1,5 @@
-<div class="wrapper" [class.dark]="index">
-  <div data-cmp-navigation></div>
-  <main [@routerTransition]="getState(outlet)">
-  	<router-outlet #outlet="outlet" (deactivate)="onDeactivate()"></router-outlet>
-  </main>
+<div class="wrapper" [class.dark]="index" [@routerTransition]="getState(outlet)">
+	<div data-cmp-navigation></div>
+	<router-outlet #outlet="outlet" (deactivate)="onDeactivate()"></router-outlet>
 </div>
-
 <div data-cmp-suggestion></div>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, Router, NavigationEnd } from "@angular/router";
-import { slideLeft } from "./router-animation";
+import { RollTop } from "./router-animation";
 import { trigger, stagger, animate, style, group, query, transition } from "@angular/animations";
 
 @Component({
@@ -10,7 +10,7 @@ import { trigger, stagger, animate, style, group, query, transition } from "@ang
     styleUrls: ["./app.component.scss"],
     animations: [
       trigger("routerTransition", [
-        transition("index => about", slideLeft)
+        transition("* <=> *", RollTop)
       ])
     ]
 })
