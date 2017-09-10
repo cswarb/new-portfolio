@@ -8,7 +8,7 @@
     margin: 0 0 5rem 0; //margin: 0 7rem 23rem 7rem;
     padding-top: 2rem;
     @media (max-width: 55rem) {
-        margin: 0 0 10rem 0;
+        margin: 0 0 4rem 0;
     }
     &__title {
         margin: 0;
@@ -19,6 +19,9 @@
         color: #3b3e44;
         overflow: hidden;
         display: inline-block;
+        @media (max-width: 55rem) {
+            font-size: 1rem;
+        }
     }
     &__sub-title {
         margin: 0;
@@ -26,6 +29,9 @@
         font-size: 1.2rem;
         letter-spacing: 0.2px;
         font-weight: 400;
+        @media (max-width: 55rem) {
+            font-size: 1rem;
+        }
     }
     &__link {
         text-decoration: none;
@@ -58,23 +64,11 @@
             display: inline-block;
             font-size: 1.2rem;
             position: relative;
-            // &:before {
-            //     content: "";
-            //     width: 0%;
-            //     height: 10px;
-            //     background-color: rgba(0, 245, 166, 0.4);
-            //     display: block;
-            //     position: absolute;
-            //     top: 50%;
-            //     left: -5%;
-            //     z-index: -1;
-            //     transition: width 0.2s ease-in-out;
-            // }
-            &:hover:before {
-                width: 50%;
-            }
             &:last-child {
                 margin-left: 4rem;
+                @media (max-width: 55rem) {
+                    margin-left: 0;
+                }
             }
             &__link {
                 color: #3b3e44;
@@ -83,6 +77,9 @@
                 &:hover {
                     border-bottom: 2px solid black;
                 }
+            }
+            @media (max-width: 55rem) {
+                font-size: 1rem;
             }
         }
     }

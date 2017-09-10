@@ -11,24 +11,8 @@
     margin: 20rem 0;
     position: relative;
     color: #000;
-    &--inactive {
-        opacity: 0.5;
-        pointer-events: none;
-        &:hover {
-            cursor: not-allowed;
-        }
-        &:before {
-            content: "Coming Soon";
-            position: absolute;
-            top: 5rem;
-            transform: rotate(270deg);
-            right: 0;
-            font-size: 0.8rem;
-            color: #fff;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            font-weight: 700;
-        }
+    @media (max-width: 55rem) {
+        margin: 10rem 0;
     }
     a {
         display: block;
@@ -68,6 +52,44 @@
             max-width: 90%;
             .contrast-text {
                 transition: color 0.2s ease-in-out;
+            }
+            @media (max-width: 55rem) {
+                font-size: 2rem;
+                max-width: 100%;
+            }
+        }
+    }
+    &--inactive {
+        opacity: 0.5;
+        pointer-events: none;
+        @media (max-width: 55rem) {
+            > a {
+                text-decoration: line-through;
+                color: #fff;
+            }
+        }
+        &:hover {
+            cursor: not-allowed;
+        }
+        &:before {
+            content: "Coming Soon";
+            position: absolute;
+            top: 5rem;
+            transform: rotate(270deg);
+            right: 0;
+            font-size: 0.8rem;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+            @media (max-width: 55rem) {
+                position: relative;
+                top: 0;
+                transform: rotate(0);
+                text-align: right;
+                display: block;
+                width: 100%;
+                margin-bottom: 0.5rem;
             }
         }
     }

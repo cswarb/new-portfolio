@@ -53,6 +53,9 @@
         background: none;
         outline: 0;
         width: 100%;
+        @media (max-width: 55rem) {
+            font-size: 1.2rem;
+        }
         &__helper {
             display: block;
             position: relative;
@@ -118,8 +121,17 @@
     margin: 0 0 0 0;
     flex-flow: row nowrap;
     position: relative;
+    @media (max-width: 55rem) {
+        padding: 3rem 2.5rem;
+    }
     &--column {
         flex-flow: column nowrap;
+    }
+    &--row {
+        flex-flow: row nowrap;
+        @media (max-width: 55rem) {
+            flex-flow: column nowrap;
+        }
     }
     &--block {
         display: block;
@@ -181,7 +193,7 @@
             color: #fff;
         }
     }
-    .primary__item {
+    .title__item {
         margin: 0;
         font-weight: 400;
         flex: 5;
@@ -190,8 +202,11 @@
         font-family: $primary-font-stack;
         letter-spacing: 0.8px;
         color: #35363a;
+        @media (max-width: 55rem) {
+            margin-bottom: 1rem;
+        }
     }
-    .secondary__item {
+    .content__item {
         list-style: none;
         margin: 0 3rem;
         // font-family: "Calibre Light";

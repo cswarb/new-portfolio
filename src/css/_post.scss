@@ -14,7 +14,7 @@
             margin-bottom: 5rem;
             min-height: auto;
             &:last-of-type {
-                margin-bottom: 0;
+                margin-bottom: 5rem;
             }
         }
     }
@@ -53,6 +53,9 @@
         line-height: 1.5;
         // font-size: 1.3rem;
         font-size: 2.1rem;
+        @media (max-width: 55rem) {
+            font-size: 1.5rem;
+        }
     }
     &__link {
         color: #31343F;
@@ -71,6 +74,10 @@
         letter-spacing: 0.8px;
         margin: 0 0 3rem 0;
         color: #35363a;
+        @media (max-width: 55rem) {
+            font-size: 2.4rem;
+            margin: 0;
+        }
         &:after {
             content: "";
             width: 4rem;
@@ -89,6 +96,11 @@
             letter-spacing: 1px;
             font-weight: 400;
             flex: 2;
+            @media (max-width: 55rem) {
+                flex: 0;
+                margin-bottom: 0.5rem;
+                font-size: 1.8rem;
+            }
         }
         &-content { 
             flex: 2;
@@ -113,7 +125,10 @@
         background-color: #FFF710;
         padding: 3rem 3rem 10rem 3rem;
         height: auto;
-        min-height: 28rem;        
+        min-height: 28rem;
+        @media (max-width: 55rem) {
+            padding: 2rem 2rem 5rem 2rem;
+        }       
         &__title {
             margin: 0;
             font-family: $primary-font-stack;
@@ -124,6 +139,7 @@
             letter-spacing: 0.8px;
             margin-bottom: 2rem;
             @media (max-width: 55rem) {
+                font-size: 2rem;
                 max-width: 100%;
             }
         }
@@ -219,7 +235,11 @@
         // flex-flow: row nowrap;
         margin-bottom: 10rem;
         text-align: center;
+        @media (max-width: 55rem) {
+            margin-bottom: 2rem;
+        }
         &__wrapper {
+            
         }
         &__item {
             margin: 0;
@@ -252,7 +272,6 @@
             // left: 0;
             // z-index: 2;
             letter-spacing: -0.8px;
-            font-size: 2rem;
             color: #000;
             line-height: 1;
             top: 0;
@@ -267,6 +286,15 @@
             transform: rotate(90deg);
             transform-origin: left bottom;
             display: block;
+            @media (max-width: 55rem) {
+                transform: rotate(0);
+                position: relative;
+                font-size: 1.5rem;
+                white-space: auto;
+                left: 0;
+                text-align: left;
+                margin: 0 0 0.5rem 0;
+            }
         }
     }
     &__image {
