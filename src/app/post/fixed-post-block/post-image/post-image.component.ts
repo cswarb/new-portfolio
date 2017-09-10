@@ -1,6 +1,8 @@
 import { Component, OnInit, Input, HostListener, AfterViewInit, trigger, transition, style, animate } from "@angular/core";
+import { Router, ActivatedRoute } from "@angular/router";
 import { Post, Section } from "../../post.model";
 import { ImageData } from "../image.model";
+import { RouterTriggerService } from "../../../shared/router-trigger/router-trigger.service";
 
 @Component({
   selector: "[data-cmp-post-image]",
@@ -35,14 +37,16 @@ export class PostImageComponent implements AfterViewInit {
         this.createImageObject();
     }
 
-    constructor() { }
-
-    ngAfterViewInit() {
-        setTimeout(() => {
-            //Create an object with our images and offsets in
+    constructor(
+        private router: ActivatedRoute,
+        private _RouterTriggerService: RouterTriggerService
+    ) {
+        this._RouterTriggerService.getTriggerState().subscribe((isRouterAnimationComplete: boolean) => {
             this.createImageObject();
         });
     }
+
+    ngAfterViewInit() {}
 
     public createImageObject(): void {
         //Empty it if we resize the viewport

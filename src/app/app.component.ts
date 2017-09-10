@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute, Router, NavigationEnd } from "@angular/router";
 import { RollTop, Jelly } from "./router-animation";
 import { trigger, stagger, animate, style, group, query, transition } from "@angular/animations";
+import { RouterTriggerService } from "./shared/router-trigger/router-trigger.service";
 
 @Component({
     moduleId: module.id,
@@ -19,8 +20,13 @@ export class AppComponent implements OnInit {
 
   constructor(
   	private route: ActivatedRoute,
-    private router: Router
-  ) { }
+    private router: Router,
+    private _RouterTriggerService: RouterTriggerService
+  ) {}
+
+  animationComplete($event) {
+      this._RouterTriggerService.trigger(true);
+  }
 
   getState(outlet) {
     const animation = outlet.activatedRouteData["animation"] || {};

@@ -2,6 +2,7 @@ import { Component, Directive, ElementRef, HostListener, Input, HostBinding, OnI
 import { DOCUMENT } from "@angular/platform-browser";
 import { Post, Section } from "../post.model";
 import { ImageData } from "./image.model";
+import { RouterTriggerService } from "../../shared/router-trigger/router-trigger.service";
 
 @Component({
   selector: "[data-cmp-fixed-block]",
@@ -38,19 +39,19 @@ export class FixedPostBlockComponent implements AfterViewInit  {
 		this.anchorPointEnd = this.getOffset(this.anchorPointEndElement);
 	}
 
-	constructor(private element: ElementRef) {
-	}
-
-	ngAfterViewInit() {
-		//Ensure the post info component has rendered - Needs better implementation
-		setTimeout(() => {
-			//Store the references we need
-			this.anchorPointStartElement = document.getElementById("scroll-anchor-ref");
+	constructor(
+		private element: ElementRef,
+		private _RouterTriggerService: RouterTriggerService
+	) {
+		this._RouterTriggerService.getTriggerState().subscribe((isRouterAnimationComplete: boolean) => {
+            this.anchorPointStartElement = document.getElementById("scroll-anchor-ref");
 			this.anchorPointEndElement = document.getElementById("scroll-anchor-ref-end");
 			this.anchorPointStart = this.getOffset(this.anchorPointStartElement);
 			this.anchorPointEnd = this.getOffset(this.anchorPointEndElement);
-		}, 2000);
+        });
 	}
+
+	ngAfterViewInit() {}
 
 	public initialiseAnchor(): void {
 		if(!this.anchorPointStart) return;

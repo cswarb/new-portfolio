@@ -1,4 +1,4 @@
-<div class="wrapper" [class.dark]="index" [@routerTransition]="getState(outlet)">
+<div class="wrapper" [class.dark]="index" [@routerTransition]="getState(outlet)" (@routerTransition.done)="animationComplete($event)">
 	<div data-cmp-navigation></div>
 	<router-outlet #outlet="outlet" (deactivate)="onDeactivate()"></router-outlet>
 </div>
