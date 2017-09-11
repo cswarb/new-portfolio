@@ -24,7 +24,7 @@ import { PostService } from "./post/post.service";
 import { AppConstants } from "./app.constants";
 import { PostImageComponent } from "./post/fixed-post-block/post-image/post-image.component";
 import { CopyToClipboardDirective } from "./copy-to-clipboard/copy-to-clipboard.directive";
-import { BurstDirective } from "./motion/burst.directive";
+// import { BurstDirective } from "./motion/burst.directive";
 
 import { RouterTriggerService } from "./shared/router-trigger/router-trigger.service";
 
@@ -40,8 +40,7 @@ import { RouterTriggerService } from "./shared/router-trigger/router-trigger.ser
     PostInfoComponent,
     FixedPostBlockComponent,
     PostImageComponent,
-    CopyToClipboardDirective,
-    BurstDirective
+    CopyToClipboardDirective
   ],
   imports: [
     BrowserAnimationsModule,

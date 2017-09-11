@@ -1,15 +1,15 @@
 {
 	"type": "POST",
 	"tag": "Design/Development Project",
-	"title": "Checking a tube status has never been so modern.",
+	"title": "Checking the tube status has never been better!",
 	"outbound": {
 		"alive": true,
-		"url": "http://www.project.com/dashboard"
+		"url": "https://github.com/cswarb/underground-status"
 	},
-	"imageUrl": "/content/posts/tube-finder/img/1.jpg",
+	"imageUrl": "/content/posts/tube-finder/img/1.png",
 	"meta": {
 		"splashText": "The TFL tube finder app was a self-initiated work. One of my goals was to use the opportunity to help me learn the new Angular 2+ framework.",
-		"role": "I created the front-end design, experience, and did the complete development including api integration",
+		"role": "I created the front-end, UI design, experience, and complete development including api integration",
 		"year": "2017",
 		"technologies": [
 			{
@@ -36,40 +36,36 @@
 	"sections": [
 		{
 			"id": 0,
-			"imageUrl": "/content/posts/tube-finder/img/1.jpg",
+			"imageUrl": "/content/posts/tube-finder/img/1.png",
 			"title": "UI + UX",
 			"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et animi, ipsa rerum. Excepturi velit molestias, libero, ea est ipsam repellat quaerat doloremque voluptatum incidunt natus sint reprehenderit dolorum quidem eum!" 
 		},
 		{
 			"id": 1,
-			"imageUrl": "/content/posts/tube-finder/img/2.jpg",
+			"imageUrl": "/content/posts/tube-finder/img/2.png",
 			"title": "Speed and performance",
 			"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora nisi repellendus quaerat quae rerum magnam esse quos qui, id, voluptates culpa. Quasi sint adipisci enim facere ex facilis, magni. Eos." 
 		},
 		{
 			"id": 2,
 			"imageUrl": "/content/posts/tube-finder/img/3.png",
-			"title": "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+			"title": "Development",
 			"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla odio dignissimos rem cum consequatur ea, sit modi ab veniam eveniet, eum, maiores odit. Similique inventore culpa, eius fuga odio officiis?" 
 		}
 	],
 	"finalThoughts": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium temporibus molestias itaque facilis mollitia cum architecto, provident, inventore laborum dolore voluptas quis assumenda? Sit, harum cumque sed, voluptas illum quaerat.",
 	"images": [
 		{
-			"title": "Initial prototypes",
-			"imageUrl": "/content/posts/tube-finder/img/butterfly.jpg"
+			"title": "Line Listing UI",
+			"imageUrl": "/content/posts/tube-finder/img/1.png"
 		},
 		{
-			"title": "The final navigation design",
-			"imageUrl": "/content/posts/tube-finder/img/2.jpg"
+			"title": "Request Logs",
+			"imageUrl": "/content/posts/tube-finder/img/2.png"
 		},
 		{
-			"title": "Auto-complete component",
-			"imageUrl": "/content/posts/tube-finder/img/3.jpg"
-		},
-		{
-			"title": "Screen overview",
-			"imageUrl": "/content/posts/tube-finder/img/4.jpg"
+			"title": "Development Code",
+			"imageUrl": "/content/posts/tube-finder/img/3.png"
 		}
 	]
 }
