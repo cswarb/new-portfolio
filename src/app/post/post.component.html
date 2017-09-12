@@ -2,7 +2,7 @@
 	<div class="article article__hero">
 		<p class="post-content__type">{{post?.tag}}</p>
 		<h3 class="post-content__hero-title">{{post?.title}}</h3>
-		<a class="post-content__link" [class.post-content__link--inactive]="!post.outbound.alive" href="#" target="_BLANK">{{post?.outbound?.url}}</a>
+		<a class="post-content__link" [class.post-content__link--inactive]="!post?.outbound?.alive" href="#" target="_BLANK">{{post?.outbound?.url}}</a>
 	</div>
 
 	<div data-cmp-post-info [splashText]="post?.meta?.splashText" [year]="post?.meta?.year" [role]="post?.meta?.role" [technologies]="post?.meta?.technologies"></div>
@@ -19,7 +19,7 @@
 
 	<article *ngIf="!isMobile()" class="flex article__inner">
 		<div class="left-side blank">
-			<div data-cmp-fixed-block [sectionData]="post?.sections" [defaultImageUrl]="post.imageUrl"></div>
+			<div data-cmp-fixed-block [sectionData]="post?.sections" [defaultImageUrl]="post?.imageUrl"></div>
 		</div>
 		<div class="right-side">
 			<section 
@@ -55,9 +55,9 @@
 		<div class="post-content__images">
 			<div class="post-content__image-meta__wrapper">
 				<figure class="post-content__image-meta" *ngFor="let image of post?.images">
-					<figcaption class="post-content__image-meta__title">{{image.title}}</figcaption>
+					<figcaption class="post-content__image-meta__title">{{image?.title}}</figcaption>
 					<div class="post-content__image-meta__item">
-						<img [src]="image.imageUrl" [alt]="image.title">
+						<img [src]="image?.imageUrl" [alt]="image?.title">
 					</div>
 				</figure>
 			</div>

@@ -46,8 +46,8 @@
 
     <div class="article__inner">
 
-      <div *ngFor="let post of posts.posts" class="jumbo_text no-margin-top" [class.jumbo_text--inactive]="!post?.status">
-        <a [routerLink]="['/post/', post.link]">
+      <div *ngFor="let post of posts?.posts" class="jumbo_text no-margin-top" [class.jumbo_text--inactive]="!post?.status">
+        <a [routerLink]="['/post/', post?.link]">
           <h2>{{post?.title}}</h2>
           <p class="text-wipe" [innerHTML]="post?.description"></p>
         </a>

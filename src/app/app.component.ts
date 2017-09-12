@@ -16,7 +16,7 @@ import { RouterTriggerService } from "./shared/router-trigger/router-trigger.ser
     ]
 })
 export class AppComponent implements OnInit {
-  private index = false;
+  public index = false;
 
   constructor(
   	private route: ActivatedRoute,

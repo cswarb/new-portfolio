@@ -9,7 +9,7 @@ import { RouterTriggerService } from "../../shared/router-trigger/router-trigger
   templateUrl: "./fixed-post-block.component.html",
   styleUrls: ["./fixed-post-block.component.scss"]
 })
-export class FixedPostBlockComponent implements AfterViewInit  {
+export class FixedPostBlockComponent  {
 
 	private anchorPointStartElement;
 	private anchorPointStart;
@@ -17,22 +17,22 @@ export class FixedPostBlockComponent implements AfterViewInit  {
 	private anchorPointEnd;
 	private anchorStartRef;
 	
-	private anchorProps = {
+	public anchorProps = {
 		"width": "",
 		"top": ""
 	};
 
-	private state: string = "";
+	public state: string = "";
 	@Input() defaultImageUrl: string = "";
 	@Input() sectionData: Section[] = [];
 
-	@HostListener("window:scroll", this.onWindowScroll)
+	@HostListener("window:scroll", ["$event"])
 	public onWindowScroll() {
 		//Initialise the scrolling logic
 		this.initialiseAnchor();
 	}
 
-	@HostListener("window:resize", this.onWindowResize)
+	@HostListener("window:resize", ["$event"])
 	public onWindowResize() {
 		//Reset the offsets
 		this.anchorPointStart = this.getOffset(this.anchorPointStartElement);
@@ -50,8 +50,6 @@ export class FixedPostBlockComponent implements AfterViewInit  {
 			this.anchorPointEnd = this.getOffset(this.anchorPointEndElement);
         });
 	}
-
-	ngAfterViewInit() {}
 
 	public initialiseAnchor(): void {
 		if(!this.anchorPointStart) return;

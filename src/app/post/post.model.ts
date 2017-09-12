@@ -2,7 +2,7 @@ export class Post {
 	"type": string;
 	"tag": string;
 	"title": string;
-	"outbond": OutboundMeta;
+	"outbound": OutboundMeta;
 	"imageUrl": string;
 	"meta": Meta;
 	"finalThoughts": string;

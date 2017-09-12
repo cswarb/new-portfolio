@@ -19,20 +19,20 @@ import { RouterTriggerService } from "../../../shared/router-trigger/router-trig
   ],
   styleUrls: ["./post-image.component.scss"]
 })
-export class PostImageComponent implements AfterViewInit {
+export class PostImageComponent {
 
     private images: ImageData[] = [];
     private activeImage: number = 1;
     private activeNumber: string = "01";
     @Input() sectionData: Section[] = [];
 
-    @HostListener("window:scroll", this.onWindowScroll)
+    @HostListener("window:scroll", ["$event"])
     public onWindowScroll() {
         //Initialise the image switching logic
         this.initialiseImageSwitching();
     }
 
-    @HostListener("window:resize", this.onWindowResize)
+    @HostListener("window:resize", ["$event"])
     public onWindowResize() {
         this.createImageObject();
     }
@@ -45,8 +45,6 @@ export class PostImageComponent implements AfterViewInit {
             this.createImageObject();
         });
     }
-
-    ngAfterViewInit() {}
 
     public createImageObject(): void {
         //Empty it if we resize the viewport

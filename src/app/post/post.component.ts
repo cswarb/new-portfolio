@@ -9,9 +9,9 @@ import { Post } from "./post.model";
 })
 export class PostComponent implements OnInit {
 
-	private post: Post = new Post();
+	public post: Post = new Post();
 
-	@HostListener("window:resize", this.onWindowResize)
+	@HostListener("window:resize", ["$event"])
 	public onWindowResize() {
 		this.isMobile();
 	}
