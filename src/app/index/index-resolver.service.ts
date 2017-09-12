@@ -12,11 +12,7 @@ export class IndexResolverService implements Resolve<any> {
 	) {}
 
 	resolve(route: ActivatedRouteSnapshot) {
-		return this._PostService.getPosts()
-			.catch(() => {
-				alert("Posts not found");
-				return false;
-			});
+		return this._PostService.getPosts();
 	}
 
 }

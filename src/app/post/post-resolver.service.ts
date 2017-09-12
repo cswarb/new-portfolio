@@ -12,11 +12,7 @@ export class PostResolverService implements Resolve<any> {
 	) {}
 
 	resolve(route: ActivatedRouteSnapshot) {
-		return this._PostService.getPost(route.paramMap.get("id"))
-			.catch(() => {
-				alert("Post: " + route.paramMap.get("id") + " not found");
-				return false;
-			});
+		return this._PostService.getPost(route.paramMap.get("id"));
 	}
 
 }
