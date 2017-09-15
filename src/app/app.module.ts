@@ -27,6 +27,8 @@ import { CopyToClipboardDirective } from "./copy-to-clipboard/copy-to-clipboard.
 // import { BurstDirective } from "./motion/burst.directive";
 
 import { RouterTriggerService } from "./shared/router-trigger/router-trigger.service";
+import { ParallaxDirective } from './shared/parallax/parallax.directive';
+import { GetInTouchComponent } from './shared/get-in-touch/get-in-touch.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { RouterTriggerService } from "./shared/router-trigger/router-trigger.ser
     PostInfoComponent,
     FixedPostBlockComponent,
     PostImageComponent,
-    CopyToClipboardDirective
+    CopyToClipboardDirective,
+    ParallaxDirective,
+    GetInTouchComponent
   ],
   imports: [
     BrowserAnimationsModule,
