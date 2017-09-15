@@ -67,13 +67,13 @@
             opacity: 0;
         }
         &:hover {
-            cursor: pointer;
+            // cursor: pointer;
             + .text_section__email__helper {
-                opacity: 1;                
+                // opacity: 1;                
             }
         }
         &.copied {
-            color: #e8d91c;
+            // color: #e8d91c;
         }
     }
     &__meta {

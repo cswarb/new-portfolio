@@ -2,7 +2,7 @@
 	<div class="article article__hero">
 		<p class="post-content__type">{{post?.tag}}</p>
 		<h3 class="post-content__hero-title">{{post?.title}}</h3>
-		<a class="post-content__link" [class.post-content__link--inactive]="!post?.outbound?.alive" href="#" target="_BLANK">{{post?.outbound?.url}}</a>
+		<a class="post-content__link" [class.post-content__link--inactive]="!post?.outbound?.alive" [href]="post?.outbound?.url" target="_BLANK">{{post?.outbound?.url}}</a>
 	</div>
 
 	<div data-cmp-post-info [splashText]="post?.meta?.splashText" [year]="post?.meta?.year" [role]="post?.meta?.role" [technologies]="post?.meta?.technologies"></div>
@@ -12,7 +12,7 @@
 		<div class="right-side">
 			<section class="post-content__wrapper">
 				<!-- <h4 class="post-content__title">{{post?.introduction?.title}}</h4> -->
-				<p class="post-content__paragraph">{{post?.introduction?.title}}</p>
+				<p class="post-content__paragraph post-content__paragraph--large">{{post?.introduction?.title}}</p>
 			</section>
 		</div>
 	</article>

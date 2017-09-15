@@ -25,12 +25,12 @@
         color: #35363a;
         font-family: $bold-font-stack;
         font-weight: 400;
-        font-size: 1rem;
-        margin: 0 0 2.5rem 0;
+        font-size: 1.1rem;
+        margin: 0 0 0.1rem 0;
         line-height: 1.8;
         text-transform: uppercase;
         letter-spacing: 1.2px;
-        border-bottom: 1px solid #e0e3e4;
+        // border-bottom: 1px solid #e0e3e4;
         padding-bottom: 1rem;
         @media (max-width: 55rem) {
             margin-bottom: 0.25rem;
@@ -51,8 +51,10 @@
         margin: 0 0 1rem 0;
         flex: 1;
         line-height: 1.5;
-        // font-size: 1.3rem;
-        font-size: 2.1rem;
+        font-size: 1.2rem;
+        &--large {
+            font-size: 2.1rem;
+        }
         @media (max-width: 55rem) {
             font-size: 1.5rem;
         }
