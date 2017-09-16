@@ -38,7 +38,9 @@
     &__link {
         text-decoration: none;
         position: relative;
-        display: block;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         &:before {
             content: "";
             // background: url("./assets/img/logo.svg");
@@ -54,6 +56,14 @@
             /* -webkit-transform: translateY(-48%); */
             /* transform: translateY(-48%); */
             left: -45%;
+        }
+        &__logo {
+            display: inline-block;
+            margin-right: 1rem;
+            max-width: 3rem;
+        }
+        &__text {
+            display: inline-block;
         }
     }
     &__list {
