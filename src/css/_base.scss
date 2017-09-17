@@ -68,6 +68,21 @@
   src: url("./assets/fonts/gtamerica/GT-America-Regular.woff") format("woff");
 }
 
+@font-face {
+  font-family: "TF Opicular Bold";
+  src: url("./assets/fonts/opicular/TTF/TF Opicular Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "TF Opicular Medium";
+  src: url("./assets/fonts/opicular/TTF/TF Opicular Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "TF Opicular";
+  src: url("./assets/fonts/opicular/TTF/TF Opicular Regular.ttf") format("truetype");
+}
+
 *, *:before, *:after {
 	box-sizing: border-box;
 }
