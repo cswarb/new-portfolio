@@ -1,16 +1,25 @@
-<div>
-	<a [routerLink]="['index']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav__link">
-		<h5 class="nav__title">Chris Swarbrick</h5>
-		<h5 class="nav__sub-title">Digital Designer — Developer</h5>
-	</a>
-</div>
-<div>
-	<ul class="nav__list_container">
-		<li class="nav__list_item">
-			<a [routerLink]="['about-contact']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav__list_item__link">About + Contact</a>
-		</li>
-		<li class="nav__list_item">
-			<a [routerLink]="['post/1']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav__list_item__link">Post</a>
-		</li>
-	</ul>
+<div class="container">
+	<nav class="nav">
+		<div>
+			<a [routerLink]="['index']" class="nav__link">
+				<!-- <div class="nav__link__logo">
+					<img src="./assets/img/l2.svg" alt="">
+				</div> -->
+				<div class="nav__link__text">
+					<h5 class="nav__title">Chris Swarbrick</h5>
+					<h5 class="nav__sub-title">Digital Designer — Developer</h5>
+				</div>
+			</a>
+		</div>
+		<div>
+			<ul class="nav__list_container">
+				<li class="nav__list_item">
+					<a [routerLink]="['about-contact']" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav__list_item__link">
+						About + Contact 
+						<!-- <span class="icon maximize"></span> -->
+					</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
 </div>

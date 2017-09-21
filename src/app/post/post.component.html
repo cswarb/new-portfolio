@@ -1,119 +1,69 @@
+<div class="container">
+	<div class="article article__hero">
+		<p class="post-content__type">{{post?.tag}}</p>
+		<h3 class="post-content__hero-title">{{post?.title}}</h3>
+		<a class="post-content__link" [class.post-content__link--inactive]="!post?.outbound?.alive" [href]="post?.outbound?.url" target="_BLANK">{{post?.outbound?.url}}</a>
+	</div>
+
+	<div data-cmp-post-info [splashText]="post?.meta?.splashText" [year]="post?.meta?.year" [role]="post?.meta?.role" [technologies]="post?.meta?.technologies"></div>
+
+	<article class="flex article__inner">
+		<div class="left-side"></div>
+		<div class="right-side">
+			<section class="post-content__wrapper">
+				<!-- <h4 class="post-content__title">{{post?.introduction?.title}}</h4> -->
+				<p class="post-content__paragraph post-content__paragraph--large">{{post?.introduction?.title}}</p>
+			</section>
+		</div>
+	</article>
+
+	<article *ngIf="!isMobile()" class="flex article__inner">
+		<div class="left-side blank">
+			<div data-cmp-fixed-block [sectionData]="post?.sections" [defaultImageUrl]="post?.imageUrl"></div>
+		</div>
+		<div class="right-side">
+			<section 
+				*ngFor="let section of post?.sections; let i = index" 
+				[id]="i === post.sections.length - 1 ? 'scroll-anchor-ref-end' : ''"
+				[attr.data-image-trigger]="section?.imageUrl"
+				class="post-content__wrapper" 
+				id="scroll-anchor-ref">
+				<h4 class="post-content__title">{{section?.title}}</h4>
+				<p class="post-content__paragraph">{{section?.content}}</p>
+			</section>
+		</div>
+	</article>
 
 
-	
+	<article *ngIf="isMobile()" class="flex article__inner">
+		<div class="right-side">
+			<section *ngFor="let section of post?.sections" class="post-content__wrapper">
+				<h4 class="post-content__title">{{section?.title}}</h4>
+				<p class="post-content__paragraph">{{section?.content}}</p>
+			</section>
+		</div>
+	</article>
 
-	<!-- <div class="hero">
-		<div>
-			<div class="hero__title">
-				<svg height="155">
-					<title>Checking the tube just got way better</title>
-					<path id="swoosh" d="M0,68.8886719 C63.6250036,59.703776 133.460159,59.703776 209.505465,68.8886719 C285.550772,78.0735677 395.361357,78.0735677 538.93722,68.8886719"></path>
-					<text letter-spacing="1">
-					<textPath xlink:href="#swoosh">
-						<tspan x="4rem" dx="50%" text-anchor="middle">Checking the tube</tspan>
-						<tspan x="4rem" dx="50%" dy="4rem" text-anchor="middle">just got way better</tspan>
-					</textPath>
-					</text>
-				</svg>	
+	<article class="flex article__inner no-margin-bottom">
+		<h2 class="post-content__closing-title">Final Thoughts</h2>
+		<p class="post-content__closing-content">{{post?.finalThoughts}}</p>
+	</article>
+
+	<!-- <hr class="post-content__separator"> -->
+
+	<div class="article__inner no-margin-top">
+		<div class="post-content__images">
+			<div class="post-content__image-meta__wrapper">
+				<figure class="post-content__image-meta" *ngFor="let image of post?.images">
+					<figcaption class="post-content__image-meta__title">{{image?.title}}</figcaption>
+					<div class="post-content__image-meta__item">
+						<img [src]="image?.imageUrl" [alt]="image?.title">
+					</div>
+				</figure>
 			</div>
-			<h4 class="hero__supporting_text">
-				How can checking if a tube is delayed be better? Fresh UI, clear application flow, and built for speed. These were the 3 key points I kept in mind when building my version of a tube checker.
-			</h4>
-		</div>
-		<div>
-			<a href="#" class="button hero__outbound_link">Visit Website</a>
-		</div>
-	</div> -->
-
-	<h3 style="margin: 0;
-    font-size: 3.1rem;
-    line-height: 1.25;
-    font-family: 'Calibre Regular';
-    font-weight: 400;
-    letter-spacing: 0.8px;
-    margin-bottom: 2rem;
-    color: #35363a;
-        margin: 0 0 5rem 31rem;">
-			Checking a tube status has never been so modern.
-		</h3>
-	
-
-	<article class="post">
-		<figure class="post__main_img">
-			<img src="./assets/img/1.jpg" alt="">
-			<figcaption></figcaption>
-		</figure>
-	</article>
-
-	<article class="flex article">
-		<div style="flex: 1;">
-			<h2 class="section__title">Inspired by nature</h2>
-		</div>
-		<div style="flex: 1;">
-			<p class="section__puller">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt, modi quas aliquam magni, at distinctio veritatis aspernatur repudiandae, nam <span class="bold">bowsman</span>, facilis amet neque esse maxime est porro? Iusto velit, commodi.</p>
-			<!-- <a class="section__puller section__link" href="#" target="_BLANK">http://www.project.com/dashboard</a> -->
-		</div>
-	</article>
-
-	<nav class="in_page_nav">
-		<ul class="in_page_nav__wrapper">
-			<li class="in_page_nav__item">
-				<p class="in_page_nav__item__number">01 —</p>
-				<a class="in_page_nav__item__link" href="#">Introduction</a>
-			</li>
-			<li class="in_page_nav__item">
-			<p class="in_page_nav__item__number">02 —</p>
-				<a class="in_page_nav__item__link" href="#">Design</a>
-			</li>
-			<li class="in_page_nav__item">
-			<p class="in_page_nav__item__number">03 —</p>
-				<a class="in_page_nav__item__link" href="#">Development</a>
-			</li>
-			<li class="in_page_nav__item">
-			<p class="in_page_nav__item__number">04 —</p>
-				<a class="in_page_nav__item__link" href="#">Final Thoughts</a>
-			</li>
-		</ul>
-	</nav>
-
-
-
-	
-	<article class="post" style="display: flex;">
-		<h3 style="">
-				Vi er en stiftelse som jobber for bedre seksuell helse - uansett hvem du er og hvem du elsker.
-			</h3>
-		<figure class="post__main_img" style="flex:2;">
-			<div class="post__main_img__area"></div>
-			<figcaption></figcaption>
-		</figure>
-	</article>
-
-
-
-
-
-
-	<div class="article slim">
-		<h3 class="article__title">Introduction —</h3>
-		<div class="article__content">
-			<p>So strongly and metaphysically did I conceive of my situation then, that while earnestly watching his motions, I seemed distinctly to perceive that my own individuality was now merged in a joint stock company of two; that my free will had received a mortal wound; and that another's mistake or misfortune might plunge innocent me into unmerited disaster and death.</p>
-
-			<p>Therefore, I saw that here was a sort of interregnum in Providence; for its even-handed equity never could have so gross an injustice. And yet still further pondering—while I jerked him now and then from between the whale and ship, which would threaten to jam him—still further pondering</p>
-
-			<p>I say, I saw that this situation of mine was the precise situation of every mortal that breathes; only, in most cases, he, one way or other, has this Siamese connexion with a plurality of other mortals.</p>
-
-			<p>If your banker breaks, you snap; if your apothecary by mistake sends you poison in your pills, you die. True, you may say that, by exceeding caution, you may possibly escape these and the multitudinous other evil chances of life. But handle Queequeg's monkey-rope heedfully as I would, sometimes he jerked it so, that I came very near sliding overboard.</p>
-
-			<p>Nor could I possibly forget that, do what I would, I only had the management of one end of it.</p>
 		</div>
 	</div>
-		
-	<hr>
 
-	<div class="meta">
-		<p class="meta__text">By OPENAI.</p>
-	</div>
-	
+	<div data-cmp-get-in-touch></div>
 
-
+</div>

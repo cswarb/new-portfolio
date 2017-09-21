@@ -1,0 +1,71 @@
+{
+	"type": "POST",
+	"tag": "Design/Development Project",
+	"title": "Checking the tube status has never been better!",
+	"outbound": {
+		"alive": true,
+		"url": "https://github.com/cswarb/underground-status"
+	},
+	"imageUrl": "/content/posts/tube-finder/img/1.png",
+	"meta": {
+		"splashText": "The TFL tube finder app was a self-initiated work. One of my goals was to use the opportunity to help me learn the new Angular 2+ framework.",
+		"role": "I created the front-end, UI design, experience, and complete development including api integration",
+		"year": "2017",
+		"technologies": [
+			{
+				"name": "Angular 4"
+			},
+			{
+				"name": "HTML"
+			},
+			{
+				"name": "SASS"
+			},
+			{
+				"name": "Git + Github"
+			},
+			{
+				"name": "TFL Unified API"
+			}
+		]
+	},
+	"introduction": {
+		"title": "How can checking a tube status be sublime? Responsive UI, clear application flow, and built for speed. These were the 3 key points I kept in mind when building my version of a tube checker",
+		"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima officia qui commodi? Dignissimos laudantium rerum facilis vitae nulla eaque minima molestiae officia atque perferendis quae pariatur, illo nesciunt quisquam sunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima officia qui commodi? Dignissimos laudantium rerum facilis vitae nulla eaque minima molestiae officia atque perferendis quae pariatur, illo nesciunt quisquam sunt."
+	},
+	"sections": [
+		{
+			"id": 0,
+			"imageUrl": "./content/posts/tube-finder/img/1.png",
+			"title": "UI + UX",
+			"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et animi, ipsa rerum. Excepturi velit molestias, libero, ea est ipsam repellat quaerat doloremque voluptatum incidunt natus sint reprehenderit dolorum quidem eum!" 
+		},
+		{
+			"id": 1,
+			"imageUrl": "./content/posts/tube-finder/img/2.png",
+			"title": "Speed and performance",
+			"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora nisi repellendus quaerat quae rerum magnam esse quos qui, id, voluptates culpa. Quasi sint adipisci enim facere ex facilis, magni. Eos." 
+		},
+		{
+			"id": 2,
+			"imageUrl": "./content/posts/tube-finder/img/3.png",
+			"title": "Development",
+			"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla odio dignissimos rem cum consequatur ea, sit modi ab veniam eveniet, eum, maiores odit. Similique inventore culpa, eius fuga odio officiis?" 
+		}
+	],
+	"finalThoughts": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium temporibus molestias itaque facilis mollitia cum architecto, provident, inventore laborum dolore voluptas quis assumenda? Sit, harum cumque sed, voluptas illum quaerat.",
+	"images": [
+		{
+			"title": "Line Listing UI",
+			"imageUrl": "./content/posts/tube-finder/img/1.png"
+		},
+		{
+			"title": "Request Logs",
+			"imageUrl": "./content/posts/tube-finder/img/2.png"
+		},
+		{
+			"title": "Development Code",
+			"imageUrl": "./content/posts/tube-finder/img/3.png"
+		}
+	]
+}

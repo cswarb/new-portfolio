@@ -1,15 +1,29 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
+import { Router, ActivatedRoute } from "@angular/router";
+import { Posts, PostLoop } from "../post/posts.model";
 
 @Component({
-  selector: 'app-index',
-  templateUrl: './index.component.html',
-  styleUrls: ['./index.component.scss']
+  selector: "[data-cmp-index]",
+  templateUrl: "./index.component.html",
+  styleUrls: ["./index.component.scss"]
 })
 export class IndexComponent implements OnInit {
 
-  constructor() { }
+	public posts: Posts;
 
-  ngOnInit() {
-  }
+	constructor(
+		private route: ActivatedRoute,
+		private router: Router
+	) { }
+
+	ngOnInit() {
+		this.posts = this.route.snapshot.data["posts"];
+	}
+
+	public getPost(post): void {
+		if(post.status) {
+			this.router.navigate(["/post/", post.link]);
+		};
+	}
 
 }

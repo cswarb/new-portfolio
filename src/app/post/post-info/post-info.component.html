@@ -1,0 +1,27 @@
+<div class="post-info">
+	<article class="post-info__hook">
+		<h3 class="post-info__hook__title">{{splashText}}</h3>
+	</article>
+	<div class="post-info__meta">
+		<section class="post-info__meta__item">
+			<header>
+				<h6 class="post-info__meta__item__title">Year</h6>
+			</header>
+			<p class="post-info__meta__item__detail">{{year}}</p>
+		</section>
+		<section class="post-info__meta__item">
+			<header>
+				<h6 class="post-info__meta__item__title">Role</h6>
+			</header>
+			<p class="post-info__meta__item__detail">{{role}}</p>
+		</section>
+		<section class="post-info__meta__item">
+			<header>
+				<h6 class="post-info__meta__item__title">Technologies Used</h6>
+			</header>
+			<ul class="post-info__meta__item__detail">
+				<li *ngFor="let technology of technologies" class="post-info__meta__item__detail__item--list">{{technology?.name}}</li>
+			</ul>
+		</section>
+	</div>
+</div>
