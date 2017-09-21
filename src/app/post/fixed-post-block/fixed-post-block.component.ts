@@ -53,7 +53,7 @@ export class FixedPostBlockComponent  {
 
 	public initialiseAnchor(): void {
 		if(!this.anchorPointStart) return;
-		if(document.body.scrollTop >= (this.anchorPointStart.top - this.vhToPixel(5))) {
+		if(window.scrollY >= (this.anchorPointStart.top - this.vhToPixel(5))) {
 			this.setState("fixed");
 			this.anchorProps["width"] = this.pxString(this.anchorPointStartElement.offsetWidth);
 		} else {

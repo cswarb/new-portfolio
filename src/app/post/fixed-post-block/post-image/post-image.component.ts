@@ -68,7 +68,7 @@ export class PostImageComponent {
         let newImage = null;
         this.images.forEach((image: ImageData) => {
             //Check the offset
-            if(document.body.scrollTop >= (image.offsetTop - this.vhToPixel(50))) {
+            if(window.scrollY >= (image.offsetTop - this.vhToPixel(50))) {
                 //Don't assign the props to the view yet - it will cause a jarring switch between multiple images
                 newImage = image;
             };
