@@ -1,5 +1,6 @@
 export class Post {
 	"type": string;
+	"name": string;
 	"tag": string;
 	"title": string;
 	"outbound": OutboundMeta;
@@ -35,6 +36,7 @@ export class Introduction {
 export class Section {
 	"id": number;
 	"imageUrl": string;
+	"imageAuthor": string;
 	"title": string;
 	"content": string;
 }

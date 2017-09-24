@@ -16,7 +16,7 @@ import { RouterTriggerService } from "./shared/router-trigger/router-trigger.ser
     ]
 })
 export class AppComponent implements OnInit {
-  public index = false;
+  public darkTheme = false;
 
   constructor(
   	private route: ActivatedRoute,
@@ -35,16 +35,17 @@ export class AppComponent implements OnInit {
 
   public ngOnInit(): void {
     this.router.events.subscribe((val) => {
-        if(val instanceof NavigationEnd && (val.url === "/index" || val.url === "/")) {
-          this.index = true;
+        //Can't seem to subscribe to custom data from router so this will have to do for now
+        if(val instanceof NavigationEnd && (val.url === "/about-contact" || val.url === "/index" || val.url === "/")) {
+          this.darkTheme = true;
         } else {
-          this.index = false;
+          this.darkTheme = false;
         };
     });
   }
 
   public onDeactivate(): void {
-    document.body.scrollTop = 0;
+    window.scrollTo(0, 0);
   }
 
 }

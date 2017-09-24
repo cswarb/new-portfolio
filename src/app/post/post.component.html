@@ -1,6 +1,6 @@
 <div class="container">
 	<div class="article article__hero">
-		<p class="post-content__type">{{post?.tag}}</p>
+		<p class="post-content__type"><span class="bold">{{post?.name}}</span> — {{post?.tag}}</p>
 		<h3 class="post-content__hero-title">{{post?.title}}</h3>
 		<a class="post-content__link" [class.post-content__link--inactive]="!post?.outbound?.alive" [href]="post?.outbound?.url" target="_BLANK">{{post?.outbound?.url}}</a>
 	</div>
@@ -51,16 +51,19 @@
 
 	<!-- <hr class="post-content__separator"> -->
 
-	<div class="article__inner no-margin-top">
-		<div class="post-content__images">
-			<div class="post-content__image-meta__wrapper">
-				<figure class="post-content__image-meta" *ngFor="let image of post?.images">
-					<figcaption class="post-content__image-meta__title">{{image?.title}}</figcaption>
-					<div class="post-content__image-meta__item">
-						<img [src]="image?.imageUrl" [alt]="image?.title">
-					</div>
-				</figure>
+	<div class="flex article__inner no-margin-top">
+		<div class="images">
+			<div class="post-content__images">
+				<div class="post-content__image-meta__wrapper">
+					<figure class="post-content__image-meta" *ngFor="let image of post?.images">
+						<div class="post-content__image-meta__item" [attr.data-author]="image?.title">
+							<img [src]="image?.imageUrl" [alt]="image?.title">
+						</div>
+					</figure>
+				</div>
 			</div>
+		</div>
+		<div class="right-side">
 		</div>
 	</div>
 

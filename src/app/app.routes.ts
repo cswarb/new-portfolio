@@ -23,19 +23,31 @@ import { IndexResolverService } from "./index/index-resolver.service";
 			{
 				path: "index",
 				component: IndexComponent,
-				data: {animation: { value: "index"}},
+				data: {
+					animation: { 
+						value: "index"
+					}
+				},
 				resolve: {
 					posts: IndexResolverService
 				}
 			},
 			{
 				path: "about-contact",
-				data:{animation: { value: "about"}},
+				data: {
+					animation: {
+						value: "about"
+					}
+				},
 				component: AboutComponent
 			},
 			{
 				path: "post/:id",
-				data: {animation: { value: "post"}},
+				data: {
+					animation: {
+						value: "post"
+					}
+				},
 				component: PostComponent,
 				resolve: {
 					post: PostResolverService

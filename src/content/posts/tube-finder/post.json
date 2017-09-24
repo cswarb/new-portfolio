@@ -1,5 +1,6 @@
 {
 	"type": "POST",
+	"name": "TFL Tube Finder",
 	"tag": "Design/Development Project",
 	"title": "Checking the tube status has never been better!",
 	"outbound": {
@@ -36,19 +37,22 @@
 	"sections": [
 		{
 			"id": 0,
-			"imageUrl": "./content/posts/tube-finder/img/1.png",
+			"imageUrl": "./content/posts/tube-finder/img/1.jpg",
+			"imageAuthor": "@christiankaindl",
 			"title": "UI + UX",
 			"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et animi, ipsa rerum. Excepturi velit molestias, libero, ea est ipsam repellat quaerat doloremque voluptatum incidunt natus sint reprehenderit dolorum quidem eum!" 
 		},
 		{
 			"id": 1,
-			"imageUrl": "./content/posts/tube-finder/img/2.png",
+			"imageUrl": "./content/posts/tube-finder/img/2.jpg",
+			"imageAuthor": "@romainp",
 			"title": "Speed and performance",
 			"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora nisi repellendus quaerat quae rerum magnam esse quos qui, id, voluptates culpa. Quasi sint adipisci enim facere ex facilis, magni. Eos." 
 		},
 		{
 			"id": 2,
-			"imageUrl": "./content/posts/tube-finder/img/3.png",
+			"imageUrl": "./content/posts/tube-finder/img/3.jpg",
+			"imageAuthor": "@goran_ivos",
 			"title": "Development",
 			"content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla odio dignissimos rem cum consequatur ea, sit modi ab veniam eveniet, eum, maiores odit. Similique inventore culpa, eius fuga odio officiis?" 
 		}
