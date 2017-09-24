@@ -36,6 +36,7 @@ export class Introduction {
 export class Section {
 	"id": number;
 	"imageUrl": string;
+	"imageAuthor": string;
 	"title": string;
 	"content": string;
 }
