@@ -2,7 +2,8 @@
         /* margin-top: 80rem; */
     padding-left: 8rem;
     position: relative;
-    min-height: 100vh;
+    min-height: calc(45vh + 10rem);
+    // min-height: 20rem;
     height: auto;
     background: grey; /*url(https://images.unsplash.com/photo-1495670999744-c350494ce7ea?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=)*/
     background-position: bottom center;
@@ -45,6 +46,16 @@
         position: absolute;
         top: 0;
         left: 0;
+        transition: background-color 0.2s ease-in-out;
+    }
+    &:hover {
+        &:before {
+            background-color: #e4e4e4;
+            color: #fff;
+        }
+        .suggestion__item__link:after {
+            opacity: 0.6;
+        }
     }
     &__stamp {
         color: #31343F; /*rgba(255,255,255,0.4);*/
@@ -77,8 +88,7 @@
     }
     &__item {
         font-size: 3.5rem;
-        line-height: 1.65;
-        letter-spacing: 1px;
+        line-height: 1;
         &__link {
             text-decoration: none;
             color: #31343F;
@@ -88,6 +98,32 @@
             font-family: $primary-font-stack;
             width: 100%;
             display: block;
+            position: relative;
+            margin: 0;
+            &:before {
+                content: "";
+                width: 4rem;
+                border-top: 2px solid black;
+                display: block;
+                position: relative;
+                /* position: relative; */
+                margin: 0 0 8.5rem 0;
+                // bottom: 13%;
+                // left: -13%;
+            }
+            &:after {
+                content: "";
+                width: 25px;
+                height: 10px;
+                position: absolute;
+                right: 4rem;
+                bottom: 1.25rem;
+                opacity: 0;
+                background: url("./assets/img/right-arrow.svg");
+                background-repeat: no-repeat;
+                background-size: 1rem;
+                background-position: center;
+            }
             svg {
                 text {
                     fill: #000;
@@ -109,21 +145,6 @@
             //     /*transition: all 0.2s linear;*/
             //     animation: pulse 1.75s cubic-bezier(0.79, 0.58, 0.54, 0.76) forwards infinite;
             // }
-            &:hover {
-                &:after {
-                    content: "";
-                    width: 25px;
-                    height: 10px;
-                    position: absolute;
-                    right: 0;
-                    top: 50%;
-                    opacity:0.6;
-                    background: url("./assets/img/right-arrow.svg");
-                    background-repeat: no-repeat;
-                    background-size: 1rem;
-                    background-position: center;
-                }
-            }
         }
     }
 }
