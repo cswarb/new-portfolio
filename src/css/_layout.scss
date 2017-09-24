@@ -26,10 +26,10 @@
     	.jumbo_text a p {
 			color: #bdc0c3;
     	}
-    	.nav__list_item__link:hover, .nav__title, .text_section__email, .contrast-text, .text_section__content, .full-height__section .title__item, .full-height__section__header {
+    	.active, .nav__list_item__link:hover, .nav__title, .text_section__email, .contrast-text, .text_section__content, .full-height__section .title__item, .full-height__section__header {
     		color: #fff;
     	}
-    	.text_section__content:after {
+    	.text_section__content:after, .active {
     		border-color: #fff;
     	}
     	> main {

@@ -1,5 +1,6 @@
 export class Post {
 	"type": string;
+	"name": string;
 	"tag": string;
 	"title": string;
 	"outbound": OutboundMeta;
