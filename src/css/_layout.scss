@@ -19,7 +19,6 @@
     //Dark theme
     &.dark {
     	background-color: #000;
-    	.nav__title, 
     	.nav__list_item__link,
     	.jumbo_text a h2 {
     		color: #737f86;
@@ -27,7 +26,7 @@
     	.jumbo_text a p {
 			color: #bdc0c3;
     	}
-    	.text_section__email, .contrast-text, .text_section__content, .full-height__section .title__item, .full-height__section__header {
+    	.nav__list_item__link:hover, .nav__title, .text_section__email, .contrast-text, .text_section__content, .full-height__section .title__item, .full-height__section__header {
     		color: #fff;
     	}
     	> main {
@@ -85,6 +84,9 @@
     	margin: 10rem 0;
     	@media (max-width: 55rem) {
         	margin: 0;
+        }
+        > div {
+        	flex: 1;
         }
     }
 }
