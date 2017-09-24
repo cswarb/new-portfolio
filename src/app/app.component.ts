@@ -35,7 +35,7 @@ export class AppComponent implements OnInit {
 
   public ngOnInit(): void {
     this.router.events.subscribe((val) => {
-        if(val instanceof NavigationEnd && (val.url === "/index" || val.url === "/")) {
+        if(val instanceof NavigationEnd && ( val.url === "/index" || val.url === "/")) {
           this.index = true;
         } else {
           this.index = false;
@@ -44,7 +44,7 @@ export class AppComponent implements OnInit {
   }
 
   public onDeactivate(): void {
-    document.body.scrollTop = 0;
+    window.scrollTo(0, 0);
   }
 
 }

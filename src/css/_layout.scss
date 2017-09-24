@@ -22,16 +22,16 @@
     	.nav__title, 
     	.nav__list_item__link,
     	.jumbo_text a h2 {
-    		color: #fff;
+    		color: #737f86;
     	}
     	.jumbo_text a p {
 			color: #bdc0c3;
     	}
-    	.contrast-text {
+    	.text_section__email, .contrast-text, .text_section__content, .full-height__section .title__item, .full-height__section__header {
     		color: #fff;
     	}
     	> main {
-		&:before {
+			&:before {
 				background: #000;
 				content: "";
 				width: 100%;
@@ -76,7 +76,7 @@
     margin: 10rem 2rem;
     &__hero {
     	position: relative;
-    	margin: 0 0 15rem 30rem;
+    	margin: 0 0 5rem 30rem;
     	@media (max-width: 55rem) {
         	margin: 0 0 10rem 0;
         }

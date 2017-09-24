@@ -1,7 +1,8 @@
 <span class="post-content__image__wrapper" *ngFor="let section of sectionData">
 	<div [ngClass]="{'fadein': activeImage === section?.id + 1}"
 		style.backgroundImage="url({{section?.imageUrl}})"
-		class="post-content__image__content">
+		class="post-content__image__content" 
+		[attr.data-author]="section?.imageAuthor">
 	</div>
 	<span class="post-content__image__number">{{activeNumber}}</span>	
 </span>

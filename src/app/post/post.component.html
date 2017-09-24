@@ -55,8 +55,7 @@
 		<div class="post-content__images">
 			<div class="post-content__image-meta__wrapper">
 				<figure class="post-content__image-meta" *ngFor="let image of post?.images">
-					<figcaption class="post-content__image-meta__title">{{image?.title}}</figcaption>
-					<div class="post-content__image-meta__item">
+					<div class="post-content__image-meta__item" [attr.data-author]="image?.title">
 						<img [src]="image?.imageUrl" [alt]="image?.title">
 					</div>
 				</figure>
