@@ -19,6 +19,7 @@
         color: #000;
         text-decoration: none;
         position: relative;
+        transition: opacity 0.2s ease-in-out;
         // &:before {
         //     content: "";
         //     // background: url("./assets/img/2.jpg");
@@ -33,9 +34,10 @@
         //     border: 1px solid rgba(255, 255, 255, 0.5);
         // }
         &:hover {
-            .contrast-text {
-                color: #00fd75;//#e8d91c;
-            }
+            // .contrast-text {
+                // color: #00fd75;//#e8d91c;
+                opacity: 0.75;
+            // }
         }
         h2 {
             margin: 0 0 1rem 0;
@@ -53,9 +55,9 @@
             letter-spacing: -0.8px;
             color: #000;
             max-width: 90%;
-            .contrast-text {
-                transition: color 0.2s ease-in-out;
-            }
+            // .contrast-text {
+                
+            // }
             @media (max-width: 55rem) {
                 font-size: 2rem;
                 max-width: 100%;
