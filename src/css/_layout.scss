@@ -23,10 +23,10 @@
     	.jumbo_text a h2 {
     		color: #656c6f;
     	}
-    	.jumbo_text a p {
+    	.jumbo_text a p, .text_section__content {
 			color: #bdc0c3;
     	}
-    	.active, .nav__list_item__link:hover, .nav__title, .text_section__email, .contrast-text, .text_section__content, .full-height__section .title__item, .full-height__section__header {
+    	.active, .nav__list_item__link:hover, .nav__title, .text_section__email, .contrast-text, .full-height__section .title__item, .full-height__section__header {
     		color: #fff;
     	}
     	.text_section__content:after, .active {
@@ -64,7 +64,7 @@
 	align-items: stretch;
 	justify-content: flex-end;
 	position: relative;
-	min-height: 90vh;
+	min-height: 100vh;
 	flex-flow: row nowrap;
 	&--column {
 		flex-flow: column nowrap;
@@ -78,7 +78,7 @@
     margin: 10rem 2rem;
     &__hero {
     	position: relative;
-    	margin: 7.5rem 0 15rem 30rem;
+    	margin: 7.5rem 30rem 15rem 7rem;
     	@media (max-width: 55rem) {
         	margin: 0 0 10rem 0;
         }
@@ -88,9 +88,9 @@
     	@media (max-width: 55rem) {
         	margin: 0;
         }
-        > div {
-        	flex: 1;
-        }
+        // > div {
+        // 	flex: 1;
+        // }
     }
 }
 

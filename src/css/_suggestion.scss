@@ -1,9 +1,7 @@
 .suggestion {
-        /* margin-top: 80rem; */
-    padding-left: 8rem;
+    padding: 4rem;
     position: relative;
     min-height: 100vh;
-    // min-height: 20rem;
     height: auto;
     background: grey; /*url(https://images.unsplash.com/photo-1495670999744-c350494ce7ea?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=)*/
     background-position: bottom center;
@@ -12,12 +10,11 @@
     bottom: 0;
     width: 100%;
     overflow: hidden;
-    // background: url("https://images.unsplash.com/photo-1495232714953-ef7f41577786?dpr=2&auto=format&fit=crop&w=1500&h=848&q=80&cs=tinysrgb&crop=");
-    // https://images.unsplash.com/photo-1490642914619-7955a3fd483c?dpr=2&auto=format&fit=crop&w=1500&h=975&q=80&cs=tinysrgb&crop=
+    text-decoration: none;
     background-size: 100%;
-    /*https://images.unsplash.com/photo-1495670999744-c350494ce7ea?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=*/
-/*https://images.unsplash.com/photo-1496849858694-9c2a93479df2?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=*/
-    /*https://images.unsplash.com/36/fVSwTG05QIaE9FN7tLQ5_IMG_1122.jpg?dpr=2&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=*/
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
     @media (max-width: 55rem) {
         padding: 3rem 2.5rem;    
     }
@@ -61,13 +58,7 @@
         color: #31343F; /*rgba(255,255,255,0.4);*/
         position: relative;
         top: 6rem;
-        /*left: -7.8rem;*/
-        /* text-transform: uppercase; */
-        /*border-bottom: 1px solid rgba(255,255,255,0.4);*/
-        /*margin: 0 65rem 0 4rem;*/
         padding-bottom: 0.7rem;
-        /* letter-spacing: -0.1px; */
-        /*font-family: 'Univers';*/
         font-weight: 700;
         font-size: 0.7rem;
         letter-spacing: 1.8px;
@@ -81,9 +72,7 @@
         margin: 0;
         list-style: none;
         padding: 0;
-        position: absolute;
         bottom: 3rem;
-        min-width: 40rem;
         max-width: 90vw;
     }
     &__item {
@@ -106,17 +95,14 @@
                 border-top: 2px solid black;
                 display: block;
                 position: relative;
-                /* position: relative; */
                 margin: 0 0 15rem 0;
-                // bottom: 13%;
-                // left: -13%;
             }
             &:after {
                 content: "";
                 width: 25px;
                 height: 10px;
                 position: absolute;
-                right: 4rem;
+                left: 110%;
                 bottom: 1.25rem;
                 opacity: 0;
                 background: url("./assets/img/right-arrow.svg");

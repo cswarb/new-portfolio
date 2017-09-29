@@ -1,21 +1,45 @@
 <div class="container">
-	<div class="article article__hero">
-		<p class="post-content__type"><span class="bold">{{post?.name}}</span> — {{post?.tag}}</p>
-		<h3 class="post-content__hero-title">{{post?.title}}</h3>
-		<a class="post-content__link" [class.post-content__link--inactive]="!post?.outbound?.alive" [href]="post?.outbound?.url" target="_BLANK">{{post?.outbound?.url}}</a>
+
+	<div class="full-height__section full-height__section--row full align-start">
+		<div style="flex: 7;margin-right: 5rem;">
+			<p class="post-content__type"><span class="bold">{{post?.name}}</span> — {{post?.tag}}</p>
+			<h5 class="title__item" style="font-family: TF Opicular,Calibre Regular,sans-serif;">{{post?.title}}</h5>
+		</div>
+
+		<section class="content__item">
+			
+		</section>
+		<section class="content__item">
+			
+		</section>
 	</div>
 
-	<div data-cmp-post-info [splashText]="post?.meta?.splashText" [year]="post?.meta?.year" [role]="post?.meta?.role" [technologies]="post?.meta?.technologies"></div>
+	<div class="full-height__section full-height__section--row full align-start">
+		<h5 class="title__item">Details</h5>
 
-	<article class="flex article__inner">
-		<div class="left-side"></div>
-		<div class="right-side">
-			<section class="post-content__wrapper">
-				<!-- <h4 class="post-content__title">{{post?.introduction?.title}}</h4> -->
-				<p class="post-content__paragraph post-content__paragraph--large">{{post?.introduction?.title}}</p>
-			</section>
-		</div>
-	</article>
+		<section class="content__item">
+			<header>
+				<h6 class="full-height__section__header">Role</h6>
+			</header>
+			<p class="full-height__section__list">
+				I created the front-end, UI design, experience, and complete development including api integration
+			</p>
+		</section>
+		<section class="content__item">
+			<header>
+				<h6 class="full-height__section__header">Technologies Used</h6>
+			</header>
+			<ul class="full-height__section__list">
+				<li>Angular 4</li>
+				<li>HTML</li>
+				<li>SASS</li>
+				<li>Git + Github</li>
+				<li>TFL Unified API</li>
+			</ul>
+		</section>
+	</div>
+
+	<!-- <div data-cmp-post-info [splashText]="post?.meta?.splashText" [year]="post?.meta?.year" [role]="post?.meta?.role" [technologies]="post?.meta?.technologies"></div> -->
 
 	<article *ngIf="!isMobile()" class="flex article__inner">
 		<div class="left-side blank">
@@ -44,26 +68,26 @@
 		</div>
 	</article>
 
-	<article class="flex article__inner no-margin-bottom">
-		<h2 class="post-content__closing-title">Final Thoughts</h2>
-		<p class="post-content__closing-content">{{post?.finalThoughts}}</p>
+	<article data-cmp-parallax class="article__inner post-content__final-wrapper parallax-wrap">
+		<div class="post-content__final-wrapper__thoughts">
+			<h5 class="post-content__final-wrapper__thoughts--title">Final Thoughts</h5>
+			<p class="color-light-blue">{{post?.finalThoughts}}</p>
+		</div>
+		<div class="post-content__final-wrapper__link">
+			<a class="post-content__link" [class.post-content__link--inactive]="!post?.outbound?.alive" [href]="post?.outbound?.url" target="_BLANK">{{post?.outbound?.url}}</a>
+		</div>
 	</article>
 
 	<!-- <hr class="post-content__separator"> -->
 
 	<div class="flex article__inner no-margin-top">
-		<div class="images">
-			<div class="post-content__images">
-				<div class="post-content__image-meta__wrapper">
-					<figure class="post-content__image-meta" *ngFor="let image of post?.images">
-						<div class="post-content__image-meta__item" [attr.data-author]="image?.title">
-							<img [src]="image?.imageUrl" [alt]="image?.title">
-						</div>
-					</figure>
-				</div>
-			</div>
-		</div>
-		<div class="right-side">
+		<div class="post-content__image-meta__wrapper">
+			<figure class="post-content__image-meta" *ngFor="let image of post?.images">
+				<!-- <div class="post-content__image-meta__item"> -->
+					<img [src]="image?.imageUrl" [alt]="image?.title">
+					<p class="post-content__image__title">{{image?.title}}</p>
+				<!-- </div> -->
+			</figure>
 		</div>
 	</div>
 

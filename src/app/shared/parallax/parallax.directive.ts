@@ -7,7 +7,7 @@ import * as Rellax from "Rellax";
 export class ParallaxDirective implements AfterViewInit, OnDestroy {
 	private rellax = null;
 	private opts = {
-		"speed": 1.5,
+		"speed": 3.5,
 		"center": true,
 		"round": false
 	};
