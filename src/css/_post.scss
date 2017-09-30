@@ -86,7 +86,8 @@
     }
     &__type {
         // font-family: "GT";
-        font-family: "TF Opicular";
+        // font-family: "TF Opicular";
+        font-family: "GT";
         position: relative;
         margin: 0;
         font-size: 0.8rem;
@@ -118,7 +119,6 @@
     }
     &__link {
         color: #000;
-        letter-spacing: 0.4px;
         font-size: 1rem;
         font-family: "TF Opicular Bold";
         &--inactive {
@@ -389,6 +389,7 @@
             margin: 0.5rem 0 2rem 0;
             text-align: left;
             font-family: "Univers Light";
+            font-family: "GT";
             font-size: 1.2rem;
             letter-spacing: 0.1px;
         }
@@ -440,7 +441,8 @@
         }
         &__number {
             position: absolute;
-            font-family: $bold-font-stack;
+            // font-family: $bold-font-stack;
+            font-family: "GT";
             color: #000;
             font-size: 2.5rem;
             top: 1.4rem;
