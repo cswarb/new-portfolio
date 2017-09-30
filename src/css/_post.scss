@@ -1,8 +1,9 @@
 .color-light-blue {
-    color: #6c717b;
-    font-size: 1.1rem;
+    color: #4d5056;
+    font-size: 1.8rem;
     line-height: 1.7;
-    font-family: "Univers";
+    margin: 0;
+    font-family: "Univers Light";
 }
 
 .post-content {
@@ -27,28 +28,36 @@
     }
     &__final-wrapper {
         display: flex;
-        flex-flow: row nowrap;
-        background-color: #f0f1f3;
+        flex-flow: column nowrap;
         padding: 5rem;
         &__thoughts {
             flex: 5;
-            margin: 0 1.5rem 0 0;
+            max-width: 65rem;
+            margin: 0 0 5rem 0;
             &--title {
                 margin: 0 0 1rem 0;
-                font-size: 1rem;
+                letter-spacing: 2.7px;
                 text-transform: uppercase;
-                font-family: "ITC";
+                display: inline-block;
+                font-family: "TF Opicular Bold";
+                color: #ced3d6;
+                &:before {
+                    content: "";
+                    width: 9px;
+                    height: 9px;
+                    display: inline-block;
+                    position: relative;
+                    border-radius: 50%;
+                    background-color: #ced3d6;
+                    margin-right: 0.8rem;
+                }
             }
-        }
-        &__link {
-            flex: 3;
-            margin: 0 0 0 1.5rem;
         }
     }
     &__title {
         flex: 3;
         align-self: flex-end;
-        display: block;
+        display: flex;
         color: #35363a;
         font-family: $bold-font-stack;
         font-weight: 400;
@@ -57,8 +66,20 @@
         line-height: 1.8;
         text-transform: uppercase;
         letter-spacing: 1.2px;
+        justify-content: flex-start;
+        align-items: center;
         // border-bottom: 1px solid #e0e3e4;
         padding-bottom: 1rem;
+        &:before {
+            content: "";
+            width: 9px;
+            height: 9px;
+            display: inline-block;
+            position: relative;
+            border-radius: 50%;
+            background-color: #fff710;
+            margin-right: 0.8rem;
+        }
         @media (max-width: 55rem) {
             margin-bottom: 0.25rem;
         }
@@ -72,7 +93,7 @@
         text-transform: uppercase;
         letter-spacing: 0.4px;
         color: #000000;
-        background: #ffeb00;
+        background: #fff710;
         margin-bottom: 0.5rem;
         display: inline-block;
         padding: 0.2rem 0.3rem;
@@ -96,10 +117,10 @@
         }
     }
     &__link {
-        color: #31343F;
+        color: #000;
         letter-spacing: 0.4px;
         font-size: 1rem;
-        font-family: "Univers";
+        font-family: "TF Opicular Bold";
         &--inactive {
             text-decoration: line-through;
             pointer-events: none;
@@ -177,7 +198,7 @@
     margin-bottom: 20rem;
     display: flex;
     &__hook {
-        background-color: #FFF710;
+        background-color: #fff710;
         padding: 3rem 3rem 10rem 3rem;
         height: auto;
         min-height: 28rem;
@@ -367,7 +388,7 @@
         &__title {
             margin: 0.5rem 0 2rem 0;
             text-align: left;
-            font-family: "Univers";
+            font-family: "Univers Light";
             font-size: 1.2rem;
             letter-spacing: 0.1px;
         }
