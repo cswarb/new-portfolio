@@ -1,9 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
 @import "vars";
 @import "keyframes";
 @import "base";
+@import "fonts";
 
 //page components
+@import "loading";
 @import "about";
 @import "index";
 @import "post";
@@ -12,6 +13,5 @@
 @import "helpers";
 @import "layout";
 @import "icons";
-@import "filters";
 @import "navigation";
-@import "knockout-text";
+@import "social";

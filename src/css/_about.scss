@@ -1,8 +1,4 @@
-.anchor-block {
-    // background: #fff;
-    // background: #ffeb00;
-    // border: 2px solid #fff;
-    // color: #fff;
+.parallax-block {
     border: 2px solid #bdc0c3;
     padding: 15rem 3rem 3rem 3rem;
     font-size: 2rem;
@@ -25,8 +21,6 @@
     &__content {
         margin: 0 auto 0 7rem;
         font-family: "Univers";
-        // font-family: "GT";
-        // font-family: "ITC";
         font-weight: 400;
         color: #000;
         font-size: 3.45rem;
@@ -35,9 +29,6 @@
         z-index: 2;
         max-width: 75%;
         position: relative;
-        // flex: 4;
-        // text-align: center;
-        // margin-bottom: 2rem;
         &:after {
             content: "";
             width: 4rem;
@@ -48,16 +39,6 @@
             margin: 0;
             bottom: 13%;
             left: -13%;
-        }
-        
-        &.align-right {
-            text-align: right;
-            margin: 0 7rem 0 auto;
-            &:after {
-                bottom: 13%;
-                right: -13%;
-                left: auto;
-            }
         }
         @media (max-width: 55rem) {
             margin: 0;
@@ -73,19 +54,7 @@
                 margin: 1rem 0 3rem 0;
             }
         }
-        &--sub {
-            // max-width: 35rem;
-            // line-height: 1.6;
-            // font-size: 1.5rem;
-            // color: #000;
-            // align-self: flex-end;
-            // font-family: "Calibre Regular";
-            // letter-spacing: 0.15px;
-            // line-height: 1.6;
-            // color: #9d9fa5;
-            // font-weight: 400;
-            // margin: 2rem auto 0 7rem;
-
+        &--sub-content {
             max-width: 35rem;
             font-size: 1.5rem;
             color: #000;
@@ -108,42 +77,6 @@
         }
         @media (max-width: 55rem) {
             margin: 0;
-        }
-    }
-    &__email {
-        z-index: 1;
-        margin: 0 auto 0.4rem auto;
-        font-size: 3rem;
-        position: relative;
-        display: inline-block;
-        border: 0;
-        // border-bottom: 1px solid #d7d8d8;
-        letter-spacing: 1px;
-        font-weight: 400;
-        background: none;
-        outline: 0;
-        width: 100%;
-        @media (max-width: 55rem) {
-            font-size: 2.5rem;
-        }
-        &__helper {
-            display: block;
-            position: relative;
-            font-size: 1rem;
-            letter-spacing: 1px;
-            line-height: 1;
-            color: #000;
-            text-transform: uppercase;
-            opacity: 0;
-        }
-        &:hover {
-            // cursor: pointer;
-            + .text_section__email__helper {
-                // opacity: 1;                
-            }
-        }
-        &.copied {
-            // color: #e8d91c;
         }
     }
     &__meta {
@@ -176,156 +109,6 @@
                 padding-top: 2px;
                 text-transform: lowercase;
             }
-        }
-    }
-}
-
-.full-height__section {
-    padding: 17.5rem 5rem;
-    height: auto;
-    min-height: 100vh;
-    background-color: transparent;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 0;
-    flex-flow: row nowrap;
-    position: relative;
-    @media (max-width: 55rem) {
-        padding: 3rem 2.5rem;
-    }
-    &--column {
-        flex-flow: column nowrap;
-    }
-    &--row {
-        flex-flow: row nowrap;
-        @media (max-width: 55rem) {
-            flex-flow: column nowrap;
-        }
-    }
-    &--block {
-        display: block;
-    }
-    &.align-center {
-        align-items: center;
-        justify-content: center;
-    }
-    &.align-start {
-        align-items: flex-start;
-    }
-    &.full {
-        padding: 5rem 0;
-    }
-    &.celestial {
-        &:before {
-            content: "";
-            border-radius: 50%;
-            width: 4rem;
-            height: 4rem;
-            display: block;
-            // background-color: rgba(241, 224, 15, 0.8);
-            position: absolute;
-            top: 17%;
-            left: 10%;
-            z-index: 1;
-        }
-        // &:after {
-        //     content: "";
-        //     border-radius: 0;
-        //     width: 2rem;
-        //     height: 2rem;
-        //     display: block;
-        //     border: 0.3rem solid rgba(0, 224, 121, 0.8);
-        //     position: absolute;
-        //     bottom: 20rem;
-        //     right: 32rem;
-        //     z-index: 1;
-        // }
-        &--night {
-            &:before {
-                background-color: rgba(7, 14, 62, 0.55);
-                left: auto;
-                right: 20%;
-                z-index: 1;
-                top: 20%;
-            }
-            &:after {
-                border: none;
-            }
-        }
-    }
-    &:first-of-type {
-        margin-top: 0;
-    }
-    &--dark {
-        padding: 20rem 10rem;
-        background-color: #1528ab;
-        h3 {
-            color: #fff;
-        }
-    }
-    .title__item {
-        margin: 0;
-        font-weight: 400;
-        flex: 5;
-        font-size: 2.3rem;
-        line-height: 1.35;
-        font-family: $primary-font-stack;
-        letter-spacing: 0.8px;
-        color: #35363a;
-        @media (max-width: 55rem) {
-            margin-bottom: 1rem;
-        }
-    }
-    .content__item {
-        list-style: none;
-        margin: 0 3rem;
-        // font-family: "Calibre Light";
-        font-size: 1.3rem;
-        letter-spacing: 1.05px;
-        line-height: 2.4;
-        color: #9d9fa5;
-        text-align: left;
-        flex: 3;
-        margin: 1.1rem 3rem 0 0;
-        @media (max-width: 55rem) {
-            margin: 5rem 0;
-        }
-    }
-    &__header {
-        text-transform: uppercase;
-        font-size: 0.8rem;
-        letter-spacing: 1.5px;
-        line-height: 1.2;
-        color: #000;
-        margin: 0 0 1.5rem 0;
-    }
-    &__list {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        font-family: "Calibre Light";
-    }
-}
-
-
-
-.social {
-    list-style: none;
-    display: flex;
-    margin: 3rem 0 0 0;
-    padding: 0;
-    &__item {
-        margin: 0 1.5rem;
-        flex: 1;
-        &:first-of-type {
-            margin-left: 0;
-        }
-        &:last-of-type {
-            margin-right: 0;
-        }
-        &__link {
-
         }
     }
 }

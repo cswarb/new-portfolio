@@ -1,128 +1,78 @@
-.jumbo_text {
-    margin: 0;
-    font-family: $primary-font-stack;
-    font-weight: 400;
-    max-width: 80%;
-    color: #31343F;
-    max-width: 70rem;
-    line-height: 1.25;
-    font-size: 2.3rem;
-    letter-spacing: 0.8px;
-    margin: 20rem 0;
-    position: relative;
+.jumbo-text {
     color: #000;
+    font-family: $primary-font-stack;
+    font-size: 2.3rem;
+    font-weight: 400;
+    letter-spacing: 0.8px;
+    line-height: 1.25;
+    max-width: 70rem;
+    position: relative;
+    &:not(:first-of-type) {
+        margin: 20rem 0;
+    }
     @media (max-width: 55rem) {
         margin: 10rem 0;
     }
-    a {
+    &__title {
+        color: #737f86;
+        font-size: 1.3rem;
+        font-weight: 100;
+        letter-spacing: -0.5px;
+        margin: 0 0 1rem 0;
+    }
+    &__content {
+        font-size: 2.5rem;
+        letter-spacing: -0.8px;
+        line-height: 1.25;
+        margin: 0;
+        max-width: 90%;
+        @media (max-width: 55rem) {
+            font-size: 2rem;
+            max-width: 100%;
+        }
+    }
+    &__link {
+        color: $black;
         display: block;
-        color: #000;
-        text-decoration: none;
         position: relative;
+        text-decoration: none;
         transition: opacity 0.2s ease-in-out;
-        // &:before {
-        //     content: "";
-        //     // background: url("./assets/img/2.jpg");
-        //     // background-size: cover;
-        //     // background-position: center;
-        //     width: 20rem;
-        //     height: 20rem;
-        //     position: absolute;
-        //     right: 0;
-        //     top: -8rem;
-        //     z-index: -1;
-        //     border: 1px solid rgba(255, 255, 255, 0.5);
-        // }
         &:hover {
-            // .contrast-text {
-                // color: #00fd75;//#e8d91c;
-                opacity: 0.75;
-            // }
-        }
-        h2 {
-            margin: 0 0 1rem 0;
-            font-size: 1.3rem;
-            letter-spacing: -0.5px;
-            font-weight: 100;
-            color: #737f86;
-            // text-decoration: underline;
-        }
-        p {
-            margin: 0;
-            // font-size: 3rem;
-            font-size: 2.5rem;
-            line-height: 1.25;
-            letter-spacing: -0.8px;
-            color: #000;
-            max-width: 90%;
-            // .contrast-text {
-                
-            // }
-            @media (max-width: 55rem) {
-                font-size: 2rem;
-                max-width: 100%;
-            }
+            opacity: 0.75;
         }
     }
     &--inactive {
         opacity: 0.5;
         pointer-events: none;
-        @media (max-width: 55rem) {
-            > a {
-                text-decoration: line-through;
-                color: #fff;
-            }
+        > .jumbo-text__link {
+            color: $white;
+            text-decoration: line-through;
         }
         &:hover {
             cursor: not-allowed;
         }
         &:before {
+            background: $white;
+            color: $black;
             content: "Coming Soon";
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            padding: 0.1rem 0.2rem;
             position: absolute;
+            right: 0;
+            text-transform: uppercase;
             top: 5rem;
             transform: rotate(270deg);
-            right: 0;
-            font-size: 0.8rem;
-            color: #000;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            font-weight: 700;
-            background: #fff;
-            padding: 0.1rem 0.2rem;
             @media (max-width: 55rem) {
+                display: block;
+                margin-bottom: 0.5rem;
                 position: relative;
+                text-align: right;
                 top: 0;
                 transform: rotate(0);
-                text-align: right;
-                display: block;
                 width: 100%;
-                margin-bottom: 0.5rem;
             }
         }
-    }
-}
-
-
-
-
-
-.loading {
-    align-items: center;
-    background-color: #000;
-    display: flex;
-    flex-flow: column nowrap;
-    height: 100vh;
-    justify-content: center;
-    position: relative;
-    width: 100%;
-    font-family: $bold-font-stack;
-    z-index: 10;
-    text-transform: uppercase;
-    &__content {
-        color: #fff;
-        display: block;
-        font-size: 1rem;
-        font-size: 0.9rem;
-        letter-spacing: 0.5px;
     }
 }

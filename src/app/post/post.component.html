@@ -1,35 +1,26 @@
 <div class="container">
 
-	<div class="full-height__section full-height__section--row full align-start">
-		<div style="flex: 7;margin-right: 5rem;">
-			<p class="post-content__type"><span class="bold">{{post?.name}}</span> — {{post?.tag}}</p>
-			<h5 class="title__item" style="font-family: TF Opicular,Calibre Regular,sans-serif;">{{post?.title}}</h5>
-		</div>
-
-		<section class="content__item">
-			
-		</section>
-		<section class="content__item">
-			
-		</section>
+	<div class="full-height-section full-height-section--wide post-content__hero">
+		<p class="post-content__hero__type"><span class="bold">{{post?.name}}</span> — {{post?.tag}}</p>
+		<h5 class="post-content__hero__title">{{post?.title}}</h5>
 	</div>
 
-	<div class="full-height__section full-height__section--row full align-start">
-		<h5 class="title__item">Details</h5>
+	<div class="full-height-section full-height-section--wide full-height-section--row full-height-section--align-top triple-block">
+		<h5 class="triple-block__title">Details</h5>
 
-		<section class="content__item">
+		<section class="triple-block__content">
 			<header>
-				<h6 class="full-height__section__header">Role</h6>
+				<h6 class="triple-block__header">Role</h6>
 			</header>
-			<p class="full-height__section__list">
+			<p class="triple-block__list">
 				I created the front-end, UI design, experience, and complete development including api integration
 			</p>
 		</section>
-		<section class="content__item">
+		<section class="triple-block__content">
 			<header>
-				<h6 class="full-height__section__header">Technologies Used</h6>
+				<h6 class="triple-block__header">Technologies Used</h6>
 			</header>
-			<ul class="full-height__section__list">
+			<ul class="triple-block__list">
 				<li>Angular 4</li>
 				<li>HTML</li>
 				<li>SASS</li>
@@ -39,9 +30,7 @@
 		</section>
 	</div>
 
-	<!-- <div data-cmp-post-info [splashText]="post?.meta?.splashText" [year]="post?.meta?.year" [role]="post?.meta?.role" [technologies]="post?.meta?.technologies"></div> -->
-
-	<article *ngIf="!isMobile()" class="flex article__inner">
+	<article *ngIf="!isMobile()" class="flex-area article__inner">
 		<div class="left-side blank">
 			<div data-cmp-fixed-block [sectionData]="post?.sections" [defaultImageUrl]="post?.imageUrl"></div>
 		</div>
@@ -58,8 +47,7 @@
 		</div>
 	</article>
 
-
-	<article *ngIf="isMobile()" class="flex article__inner">
+	<article *ngIf="isMobile()" class="flex-area article__inner">
 		<div class="right-side">
 			<section *ngFor="let section of post?.sections" class="post-content__wrapper">
 				<h4 class="post-content__title">{{section?.title}}</h4>
@@ -78,15 +66,11 @@
 		</div>
 	</article>
 
-	<!-- <hr class="post-content__separator"> -->
-
-	<div class="flex article__inner no-margin-top">
+	<div class="flex-area article__inner no-margin-top">
 		<div class="post-content__image-meta__wrapper">
 			<figure class="post-content__image-meta" *ngFor="let image of post?.images">
-				<!-- <div class="post-content__image-meta__item"> -->
-					<img [src]="image?.imageUrl" [alt]="image?.title">
-					<p class="post-content__image__title">{{image?.title}}</p>
-				<!-- </div> -->
+				<img [src]="image?.imageUrl" [alt]="image?.title">
+				<p class="post-content__image__title">{{image?.title}}</p>
 			</figure>
 		</div>
 	</div>

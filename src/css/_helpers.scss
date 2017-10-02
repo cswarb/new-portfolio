@@ -13,7 +13,7 @@
     background-color: transparent;
     color: transparent;
     border: 0;
-    border-bottom: 1px solid rgba(0,0,0,.05);
+    border-bottom: 1px solid rgba(0, 0, 0, .05);
 }
 
 .no-margin-top {
@@ -71,37 +71,6 @@
 .link.underline:hover:before {
     border-color: #909396;
 }
-
-// .text-wipe {
-// 	overflow: hidden;
-// 	position: relative;
-//     &:before {
-//         animation: blockRevealRight 1s ease-in-out 2s 1 normal both running;
-//         background-color: #000;
-//         content: "";
-//         display: block;
-//         height: 100%;
-//         left: 0;
-//         overflow: hidden;
-//         position: absolute;
-//         top: 0;
-//         width: 100%;
-//     }
-//     &:after {
-//         animation: blockRevealLeft 1s ease-in-out 2s 1 normal both running;
-//         background-color: #000;
-//         content: "";
-//         display: block;
-//         height: 100%;
-//         left: 0;
-//         overflow: hidden;
-//         position: absolute;
-//         top: 0;
-//         width: 0;
-//         width: 100%;
-//     }
-// }
-
 
 .center {
     text-align: center;
