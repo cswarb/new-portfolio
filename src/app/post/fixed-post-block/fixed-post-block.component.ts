@@ -55,7 +55,7 @@ export class FixedPostBlockComponent  {
 		if(!this.anchorPointStart) return;
 		if(window.scrollY >= (this.anchorPointStart.top - this.vhToPixel(5))) {
 			this.setState("fixed");
-			this.anchorProps["width"] = this.pxString(this.anchorPointStartElement.offsetWidth);
+			// this.anchorProps["width"] = this.pxString(this.anchorPointStartElement.offsetWidth);
 		} else {
 			this.setState("resting");
 		};
@@ -64,7 +64,7 @@ export class FixedPostBlockComponent  {
 		if(window.pageYOffset >= (this.anchorPointEnd.top - this.vhToPixel(5))) {
 			this.setState("end");
 			this.anchorProps["top"] = (this.pxString(this.anchorPointEnd.top - this.anchorPointStart.top));
-			this.anchorProps["width"] = this.pxString(this.anchorPointStartElement.offsetWidth);
+			// this.anchorProps["width"] = this.pxString(this.anchorPointStartElement.offsetWidth);
 		};
 	}
 

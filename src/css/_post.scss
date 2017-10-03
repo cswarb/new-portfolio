@@ -100,7 +100,7 @@
             }
             &__content {
                 color: #4d5056;
-                font-size: 1.8rem;
+                font-size: 1.7rem;
                 line-height: 1.7;
                 margin: 0;
                 font-family: "Univers Light";
@@ -186,7 +186,7 @@
     &__link {
         color: #000;
         font-size: 1rem;
-        font-family: "TF Opicular Bold";
+        font-family: "Univers";
         &--inactive {
             text-decoration: line-through;
             pointer-events: none;
@@ -255,6 +255,7 @@
             position: fixed!important;
             transform: translateZ(0);
             top: 5vh!important;
+            width: inherit;
         }
         &.end {
             left: 0!important;
@@ -345,6 +346,9 @@
                 }
             }
         }
+    }
+    &__fixed-block {
+        width: 45vw;
     }
 }
 
