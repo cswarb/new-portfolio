@@ -2,6 +2,7 @@
 @import "keyframes";
 @import "base";
 @import "fonts";
+@import "layout";
 
 //page components
 @import "loading";
@@ -10,8 +11,8 @@
 @import "post";
 @import "suggestion";
 
-@import "helpers";
-@import "layout";
 @import "icons";
 @import "navigation";
 @import "social";
+
+@import "helpers";

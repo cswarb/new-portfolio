@@ -1,7 +1,7 @@
 <div class="container">
 
-	<div class="full-height-section full-height-section--wide post-content__hero">
-		<p class="post-content__hero__type"><span class="bold">{{post?.name}}</span> — {{post?.tag}}</p>
+	<div class="post-content__hero full-height-section full-height-section--wide">
+		<p class="post-content__hero__type"><span class="bold">{{post?.meta?.year}} — {{post?.name}}</span> — {{post?.tag}}</p>
 		<h5 class="post-content__hero__title">{{post?.title}}</h5>
 	</div>
 
@@ -13,7 +13,7 @@
 				<h6 class="triple-block__header">Role</h6>
 			</header>
 			<p class="triple-block__list">
-				I created the front-end, UI design, experience, and complete development including api integration
+				{{post?.meta?.role}}
 			</p>
 		</section>
 		<section class="triple-block__content">
@@ -21,17 +21,13 @@
 				<h6 class="triple-block__header">Technologies Used</h6>
 			</header>
 			<ul class="triple-block__list">
-				<li>Angular 4</li>
-				<li>HTML</li>
-				<li>SASS</li>
-				<li>Git + Github</li>
-				<li>TFL Unified API</li>
+				<li *ngFor="let technology of post?.meta?.technologies">{{technology?.name}}</li>
 			</ul>
 		</section>
 	</div>
 
 	<article *ngIf="!isMobile()" class="flex-area article__inner">
-		<div class="left-side blank">
+		<div class="left-side left-side--blank">
 			<div data-cmp-fixed-block [sectionData]="post?.sections" [defaultImageUrl]="post?.imageUrl"></div>
 		</div>
 		<div class="right-side">
@@ -56,18 +52,18 @@
 		</div>
 	</article>
 
-	<article data-cmp-parallax class="article__inner post-content__final-wrapper parallax-wrap">
+	<article class="article__inner post-content__final-wrapper">
 		<div class="post-content__final-wrapper__thoughts">
-			<h5 class="post-content__final-wrapper__thoughts--title">Final Thoughts</h5>
-			<p class="color-light-blue">{{post?.finalThoughts}}</p>
+			<h5 class="post-content__final-wrapper__thoughts__title">Final Thoughts</h5>
+			<p class="post-content__final-wrapper__thoughts__content">{{post?.finalThoughts}}</p>
 		</div>
 		<div class="post-content__final-wrapper__link">
 			<a class="post-content__link" [class.post-content__link--inactive]="!post?.outbound?.alive" [href]="post?.outbound?.url" target="_BLANK">{{post?.outbound?.url}}</a>
 		</div>
 	</article>
 
-	<div class="flex-area article__inner no-margin-top">
-		<div class="post-content__image-meta__wrapper">
+	<div class="flex-area article__inner">
+		<div class="flex">
 			<figure class="post-content__image-meta" *ngFor="let image of post?.images">
 				<img [src]="image?.imageUrl" [alt]="image?.title">
 				<p class="post-content__image__title">{{image?.title}}</p>

@@ -7,6 +7,9 @@
     margin: 5rem 10rem 10rem 10rem;
     font-family: "Univers";
     line-height: 1.4;
+    @media (max-width: 55rem) {
+        margin: $global-section-padding-mobile;
+    }
 }
 
 .text_section {
