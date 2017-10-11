@@ -1,7 +1,7 @@
 .nav {
     align-items: flex-start;
     display: flex;
-    font-family: "Neue Haas Unica Pro";
+    font-family: "Neue Haas Unica";
     justify-content: space-between;
     margin: 0 0 5rem 0;
     padding-top: 2rem;
@@ -36,9 +36,6 @@
     }
     &__link {
         text-decoration: none;
-        &__text {
-            font-family: "Neue Haas Unica";
-        }
     }
     &__list {
         &_container {
