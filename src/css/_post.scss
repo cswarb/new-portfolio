@@ -54,6 +54,21 @@
     }
 }
 
+.charm {
+    animation: 5s slideInUp ease-in-out both 1s;
+    background-image: url("/assets/img/tube.svg");
+    width: 10rem;
+    height: 3rem;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: fixed;
+    transform: rotate(90deg) translateZ(0);
+    left: -4rem;
+    top: 50%;
+    z-index: 2;
+}
+
 .post-content {
     &__wrapper {
         height: auto;
