@@ -36,6 +36,9 @@
     }
     &__link {
         text-decoration: none;
+        &__text {
+            font-family: "Neue Haas Unica";
+        }
     }
     &__list {
         &_container {
