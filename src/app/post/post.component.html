@@ -1,6 +1,6 @@
 <div class="container">
 
-	<div class="charm"></div>
+	<!-- <div class="charm"></div> -->
 
 	<div class="post-content__hero full-height-section full-height-section--wide">
 		<p class="post-content__hero__type"><span class="bold">{{post?.meta?.year}} — {{post?.name}}</span> — {{post?.tag}}</p>
@@ -40,7 +40,7 @@
 				class="post-content__wrapper" 
 				id="scroll-anchor-ref">
 				<h4 class="post-content__title">{{section?.title}}</h4>
-				<p class="post-content__paragraph">{{section?.content}}</p>
+				<p class="post-content__paragraph" *ngFor="let content of section?.content">{{content}}</p>
 			</section>
 		</div>
 	</article>
