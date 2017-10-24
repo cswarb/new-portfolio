@@ -1,25 +1,36 @@
 <div class="container">
-	<div class="article article__hero">
-		<p class="post-content__type"><span class="bold">{{post?.name}}</span> — {{post?.tag}}</p>
-		<h3 class="post-content__hero-title">{{post?.title}}</h3>
-		<a class="post-content__link" [class.post-content__link--inactive]="!post?.outbound?.alive" [href]="post?.outbound?.url" target="_BLANK">{{post?.outbound?.url}}</a>
+
+	<!-- <div class="charm"></div> -->
+
+	<div class="post-content__hero full-height-section full-height-section--wide">
+		<p class="post-content__hero__type"><span class="bold">{{post?.meta?.year}} — {{post?.name}}</span> — {{post?.tag}}</p>
+		<h5 class="post-content__hero__title">{{post?.title}}</h5>
 	</div>
 
-	<div data-cmp-post-info [splashText]="post?.meta?.splashText" [year]="post?.meta?.year" [role]="post?.meta?.role" [technologies]="post?.meta?.technologies"></div>
+	<div class="full-height-section full-height-section--wide full-height-section--row full-height-section--align-top triple-block">
+		<h5 class="triple-block__title">Details</h5>
 
-	<article class="flex article__inner">
-		<div class="left-side"></div>
-		<div class="right-side">
-			<section class="post-content__wrapper">
-				<!-- <h4 class="post-content__title">{{post?.introduction?.title}}</h4> -->
-				<p class="post-content__paragraph post-content__paragraph--large">{{post?.introduction?.title}}</p>
-			</section>
-		</div>
-	</article>
+		<section class="triple-block__content">
+			<header>
+				<h6 class="triple-block__header">Role</h6>
+			</header>
+			<p class="triple-block__list">
+				{{post?.meta?.role}}
+			</p>
+		</section>
+		<section class="triple-block__content">
+			<header>
+				<h6 class="triple-block__header">Technologies Used</h6>
+			</header>
+			<ul class="triple-block__list">
+				<li *ngFor="let technology of post?.meta?.technologies">{{technology?.name}}</li>
+			</ul>
+		</section>
+	</div>
 
-	<article *ngIf="!isMobile()" class="flex article__inner">
-		<div class="left-side blank">
-			<div data-cmp-fixed-block [sectionData]="post?.sections" [defaultImageUrl]="post?.imageUrl"></div>
+	<article *ngIf="!isMobile()" class="flex-area article__inner">
+		<div class="left-side left-side--blank">
+			<div data-cmp-fixed-block class="post-content__fixed-block" [sectionData]="post?.sections" [defaultImageUrl]="post?.imageUrl"></div>
 		</div>
 		<div class="right-side">
 			<section 
@@ -29,13 +40,12 @@
 				class="post-content__wrapper" 
 				id="scroll-anchor-ref">
 				<h4 class="post-content__title">{{section?.title}}</h4>
-				<p class="post-content__paragraph">{{section?.content}}</p>
+				<p class="post-content__paragraph" *ngFor="let content of section?.content">{{content}}</p>
 			</section>
 		</div>
 	</article>
 
-
-	<article *ngIf="isMobile()" class="flex article__inner">
+	<article *ngIf="isMobile()" class="flex-area article__inner">
 		<div class="right-side">
 			<section *ngFor="let section of post?.sections" class="post-content__wrapper">
 				<h4 class="post-content__title">{{section?.title}}</h4>
@@ -44,26 +54,22 @@
 		</div>
 	</article>
 
-	<article class="flex article__inner no-margin-bottom">
-		<h2 class="post-content__closing-title">Final Thoughts</h2>
-		<p class="post-content__closing-content">{{post?.finalThoughts}}</p>
+	<article class="article__inner post-content__final-wrapper">
+		<div class="post-content__final-wrapper__thoughts">
+			<h5 class="post-content__final-wrapper__thoughts__title">Final Thoughts</h5>
+			<p class="post-content__final-wrapper__thoughts__content">{{post?.finalThoughts}}</p>
+		</div>
+		<div class="post-content__final-wrapper__link">
+			<a class="post-content__link" [class.post-content__link--inactive]="!post?.outbound?.alive" [href]="post?.outbound?.url" target="_BLANK">{{post?.outbound?.url}}</a>
+		</div>
 	</article>
 
-	<!-- <hr class="post-content__separator"> -->
-
-	<div class="flex article__inner no-margin-top">
-		<div class="images">
-			<div class="post-content__images">
-				<div class="post-content__image-meta__wrapper">
-					<figure class="post-content__image-meta" *ngFor="let image of post?.images">
-						<div class="post-content__image-meta__item" [attr.data-author]="image?.title">
-							<img [src]="image?.imageUrl" [alt]="image?.title">
-						</div>
-					</figure>
-				</div>
-			</div>
-		</div>
-		<div class="right-side">
+	<div class="flex-area">
+		<div class="flex">
+			<figure class="post-content__image-meta" *ngFor="let image of post?.images">
+				<img [src]="image?.imageUrl" [alt]="image?.title">
+				<p class="post-content__image__title">{{image?.title}}</p>
+			</figure>
 		</div>
 	</div>
 

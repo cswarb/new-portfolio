@@ -30,13 +30,4 @@ export class PostComponent implements OnInit {
 		return false;
 	}
 
-	public createImage(imageUrl: string) {
-		return {
-			"background": `url(${imageUrl})`,
-			"backgroundSize": "cover",
-			"width": "100%",
-			"height": "auto"
-		}
-	}
-
 }

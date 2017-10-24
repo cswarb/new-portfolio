@@ -6,12 +6,12 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./suggestion.component.scss"]
 })
 export class SuggestionComponent implements OnInit {
-	private imageUrl: string = "./assets/img/Flow_05_color.jpg"
-	private suggestion: any = {
-		"background-position": "center",
-    	"background-image": `url(${this.imageUrl})`,
-    	"background-size": "contain"
-    };
+	// private imageUrl: string = "./assets/img/Flow_05_color.jpg"
+	// private suggestion: any = {
+	// 	"background-position": "center",
+ //    	"background-image": `url(${this.imageUrl})`,
+ //    	"background-size": "contain"
+ //    };
 
 	constructor() { }
 
