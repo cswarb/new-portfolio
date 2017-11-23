@@ -5,10 +5,11 @@
     font-weight: 400;
     letter-spacing: 0.8px;
     line-height: 1.25;
-    max-width: 70rem;
+    margin: 0 auto;
+    max-width: 50rem;
     position: relative;
     &:not(:first-of-type) {
-        margin: 20rem 0;
+        margin: 20rem auto;
     }
     @media (max-width: 55rem) {
         margin: 10rem 0;
@@ -21,11 +22,10 @@
         margin: 0 0 1rem 0;
     }
     &__content {
-        font-size: 2.5rem;
+        font-size: 2rem;
         letter-spacing: -0.8px;
         line-height: 1.25;
         margin: 0;
-        max-width: 90%;
         @media (max-width: 55rem) {
             font-size: 2rem;
             max-width: 100%;
@@ -42,35 +42,31 @@
         }
     }
     &--inactive {
-        opacity: 0.5;
-        pointer-events: none;
+        opacity: 0.8;
+        // pointer-events: none;
         > .jumbo-text__link {
             color: $white;
-            text-decoration: line-through;
-        }
-        &:hover {
-            cursor: not-allowed;
+            &:hover {
+                cursor: not-allowed;
+            }
         }
         &:before {
-            background: $white;
+            background-color: #b1a75f;
             color: $black;
             content: "Coming Soon";
-            font-size: 0.8rem;
+            font-size: 0.6rem;
             font-weight: 700;
             letter-spacing: 1.5px;
-            padding: 0.1rem 0.2rem;
+            padding: 0.2rem 0.3rem;
             position: absolute;
             right: 0;
             text-transform: uppercase;
-            top: 5rem;
-            transform: rotate(270deg);
             @media (max-width: 55rem) {
                 display: block;
                 margin-bottom: 0.5rem;
                 position: relative;
                 text-align: right;
                 top: 0;
-                transform: rotate(0);
                 width: 100%;
             }
         }
