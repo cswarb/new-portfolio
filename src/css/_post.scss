@@ -144,14 +144,14 @@
         align-items: center;
         padding-bottom: 1rem;
         &:before {
-            content: "";
-            width: 9px;
-            height: 9px;
-            display: inline-block;
-            position: relative;
-            border-radius: 50%;
-            background-color: #fff710;
-            margin-right: 0.8rem;
+            // content: "";
+            // width: 9px;
+            // height: 9px;
+            // display: inline-block;
+            // position: relative;
+            // border-radius: 50%;
+            // background-color: #fff710;
+            // margin-right: 0.8rem;
         }
         @media (max-width: 55rem) {
             margin-bottom: 0.25rem;
@@ -192,7 +192,7 @@
         margin: 0 0 1rem 0;
         flex: 1;
         line-height: 1.7;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         color: #646876;
         &--medium {
             font-size: 1.5rem;
