@@ -31,6 +31,9 @@
     z-index: 1;
     display: block;
     width: 100%;
+    &--cut {
+        padding-top: 0;
+    }
     @media (max-width: 55rem) {
         padding: $global-section-padding-mobile;
     }
@@ -112,10 +115,14 @@
         padding: 3rem 2.5rem;
     }
     &--cut {
-        padding-top: 12.5rem;
+        padding-top: 10rem;
     }
     &--wide {
         padding: 4rem 0;
+        &--cut {
+            padding-left: 0;
+            padding-right: 0;
+        }
     }
     &--column {
         flex-flow: column nowrap;

@@ -1,10 +1,13 @@
-<div class="container">
+<div class="container container--cut">
 
 	<!-- <div class="charm"></div> -->
-
-	<div class="post-content__hero full-height-section full-height-section--wide">
-		<p class="post-content__hero__type"><span class="bold">{{post?.meta?.year}} — {{post?.name}}</span> — {{post?.tag}}</p>
-		<h5 class="post-content__hero__title">{{post?.title}}</h5>
+	<div class="full-height-section full-height-section--column full-height-section--align-top full-height-section--cut full-height-section--wide--cut">
+		<h3 class="text_section__content">
+			<span class="contrast-text">{{post?.title}}</span>
+		</h3>
+		<p class="text_section__content--sub-content">
+			 <span>{{post?.meta?.year}} — {{post?.name}}</span> — {{post?.tag}}
+		</p>
 	</div>
 
 	<div class="full-height-section full-height-section--wide full-height-section--row full-height-section--align-top triple-block">
@@ -56,7 +59,7 @@
 
 	<article class="article__inner post-content__final-wrapper">
 		<div class="post-content__final-wrapper__thoughts">
-			<h5 class="post-content__final-wrapper__thoughts__title">Final Thoughts</h5>
+			<!-- <h5 class="post-content__final-wrapper__thoughts__title">Final Thoughts</h5> -->
 			<p class="post-content__final-wrapper__thoughts__content">{{post?.finalThoughts}}</p>
 		</div>
 		<div class="post-content__final-wrapper__link">

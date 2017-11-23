@@ -93,8 +93,9 @@
         }
         &__thoughts {
             flex: 5;
-            max-width: 65rem;
-            margin: 0 0 5rem 0;
+            max-width: 60rem;
+            margin: 0 auto 5rem auto;
+            text-align: center;
             &__title {
                 margin: 0 0 1rem 0;
                 letter-spacing: 2.7px;
@@ -114,12 +115,17 @@
                 }
             }
             &__content {
-                color: #4d5056;
-                font-size: 1.7rem;
-                line-height: 1.7;
-                margin: 0;
+                color: #7a7c82;
                 font-family: "Univers Light";
+                font-size: 1.5rem;
+                letter-spacing: 0.15px;
+                line-height: 1.6;
+                margin: 0;
+                text-align: left;
             }
+        }
+        &__link {
+            text-align: center;
         }
     }
     &__title {
@@ -277,12 +283,12 @@
             position: absolute!important;
         }
         &__title {
-            margin: 0.5rem 0 2rem 0;
-            text-align: left;
-            font-family: "Univers Light";
-            font-family: "GT";
+            color: #000;
+            font-family: Univers;
             font-size: 1.2rem;
             letter-spacing: 0.1px;
+            margin: 0.5rem 0 2rem 0;
+            text-align: left;
         }
         &__content {
             z-index: 1;
