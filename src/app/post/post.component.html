@@ -61,9 +61,8 @@
 		<div class="post-content__final-wrapper__thoughts">
 			<!-- <h5 class="post-content__final-wrapper__thoughts__title">Final Thoughts</h5> -->
 			<p class="post-content__final-wrapper__thoughts__content">{{post?.finalThoughts}}</p>
-		</div>
-		<div class="post-content__final-wrapper__link">
-			<a class="post-content__link" [class.post-content__link--inactive]="!post?.outbound?.alive" [href]="post?.outbound?.url" target="_BLANK">{{post?.outbound?.url}}</a>
+			<a class="post-content__link" [class.post-content__link--inactive]="!post?.outbound?.alive" [href]="post?.outbound?.url"
+			 target="_BLANK">{{post?.outbound?.url}}</a>
 		</div>
 	</article>
 

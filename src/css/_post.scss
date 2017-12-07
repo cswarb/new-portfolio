@@ -97,7 +97,6 @@
             padding: 0;
         }
         &__thoughts {
-            flex: 5;
             max-width: 60rem;
             margin: 0 auto 5rem auto;
             text-align: center;
@@ -129,9 +128,6 @@
                 margin: 0;
                 text-align: left;
             }
-        }
-        &__link {
-            text-align: center;
         }
     }
     &__title {
@@ -214,9 +210,12 @@
     }
     &__link {
         color: #000;
+        display: block;
         font-size: 1rem;
         font-family: "Univers";
         font-family: "Helvetica Neue Medium";
+        margin-top: 5rem;
+        text-align: left;
         &--inactive {
             text-decoration: line-through;
             pointer-events: none;
