@@ -20,12 +20,14 @@
         font-weight: 100;
         letter-spacing: -0.5px;
         margin: 0 0 1rem 0;
+        font-family: "Helvetica Neue Medium";
     }
     &__content {
         font-size: 2rem;
         letter-spacing: -0.8px;
         line-height: 1.25;
         margin: 0;
+        font-family: "Helvetica Neue Medium";
         @media (max-width: 55rem) {
             font-size: 2rem;
             max-width: 100%;
