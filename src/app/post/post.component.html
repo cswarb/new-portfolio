@@ -1,5 +1,4 @@
 <div class="container container--cut">
-
 	<!-- <div class="charm"></div> -->
 	<div class="full-height-section full-height-section--column full-height-section--align-top full-height-section--cut full-height-section--wide--cut">
 		<h3 class="text_section__content">
@@ -56,16 +55,18 @@
 			</section>
 		</div>
 	</article>
+</div>
 
-	<article class="article__inner post-content__final-wrapper">
-		<div class="post-content__final-wrapper__thoughts">
-			<!-- <h5 class="post-content__final-wrapper__thoughts__title">Final Thoughts</h5> -->
-			<p class="post-content__final-wrapper__thoughts__content">{{post?.finalThoughts}}</p>
-			<a class="post-content__link" [class.post-content__link--inactive]="!post?.outbound?.alive" [href]="post?.outbound?.url"
-			 target="_BLANK">{{post?.outbound?.url}}</a>
-		</div>
-	</article>
+<article class="article__inner post-content__final-wrapper">
+	<div class="post-content__final-wrapper__thoughts">
+		<!-- <h5 class="post-content__final-wrapper__thoughts__title">Final Thoughts</h5> -->
+		<p class="post-content__final-wrapper__thoughts__content">{{post?.finalThoughts}}</p>
+		<a class="post-content__link" [class.post-content__link--inactive]="!post?.outbound?.alive" [href]="post?.outbound?.url"
+			target="_BLANK">{{post?.outbound?.url}}</a>
+	</div>
+</article>
 
+<div class="container container--cut">
 	<div class="flex-area">
 		<div class="flex">
 			<figure class="post-content__image-meta" *ngFor="let image of post?.images">
@@ -76,5 +77,4 @@
 	</div>
 
 	<div data-cmp-get-in-touch></div>
-
 </div>

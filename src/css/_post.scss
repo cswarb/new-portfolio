@@ -90,15 +90,22 @@
         }
     }
     &__final-wrapper {
+        background-color: #F8F9FD;
         display: flex;
         flex-flow: column nowrap;
-        margin: 15rem 0 20rem 0;
+        margin: 10rem 0 20rem 0;
+        padding: 15rem 0;
+        min-height: 100vh;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: flex-start;
         @media (max-width: 55rem) {
             padding: 0;
         }
         &__thoughts {
             max-width: 60rem;
-            margin: 0 auto 5rem auto;
+            margin: 0 auto;
             text-align: center;
             &__title {
                 margin: 0 0 1rem 0;
@@ -120,6 +127,7 @@
             }
             &__content {
                 color: #7a7c82;
+                color: #2752ff;
                 font-family: "Univers Light";
                 font-family: "Helvetica Neue Medium";
                 font-size: 1.5rem;
