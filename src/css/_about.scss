@@ -27,7 +27,7 @@
         color: #000;
         font-size: 3rem;
         line-height: 1.2;
-        letter-spacing: 0px;
+        letter-spacing: -0.6px;
         z-index: 2;
         max-width: 55%;
         position: relative;
@@ -39,7 +39,7 @@
             display: block;
             position: absolute;
             margin: 0;
-            bottom: 7%;
+            bottom: 10%;
             left: -13%;
         }
         @media (max-width: 55rem) {
@@ -58,19 +58,21 @@
         }
         &--sub-content {
             max-width: 35rem;
-            font-size: 1.5rem;
-            // color: #000;
+            font-size: 1.3rem;
+            color: #95989c;
             -ms-flex-item-align: end;
             align-self: flex-end;
-            font-family: "Helvetica Neue";
+            font-family: "Helvetica Neue Medium";
             letter-spacing: 0.35px;
-            line-height: 1.25;
-            color: #c5c7ca;
-            margin: 1.7rem auto 0 7rem;
+            line-height: 1.35;
+            margin: 1.7rem auto 0.3rem 7rem;
             font-weight: 400;
             @media (max-width: 55rem) {
                 margin: 0;
                 align-self: flex-start;
+            }
+            &--post {
+                color: #2752ff;
             }
         }
         &--small {
