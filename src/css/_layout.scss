@@ -98,7 +98,10 @@
         }
     }
     &__inner {
-    	margin: 10rem 0;
+        margin: 10rem 0;
+        &--post-content {
+            margin: 0;
+        }
     	@media (max-width: 55rem) {
         	margin: 0;
         }
