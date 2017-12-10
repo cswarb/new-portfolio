@@ -4,7 +4,7 @@
 		<p class="text_section__content--sub-content text_section__content--sub-content--post">
 			<span>{{post?.meta?.year}} — {{post?.name}}</span>
 		</p>
-		<h3 class="text_section__content">
+		<h3 class="text_section__content text_section__content--post">
 			<span class="contrast-text">{{post?.title}}</span>
 		</h3>
 	</div>
@@ -29,7 +29,9 @@
 			</ul>
 		</section>
 	</div>
+</div>
 
+<div class="container--post">
 	<article *ngIf="!isMobile()" class="flex-area article__inner">
 		<div class="left-side left-side--blank">
 			<div data-cmp-fixed-block class="post-content__fixed-block" [sectionData]="post?.sections" [defaultImageUrl]="post?.imageUrl"></div>
@@ -46,7 +48,7 @@
 			</section>
 		</div>
 	</article>
-
+	
 	<article *ngIf="isMobile()" class="flex-area article__inner">
 		<div class="right-side">
 			<section *ngFor="let section of post?.sections" class="post-content__wrapper">
