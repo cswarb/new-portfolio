@@ -74,7 +74,9 @@
 	<div class="flex-area">
 		<div class="flex">
 			<figure class="post-content__image-meta" *ngFor="let image of post?.images">
-				<img [src]="image?.imageUrl" [alt]="image?.title">
+				<span class="lazyimage">
+					<img data-lazy-load class="image" [attr.data-lazy-src]="image?.imageUrl" [alt]="image?.title">
+				</span>
 				<p class="post-content__image__title">{{image?.title}}</p>
 			</figure>
 		</div>
