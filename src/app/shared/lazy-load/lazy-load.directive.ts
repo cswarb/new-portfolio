@@ -8,6 +8,7 @@ import { Element } from "@angular/compiler";
 export class LazyLoadDirective implements OnInit, AfterViewInit {
 	private image: any = null;
 	private imageSrc: string = null;
+	private isSrcSet: boolean = false;
 
 	constructor(
 	private element: ElementRef
@@ -22,6 +23,7 @@ export class LazyLoadDirective implements OnInit, AfterViewInit {
 	ngAfterViewInit() {
 		this.image = this.element.nativeElement;
 		this.imageSrc = this.element.nativeElement.dataset["lazySrc"];
+		this.isSrcSet = this.element.nativeElement.dataset["isSrcSet"];
 
 		window.addEventListener("scroll", this.inViewCallback.bind(this));
 	}
@@ -29,8 +31,7 @@ export class LazyLoadDirective implements OnInit, AfterViewInit {
 	public inViewCallback() {
 		if (this.isInViewport(this.image)) {
 			//Set the image src
-			this.element.nativeElement.setAttribute("src", this.imageSrc);
-			this.element.nativeElement.setAttribute("srcset", this.imageSrc);
+			this.isSrcSet ? this.element.nativeElement.setAttribute("srcset", this.imageSrc) : this.element.nativeElement.setAttribute("src", this.imageSrc);
 
 			//Fade in the span above to make it less jarring
 			this.element.nativeElement.parentElement.classList.add("lazyimage--loaded");
