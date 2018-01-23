@@ -6,10 +6,8 @@ import { Element } from "@angular/compiler";
 	selector: "[data-lazy-load]"
 })
 export class LazyLoadDirective implements OnInit, AfterViewInit {
-	private image: any = null;
-	private imageSrc: string = null;
-	private isSrcSet: boolean = false;
-	private res: number = 1;
+	private imageContainer: any = null;
+	private images: any = [];
 
 	constructor(
 	private element: ElementRef
@@ -18,28 +16,32 @@ export class LazyLoadDirective implements OnInit, AfterViewInit {
 	}
 
 	ngOnInit() {
-
+		
 	}
 
 	ngAfterViewInit() {
-		this.image = this.element.nativeElement;
-		this.imageSrc = this.element.nativeElement.dataset["lazySrc"];
-		this.isSrcSet = this.element.nativeElement.dataset["isSrcSet"];
-		this.res = this.element.nativeElement.dataset["res"];
-
+		this.imageContainer = this.element.nativeElement;
+		this.images = Array.from(this.element.nativeElement.children);
 		window.addEventListener("scroll", this.inViewCallback.bind(this));
 	}
 
 	public inViewCallback(): void {
-		if (this.isInViewport(this.image)) {
-			//Set the image src
-			this.isSrcSet ? 
-				this.element.nativeElement.setAttribute("srcset", this.imageSrc + this.getRes()) : 
-				this.element.nativeElement.setAttribute("src", this.imageSrc);
+		if (this.isInViewport(this.imageContainer)) {
+			if (!this.images.length) return;
+			this.images.forEach(image => {
+				//Set the image src
+				let src = image.dataset["lazySrc"];
+				let isSrcSet = image.dataset["isSrcSet"];
+				let res = image.dataset["res"];
+
+				isSrcSet ?
+					image.setAttribute("srcset", src + this.getRes(res)) :
+					image.setAttribute("src", src);
+			});
 
 			//Fade in the span above to make it less jarring
-			this.element.nativeElement.parentElement.classList.add("lazyimage--loaded");
-
+			this.element.nativeElement.classList.add("lazyimage--loaded");
+			
 			//Unbind the event
 			window.removeEventListener("scroll", this.inViewCallback);
 		};
@@ -61,8 +63,8 @@ export class LazyLoadDirective implements OnInit, AfterViewInit {
 		);
 	}
 
-	private getRes(): string {
-		return " " + this.res + "x";
+	private getRes(res: number): string {
+		return " " + res + "x";
 	}
 
 }
