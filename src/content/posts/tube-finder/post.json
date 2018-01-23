@@ -67,23 +67,28 @@
 	"images": [
 		{
 			"title": "Line Listing UI",
-			"imageUrl": "./content/posts/tube-finder/img/1.png"
+			"imageUrl": "./content/posts/tube-finder/img/1.png",
+			"imageUrl2x": "./content/posts/tube-finder/img/1-2x.png"
 		},
 		{
 			"title": "Request Logs",
-			"imageUrl": "./content/posts/tube-finder/img/2.png"
+			"imageUrl": "./content/posts/tube-finder/img/2.png",
+			"imageUrl2x": "./content/posts/tube-finder/img/2-2x.png"
 		},
 		{
 			"title": "Development Code",
-			"imageUrl": "./content/posts/tube-finder/img/3.png"
+			"imageUrl": "./content/posts/tube-finder/img/3.png",
+			"imageUrl2x": "./content/posts/tube-finder/img/3-2x.png"
 		},
 		{
 			"title": "Autocomplete UI",
-			"imageUrl": "./content/posts/tube-finder/img/4.png"
+			"imageUrl": "./content/posts/tube-finder/img/4.png",
+			"imageUrl2x": "./content/posts/tube-finder/img/4-2x.png"
 		},
 		{
 			"title": "Custom vectors",
-			"imageUrl": "./content/posts/tube-finder/img/5.png"
+			"imageUrl": "./content/posts/tube-finder/img/5.png",
+			"imageUrl2x": "./content/posts/tube-finder/img/5-2x.png"
 		}
 	]
 }

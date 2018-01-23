@@ -30,6 +30,7 @@ export class LazyLoadDirective implements OnInit, AfterViewInit {
 		if (this.isInViewport(this.image)) {
 			//Set the image src
 			this.element.nativeElement.setAttribute("src", this.imageSrc);
+			this.element.nativeElement.setAttribute("srcset", this.imageSrc);
 
 			//Fade in the span above to make it less jarring
 			this.element.nativeElement.parentElement.classList.add("lazyimage--loaded");
