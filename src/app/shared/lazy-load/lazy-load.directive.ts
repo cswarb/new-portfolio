@@ -8,6 +8,8 @@ import { Element } from "@angular/compiler";
 export class LazyLoadDirective implements OnInit, AfterViewInit {
 	private imageContainer: any = null;
 	private images: any = [];
+	//Bind creates a new function reference so removeEventListener won't work with storing the function with .bind first
+	private inViewBinded = this.inViewCallback.bind(this);
 
 	constructor(
 	private element: ElementRef
@@ -22,7 +24,7 @@ export class LazyLoadDirective implements OnInit, AfterViewInit {
 	ngAfterViewInit() {
 		this.imageContainer = this.element.nativeElement;
 		this.images = Array.from(this.element.nativeElement.children);
-		window.addEventListener("scroll", this.inViewCallback.bind(this));
+		window.addEventListener("scroll", this.inViewBinded);
 	}
 
 	public inViewCallback(): void {
@@ -40,10 +42,10 @@ export class LazyLoadDirective implements OnInit, AfterViewInit {
 			});
 
 			//Fade in the span above to make it less jarring
-			this.element.nativeElement.classList.add("lazyimage--loaded");
+			this.element.nativeElement.classList.add("lazyimage--loaded");			
 			
 			//Unbind the event
-			window.removeEventListener("scroll", this.inViewCallback);
+			window.removeEventListener("scroll", this.inViewBinded);
 		};
 	}
 
