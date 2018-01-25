@@ -10,7 +10,7 @@
 	"imageUrl": "/content/posts/tube-finder/img/1.png",
 	"meta": {
 		"splashText": "The TFL tube finder app was a self-initiated work. One of my goals was to use the opportunity to help me learn the new Angular 2+ framework.",
-		"role": "I created the front-end, UI design, experience, and complete development including api integration",
+		"role": "A design and development project. I created the front-end, UI design, experience, and complete development including api integration",
 		"year": "2017",
 		"technologies": [
 			{
@@ -41,7 +41,7 @@
 			"imageAuthor": "@christiankaindl",
 			"title": "UI + UX",
 			"content": [
-				"I began the project by defining exactly how a typical user would navigate through the site. This involved creating storyboards and personas to define the context in which the user would typically use the app, and help me understand how I could cater to the users needs. A key point I wanted to address early on was how users will interact with the service on the move, and from this I created 2 must have criteria: It must be response. It must be lightweight.",
+				"I began the project by defining exactly how a typical user would navigate through the site. This involved creating storyboards and personas to define the context in which the user would typically use the app, and help me understand how I could cater to the users needs. A key point I wanted to address early on was how users will interact with the service on the move, and from this I created 2 must have criteria: It must be responsive, It must be lightweight.",
 				"At this point I debated whether or not to continue with Angular 2 as a framework. However, the AOT compile mode and lazy loading features, along with other compiling features such as tree shaking confirmed my decision."
 			]
 		},
@@ -67,23 +67,28 @@
 	"images": [
 		{
 			"title": "Line Listing UI",
-			"imageUrl": "./content/posts/tube-finder/img/1.png"
+			"imageUrl": "./content/posts/tube-finder/img/1.png",
+			"imageUrl2x": "./content/posts/tube-finder/img/1-2x.png"
 		},
 		{
 			"title": "Request Logs",
-			"imageUrl": "./content/posts/tube-finder/img/2.png"
+			"imageUrl": "./content/posts/tube-finder/img/2.png",
+			"imageUrl2x": "./content/posts/tube-finder/img/2-2x.png"
 		},
 		{
 			"title": "Development Code",
-			"imageUrl": "./content/posts/tube-finder/img/3.png"
+			"imageUrl": "./content/posts/tube-finder/img/3.png",
+			"imageUrl2x": "./content/posts/tube-finder/img/3-2x.png"
 		},
 		{
 			"title": "Autocomplete UI",
-			"imageUrl": "./content/posts/tube-finder/img/4.png"
+			"imageUrl": "./content/posts/tube-finder/img/4.png",
+			"imageUrl2x": "./content/posts/tube-finder/img/4-2x.png"
 		},
 		{
 			"title": "Custom vectors",
-			"imageUrl": "./content/posts/tube-finder/img/5.png"
+			"imageUrl": "./content/posts/tube-finder/img/5.png",
+			"imageUrl2x": "./content/posts/tube-finder/img/5-2x.png"
 		}
 	]
 }

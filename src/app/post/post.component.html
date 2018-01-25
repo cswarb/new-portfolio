@@ -1,10 +1,12 @@
-<div class="container">
-
+<div class="container container--cut">
 	<!-- <div class="charm"></div> -->
-
-	<div class="post-content__hero full-height-section full-height-section--wide">
-		<p class="post-content__hero__type"><span class="bold">{{post?.meta?.year}} — {{post?.name}}</span> — {{post?.tag}}</p>
-		<h5 class="post-content__hero__title">{{post?.title}}</h5>
+	<div class="full-height-section full-height-section--column full-height-section--align-top full-height-section--cut full-height-section--wide--cut">
+		<p class="text_section__content--sub-content text_section__content--sub-content--post">
+			<span>{{post?.meta?.year}} — {{post?.name}}</span>
+		</p>
+		<h3 class="text_section__content text_section__content--post">
+			<span class="contrast-text">{{post?.title}}</span>
+		</h3>
 	</div>
 
 	<div class="full-height-section full-height-section--wide full-height-section--row full-height-section--align-top triple-block">
@@ -27,8 +29,10 @@
 			</ul>
 		</section>
 	</div>
+</div>
 
-	<article *ngIf="!isMobile()" class="flex-area article__inner">
+<div class="container--post">
+	<article *ngIf="!isMobile()" class="flex-area article__inner--post-content">
 		<div class="left-side left-side--blank">
 			<div data-cmp-fixed-block class="post-content__fixed-block" [sectionData]="post?.sections" [defaultImageUrl]="post?.imageUrl"></div>
 		</div>
@@ -44,7 +48,7 @@
 			</section>
 		</div>
 	</article>
-
+	
 	<article *ngIf="isMobile()" class="flex-area article__inner">
 		<div class="right-side">
 			<section *ngFor="let section of post?.sections" class="post-content__wrapper">
@@ -53,26 +57,32 @@
 			</section>
 		</div>
 	</article>
+</div>
 
-	<article class="article__inner post-content__final-wrapper">
+<article class="article__inner post-content__final-wrapper">
+	<div class="container container--cut">
 		<div class="post-content__final-wrapper__thoughts">
-			<h5 class="post-content__final-wrapper__thoughts__title">Final Thoughts</h5>
+			<!-- <h5 class="post-content__final-wrapper__thoughts__title">Final Thoughts</h5> -->
 			<p class="post-content__final-wrapper__thoughts__content">{{post?.finalThoughts}}</p>
+			<a class="post-content__link" [class.post-content__link--inactive]="!post?.outbound?.alive" [href]="post?.outbound?.url"
+				target="_BLANK">{{post?.outbound?.url}}</a>
 		</div>
-		<div class="post-content__final-wrapper__link">
-			<a class="post-content__link" [class.post-content__link--inactive]="!post?.outbound?.alive" [href]="post?.outbound?.url" target="_BLANK">{{post?.outbound?.url}}</a>
-		</div>
-	</article>
+	</div>
+</article>
 
+<div class="container container--cut">
 	<div class="flex-area">
 		<div class="flex">
 			<figure class="post-content__image-meta" *ngFor="let image of post?.images">
-				<img [src]="image?.imageUrl" [alt]="image?.title">
+				<picture data-lazy-load class="lazyimage">
+					<source class="image" data-is-src-set="true" data-res="2" [attr.data-lazy-src]="image?.imageUrl2x" media="(min-width: 1200px)">
+					<source class="image" data-is-src-set="true" data-res="1" [attr.data-lazy-src]="image?.imageUrl" media="(min-width: 600px)">
+					<img class="image" [attr.data-lazy-src]="image?.imageUrl" [alt]="image?.title">
+				</picture>
 				<p class="post-content__image__title">{{image?.title}}</p>
 			</figure>
 		</div>
 	</div>
 
 	<div data-cmp-get-in-touch></div>
-
 </div>

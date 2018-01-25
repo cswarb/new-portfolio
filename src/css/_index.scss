@@ -5,10 +5,11 @@
     font-weight: 400;
     letter-spacing: 0.8px;
     line-height: 1.25;
+    margin: 0 auto;
     max-width: 70rem;
     position: relative;
     &:not(:first-of-type) {
-        margin: 20rem 0;
+        margin: 20rem auto;
     }
     @media (max-width: 55rem) {
         margin: 10rem 0;
@@ -18,14 +19,17 @@
         font-size: 1.3rem;
         font-weight: 100;
         letter-spacing: -0.5px;
-        margin: 0 0 1rem 0;
+        margin: 0;
+        font-family: "Helvetica Neue Medium";
+        flex: 2;
     }
     &__content {
-        font-size: 2.5rem;
+        font-size: 2rem;
         letter-spacing: -0.8px;
         line-height: 1.25;
         margin: 0;
-        max-width: 90%;
+        flex: 6;
+        font-family: "Univers";
         @media (max-width: 55rem) {
             font-size: 2rem;
             max-width: 100%;
@@ -37,40 +41,43 @@
         position: relative;
         text-decoration: none;
         transition: opacity 0.2s ease-in-out;
+        display: flex;
+        flex-flow: row nowrap;
         &:hover {
             opacity: 0.75;
         }
+        @media (max-width: 55rem) {
+            flex-flow: column nowrap;
+        }
     }
     &--inactive {
-        opacity: 0.5;
-        pointer-events: none;
+        opacity: 0.8;
+        // pointer-events: none;
         > .jumbo-text__link {
             color: $white;
-            text-decoration: line-through;
-        }
-        &:hover {
-            cursor: not-allowed;
+            &:hover {
+                cursor: not-allowed;
+            }
         }
         &:before {
-            background: $white;
-            color: $black;
+            background-color: #F8F9FD;
+            color: #2752ff;
             content: "Coming Soon";
-            font-size: 0.8rem;
+            display: inline-block;
+            font-size: 0.6rem;
             font-weight: 700;
             letter-spacing: 1.5px;
-            padding: 0.1rem 0.2rem;
-            position: absolute;
-            right: 0;
+            padding: 0.2rem 0.3rem;
+            margin-bottom: 0.5rem;
+            // position: absolute;
+            // right: 0;
             text-transform: uppercase;
-            top: 5rem;
-            transform: rotate(270deg);
             @media (max-width: 55rem) {
                 display: block;
                 margin-bottom: 0.5rem;
                 position: relative;
                 text-align: right;
                 top: 0;
-                transform: rotate(0);
                 width: 100%;
             }
         }

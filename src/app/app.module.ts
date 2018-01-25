@@ -25,8 +25,9 @@ import { PostImageComponent } from "./post/fixed-post-block/post-image/post-imag
 import { CopyToClipboardDirective } from "./copy-to-clipboard/copy-to-clipboard.directive";
 
 import { RouterTriggerService } from "./shared/router-trigger/router-trigger.service";
-import { ParallaxDirective } from './shared/parallax/parallax.directive';
-import { GetInTouchComponent } from './shared/get-in-touch/get-in-touch.component';
+import { ParallaxDirective } from "./shared/parallax/parallax.directive";
+import { GetInTouchComponent } from "./shared/get-in-touch/get-in-touch.component";
+import { LazyLoadDirective } from "./shared/lazy-load/lazy-load.directive";
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { GetInTouchComponent } from './shared/get-in-touch/get-in-touch.componen
     PostImageComponent,
     CopyToClipboardDirective,
     ParallaxDirective,
-    GetInTouchComponent
+    GetInTouchComponent,
+    LazyLoadDirective
   ],
   imports: [
     BrowserAnimationsModule,

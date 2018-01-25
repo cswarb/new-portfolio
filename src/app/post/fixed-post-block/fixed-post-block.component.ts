@@ -35,8 +35,11 @@ export class FixedPostBlockComponent  {
 	@HostListener("window:resize", ["$event"])
 	public onWindowResize() {
 		//Reset the offsets
+		this.anchorPointStartElement = document.getElementById("scroll-anchor-ref");
+		this.anchorPointEndElement = document.getElementById("scroll-anchor-ref-end");
 		this.anchorPointStart = this.getOffset(this.anchorPointStartElement);
 		this.anchorPointEnd = this.getOffset(this.anchorPointEndElement);
+		this.initialiseAnchor();
 	}
 
 	constructor(

@@ -1,5 +1,5 @@
 .wrapper {
-    background-color: #fff;
+    background-color:#ffffff;
     position: relative;
     z-index: 999;
     margin-bottom: 100vh;
@@ -11,10 +11,11 @@
     	background-color: #000;
     	.nav__list_item__link,
     	.jumbo-text a h2 {
-    		color: #656c6f;
+    		// color: #656c6f;
+    		color: #4d5156;
     	}
     	.jumbo-text a p, .text_section__content {
-			color: #bdc0c3;
+			color: #a0a6ad;
     	}
     	.triple-block__header, .triple-block__title, .full-height-section .title__item, .full-height-section__header, .social__title, .active, .nav__list_item__link:hover, .nav__title, .text_section__email, .contrast-text, .full-height__section .title__item, .full-height__section__header {
     		color: #fff;
@@ -31,6 +32,12 @@
     z-index: 1;
     display: block;
     width: 100%;
+    &--cut {
+        padding-top: 0;
+    }
+    &--post {
+        padding: 3rem 2.5rem;
+    }
     @media (max-width: 55rem) {
         padding: $global-section-padding-mobile;
     }
@@ -56,7 +63,8 @@
 		flex-flow: column nowrap;
 	}
 	@media (max-width: 55rem) {
-		flex-flow: column nowrap;
+        flex-flow: column nowrap;
+        margin: 2.5rem 0;
 	}
 	.left-side {
 		flex: 1;
@@ -90,7 +98,10 @@
         }
     }
     &__inner {
-    	margin: 10rem 0;
+        margin: 10rem 0;
+        &--post-content {
+            margin: 0;
+        }
     	@media (max-width: 55rem) {
         	margin: 0;
         }
@@ -98,7 +109,7 @@
 }
 
 .full-height-section {
-    padding: $global-large-padding;
+    padding: $global-jumbo-padding;
     height: auto;
     min-height: 100vh;
     background-color: transparent;
@@ -111,8 +122,15 @@
     @media (max-width: 55rem) {
         padding: 3rem 2.5rem;
     }
+    &--cut {
+        padding-top: 10rem;
+    }
     &--wide {
         padding: 4rem 0;
+        &--cut {
+            padding-left: 0;
+            padding-right: 0;
+        }
     }
     &--column {
         flex-flow: column nowrap;

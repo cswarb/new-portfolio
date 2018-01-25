@@ -19,11 +19,12 @@
         position: relative;
         display: inline-block;
         border: 0;
-        letter-spacing: 1px;
+        // letter-spacing: 1px;
         font-weight: 400;
         background: none;
         outline: 0;
         width: 100%;
+        font-family: "Helvetica Neue Medium";
         @media (max-width: 55rem) {
             font-size: 2.5rem;
         }
