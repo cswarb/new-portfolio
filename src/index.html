@@ -19,7 +19,7 @@
     </script>
 
 </head>
-<body>
+<body class="no-js">
     <div data-cmp-root>
         <div class="loading">
             <p class="loading__content">Loading</p>
@@ -46,5 +46,10 @@
         </a>
     </noscript>
 
+    <script>
+        (function (doc) {
+            doc.getElementsByTagName("body")[0].classList.remove("no-js");
+        })(document);
+    </script>
 </body>
 </html>

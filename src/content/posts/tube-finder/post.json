@@ -63,7 +63,7 @@
 			] 
 		}
 	],
-	"finalThoughts": "Creating the app up to this point took a few months of my spare time, and in my opinion turned out well from a design and development perspective. It allowed me to develop my skills in Angular 2 + 4, and also develop my knowledge of component based development methodologies. If I were to do it again, I'd put more of a focus on developing more re-usable components with a better API for passing options to, to customise the look and feel — an example being the auto-complete component.",
+	"finalThoughts": "Creating the app up to this point took a few months of my spare time, and in my opinion turned out well from a design and development perspective. It allowed me to develop my skills in Angular 2 + 4, and also develop my knowledge of component based development methodologies. If I were to do it again, I'd put more of a focus on developing more re-usable and generic components — an example being the auto-complete component.",
 	"images": [
 		{
 			"title": "Line Listing UI",
