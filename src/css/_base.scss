@@ -20,8 +20,11 @@ img {
 }
 
 noscript {
-  font-family: $primary-font-stack;
-  font-size: 1.25rem;
-  line-height: 1.2;
-  letter-spacing: 0.8px;
+	font-family: "TF Opicular";
+	font-size: 1.25rem;
+	line-height: 1.2;
+	letter-spacing: 0.8px;
+	margin: 4rem;
+	display: block;
+	position: relative;
 }

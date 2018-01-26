@@ -138,7 +138,7 @@
             }
             &__content {
                 color: #7a7c82;
-                color: #2752ff;
+                color: $blue;
                 font-family: "Univers Light";
                 font-family: "Helvetica Neue Medium";
                 font-size: 1.5rem;
@@ -416,7 +416,7 @@
 }
 
 .lazyimage {
-    background-color: #faf200;
+    background-color: $blue;
     display: block;
     min-height: 20rem;
     opacity: 0;
