@@ -13,6 +13,12 @@
             margin-bottom: 1rem;
         }
     }
+    &__description {
+        font-size: 1.1rem;
+        letter-spacing: 1.05px;
+        line-height: 2;
+        color: #9d9fa5;
+    }
     &__item {
         list-style: none;
         margin: 0 3rem;
@@ -42,6 +48,9 @@
             &:not(:first-of-type) {
                 margin-top: 4rem;
             }
+        }
+        &--prime {
+            flex: 10;
         }
     }
     &__header {
@@ -352,8 +361,7 @@
                 left: 0;
                 font-size: 0.6rem;
                 letter-spacing: 1.1px;
-                // font-family: "TF Opicular Bold";
-                font-family: "Helvetica Neue Medium";
+                font-family: "Helvetica Neue";
                 color: #fff;
                 font-weight: 400;
                 text-transform: uppercase;
