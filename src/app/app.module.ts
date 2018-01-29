@@ -2,6 +2,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HttpModule, Http, JsonpModule } from "@angular/http";
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { Routes, RouterModule } from "@angular/router";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
@@ -52,7 +53,7 @@ import { PhotoStoryResolverService } from "./photo-story/photo-story-resolver.se
   imports: [
     BrowserAnimationsModule,
     BrowserModule,
-    HttpModule,
+    HttpClientModule,
     RouterModule,
     AppRoutingModule
   ],

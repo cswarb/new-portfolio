@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Http, Response, URLSearchParams, Headers } from "@angular/http";
+import { HttpClientModule, HttpClient, HttpHeaders } from '@angular/common/http';
 import { HeadersService } from "../shared/headers/headers.service";
 import { AppConstants } from "../app.constants";
 import "rxjs/add/operator/toPromise";
@@ -8,7 +9,7 @@ import "rxjs/add/operator/toPromise";
 export class PostService {
 
 	constructor(
-		private _Http: Http,
+		private _Http: HttpClient,
 		private _AppConstants: AppConstants,
 		private _HeadersService: HeadersService
 	) {}
@@ -20,7 +21,7 @@ export class PostService {
 			})
 			.toPromise()
 			.then((response: any) => {
-				return Promise.resolve(response.json());
+				return Promise.resolve(response);
 			})
 			.catch((error: any) => {
 				return Promise.reject(error);
@@ -34,7 +35,7 @@ export class PostService {
 			})
 			.toPromise()
 			.then((response: any) => {
-				return Promise.resolve(response.json());
+				return Promise.resolve(response);
 			})
 			.catch((error: any) => {
 				return Promise.reject(error);
