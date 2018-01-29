@@ -8,4 +8,5 @@ export class PostLoop {
 	"description": string;
 	"imageUrl": string;
 	"link": string;
+	"type": string;
 }

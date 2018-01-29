@@ -7,9 +7,11 @@ import { NgModule } from "@angular/core";
 import { IndexComponent } from "./index/index.component";
 import { AboutComponent } from "./about/about.component";
 import { PostComponent } from "./post/post.component";
+import { PhotoStoryComponent } from "./photo-story/photo-story.component";
 
 import { PostResolverService } from "./post/post-resolver.service";
 import { IndexResolverService } from "./index/index-resolver.service";
+import { PhotoStoryResolverService } from "./photo-story/photo-story-resolver.service";
 
 //Either configure routes in this Routing Module or within the module itself but not in both.
 @NgModule({
@@ -51,6 +53,18 @@ import { IndexResolverService } from "./index/index-resolver.service";
 				component: PostComponent,
 				resolve: {
 					post: PostResolverService
+				}
+			},
+			{
+				path: "photo-story/:id",
+				data: {
+					animation: {
+						value: "post"
+					}
+				},
+				component: PhotoStoryComponent,
+				resolve: {
+					post: PhotoStoryResolverService
 				}
 			},
 			{

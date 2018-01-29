@@ -28,6 +28,9 @@ import { RouterTriggerService } from "./shared/router-trigger/router-trigger.ser
 import { ParallaxDirective } from "./shared/parallax/parallax.directive";
 import { GetInTouchComponent } from "./shared/get-in-touch/get-in-touch.component";
 import { LazyLoadDirective } from "./shared/lazy-load/lazy-load.directive";
+import { PhotoStoryComponent } from "./photo-story/photo-story.component";
+import { PhotoStoryService } from "./photo-story/photo-story.service";
+import { PhotoStoryResolverService } from "./photo-story/photo-story-resolver.service";
 
 @NgModule({
   declarations: [
@@ -35,6 +38,7 @@ import { LazyLoadDirective } from "./shared/lazy-load/lazy-load.directive";
     IndexComponent,
     AboutComponent,
     PostComponent,
+    PhotoStoryComponent,
     NavigationComponent,
     SuggestionComponent,
     PostInfoComponent,
@@ -56,6 +60,8 @@ import { LazyLoadDirective } from "./shared/lazy-load/lazy-load.directive";
     AppConstants,
     HeadersService,
     PostService,
+    PhotoStoryService,
+    PhotoStoryResolverService,
     PostResolverService,
     IndexResolverService,
     RouterTriggerService
