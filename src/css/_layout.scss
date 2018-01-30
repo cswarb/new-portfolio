@@ -85,7 +85,12 @@
 		position: relative;
 		@media (max-width: 55rem) {
 	    	margin: 0;
-	    }
+        }
+        &--float {
+            margin: 2rem;
+            position: absolute;
+            z-index: 9;
+        }
 	}
 }
 

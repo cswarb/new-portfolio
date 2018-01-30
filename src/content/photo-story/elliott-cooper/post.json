@@ -1,0 +1,108 @@
+{
+	"type": "POST",
+	"name": "Photo Project",
+	"tag": "Photo Project",
+	"title": "Some photo story.",
+	"outbound": {
+		"alive": true,
+		"url": "https://www.flickr.com"
+	},
+	"imageUrl": "/content/photo-story/elliott-cooper/img/1.png",
+	"meta": {
+		"splashText": "The TFL tube finder app was a self-initiated work. One of my goals was to use the opportunity to help me learn the new Angular 2+ framework.",
+		"year": "2017"
+	},
+	"sections": [
+		{
+			"id": 0,
+			"imageUrl": "./content/photo-story/elliott-cooper/img/1.jpg",
+			"imageAuthor": "@christiankaindl",
+			"title": "UI + UX",
+			"content": [
+				"Lorem ipsum test content para"
+			]
+		},
+		{
+			"id": 1,
+			"imageUrl": "./content/photo-story/elliott-cooper/img/2.jpg",
+			"imageAuthor": "@romainp",
+			"title": "Technical Architecture",
+			"content": [
+				"Lorem ipsum test content para"
+			]
+		},
+		{
+			"id": 2,
+			"imageUrl": "./content/photo-story/elliott-cooper/img/3.jpg",
+			"imageAuthor": "@goran_ivos",
+			"title": "Development",
+			"content": [
+				"Lorem ipsum test content para"
+			]
+		},
+		{
+			"id": 3,
+			"imageUrl": "./content/photo-story/elliott-cooper/img/4.jpg",
+			"imageAuthor": "@goran_ivos",
+			"title": "Development",
+			"content": [
+				"Lorem ipsum test content para"
+			]
+		},
+		{
+			"id": 4,
+			"imageUrl": "./content/photo-story/elliott-cooper/img/5.jpg",
+			"imageAuthor": "@goran_ivos",
+			"title": "Development",
+			"content": [
+				"Lorem ipsum test content para"
+			]
+		},
+		{
+			"id": 5,
+			"imageUrl": "./content/photo-story/elliott-cooper/img/6.jpg",
+			"imageAuthor": "@goran_ivos",
+			"title": "Development",
+			"content": [
+				"Lorem ipsum test content para"
+			]
+		},
+		{
+			"id": 6,
+			"imageUrl": "./content/photo-story/elliott-cooper/img/7.jpg",
+			"imageAuthor": "@goran_ivos",
+			"title": "Development",
+			"content": [
+				"Lorem ipsum test content para"
+			]
+		}
+	],
+	"finalThoughts": "The final thoughts are a brief wrap up and reflection of the project.",
+	"images": [
+		{
+			"title": "Photo 1",
+			"imageUrl": "./content/photo-story/elliott-cooper/img/1.png",
+			"imageUrl2x": "./content/photo-story/elliott-cooper/img/1-2x.png"
+		},
+		{
+			"title": "Photo 2",
+			"imageUrl": "./content/photo-story/elliott-cooper/img/2.png",
+			"imageUrl2x": "./content/photo-story/elliott-cooper/img/2-2x.png"
+		},
+		{
+			"title": "Photo 3",
+			"imageUrl": "./content/photo-story/elliott-cooper/img/3.png",
+			"imageUrl2x": "./content/photo-story/elliott-cooper/img/3-2x.png"
+		},
+		{
+			"title": "Photo 4",
+			"imageUrl": "./content/photo-story/elliott-cooper/img/4.png",
+			"imageUrl2x": "./content/photo-story/elliott-cooper/img/4-2x.png"
+		},
+		{
+			"title": "Photo 5",
+			"imageUrl": "./content/photo-story/elliott-cooper/img/5.png",
+			"imageUrl2x": "./content/photo-story/elliott-cooper/img/5-2x.png"
+		}
+	]
+}

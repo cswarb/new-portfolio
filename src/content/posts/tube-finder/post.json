@@ -33,10 +33,6 @@
 			}
 		]
 	},
-	"introduction": {
-		"title": "How can checking a tube status be sublime? Responsive UI, clear application flow, and built for speed. These were the 3 key points I kept in mind when building my version of a tube checker",
-		"content": ""
-	},
 	"sections": [
 		{
 			"id": 0,
