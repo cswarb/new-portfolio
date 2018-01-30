@@ -14,7 +14,7 @@
 		<div class="left-side left-side--blank">
 			<div data-cmp-fixed-photo-block class="post-content__fixed-block--full-width" [sectionData]="post?.sections" [defaultImageUrl]="post?.imageUrl"></div>
 		</div>
-		<div class="right-side">
+		<div class="right-side right-side--float">
 			<section *ngFor="let section of post?.sections; let i = index" [id]="i === post.sections.length - 1 ? 'scroll-anchor-ref-end' : ''"
 			 [attr.data-image-trigger]="section?.imageUrl" class="post-content__wrapper" id="scroll-anchor-ref">
 				<h4 class="post-content__title"></h4>

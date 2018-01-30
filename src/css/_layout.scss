@@ -66,32 +66,36 @@
         flex-flow: column nowrap;
         margin: 2.5rem 0;
 	}
-	.left-side {
-		flex: 1;
-		margin: 0 0 2rem 0;    
-		background-color: #f5f5f5;
-	    min-height: 4rem;
-	    position: relative;
-	    &--blank {
-	    	background-color: transparent;
-	    }
-	    @media (max-width: 55rem) {
-	        margin: 5rem 0 1rem 0;  
-	    }
-	}
-	.right-side {
-		flex: 1;
-		margin: 0 0 0 2rem;
-		position: relative;
-		@media (max-width: 55rem) {
-	    	margin: 0;
-        }
-        &--float {
-            margin: 2rem;
-            position: absolute;
-            z-index: 9;
-        }
-	}
+}
+
+.left-side {
+    flex: 1;
+    margin: 0 0 2rem 0;    
+    background-color: #f5f5f5;
+    min-height: 4rem;
+    position: relative;
+    &--blank {
+        background-color: transparent;
+    }
+    @media (max-width: 55rem) {
+        margin: 5rem 0 1rem 0;  
+    }
+}
+.right-side {
+    flex: 1;
+    margin: 0 0 0 2rem;
+    position: relative;
+    @media (max-width: 55rem) {
+        margin: 0;
+    }
+    &--float {
+        //We must offset the last image in the set by atleast 100vw 
+        //to ensure it never overlaps the content further down
+        
+        //In a photo story, there is no content, so it doesn't force
+        //the right side further down which is why this needs to be added
+        margin-bottom: 100vh;
+    }
 }
 
 .article {
