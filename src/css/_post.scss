@@ -401,14 +401,10 @@
             top: 1.4rem;
             z-index: 999;
             &--helper {
-                background-image: url("/assets/img/down-arrow.svg");
-                background-size: 1.25rem;
-                background-position: center;
-                background-repeat: no-repeat;
-                height: 1.25rem;
-                width: 1.25rem;
-                top: 2.4rem;
-                animation: upDown 2s ease-in-out both infinite;
+                font-family: "Helvetica Neue Medium"; 
+                left: -1.5rem;
+                position: relative;
+                display: block;
             }
             &__wrapper {
                 width: 0;
@@ -431,6 +427,9 @@
                     height: 0;
                     border: 50px solid transparent;
                     border-top-color: #ffffff;
+                }
+                &--helper {
+                    max-width: 30vw;
                 }
             }
         }
