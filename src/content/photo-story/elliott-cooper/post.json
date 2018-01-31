@@ -19,7 +19,7 @@
 			"imageAuthor": "@christiankaindl",
 			"title": "UI + UX",
 			"content": [
-				"Lorem ipsum test content para"
+				"The first paragraph is always the best"
 			]
 		},
 		{
@@ -28,7 +28,7 @@
 			"imageAuthor": "@romainp",
 			"title": "Technical Architecture",
 			"content": [
-				"Lorem ipsum test content para"
+				"The second is pretty good too"
 			]
 		},
 		{
@@ -37,7 +37,7 @@
 			"imageAuthor": "@goran_ivos",
 			"title": "Development",
 			"content": [
-				"Lorem ipsum test content para"
+				"The third?"
 			]
 		},
 		{
@@ -46,7 +46,7 @@
 			"imageAuthor": "@goran_ivos",
 			"title": "Development",
 			"content": [
-				"Lorem ipsum test content para"
+				"Not the fourth"
 			]
 		},
 		{
@@ -55,7 +55,7 @@
 			"imageAuthor": "@goran_ivos",
 			"title": "Development",
 			"content": [
-				"Lorem ipsum test content para"
+				"This is too long"
 			]
 		},
 		{
@@ -64,7 +64,7 @@
 			"imageAuthor": "@goran_ivos",
 			"title": "Development",
 			"content": [
-				"Lorem ipsum test content para"
+				"The sixth?"
 			]
 		},
 		{
@@ -73,7 +73,7 @@
 			"imageAuthor": "@goran_ivos",
 			"title": "Development",
 			"content": [
-				"Lorem ipsum test content para"
+				"The last one"
 			]
 		}
 	],

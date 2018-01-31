@@ -108,6 +108,19 @@
     }
     &__inner {
         margin: 10rem 0;
+        &--alt {
+            margin: 0;
+            .jumbo-text {
+                margin: 0;
+            }
+            .jumbo-text__title {
+                font-size: 4rem;
+                margin: 0;
+            }
+            .jumbo-text:not(:first-of-type) {
+                margin: 2rem auto 2rem 0;
+            }
+        }
         &--post-content {
             margin: 0;
         }

@@ -14,6 +14,13 @@
     @media (max-width: 55rem) {
         margin: 10rem 0;
     }
+    &__header {
+        color: $white;
+        font-family: "Helvetica Neue Light";
+        font-size: 0.9rem;
+        letter-spacing: 1.1px;
+        margin: 0 0 0.5rem 0;
+    }
     &__title {
         color: #737f86;
         font-size: 1.3rem;
@@ -37,11 +44,10 @@
     }
     &__link {
         color: $black;
-        display: block;
         position: relative;
         text-decoration: none;
         transition: opacity 0.2s ease-in-out;
-        display: flex;
+        display: inline-flex;
         flex-flow: row nowrap;
         &:hover {
             opacity: 0.75;
@@ -51,7 +57,7 @@
         }
     }
     &--inactive {
-        opacity: 0.8;
+        opacity: 0.6;
         // pointer-events: none;
         > .jumbo-text__link {
             color: $white;
@@ -59,26 +65,29 @@
                 cursor: not-allowed;
             }
         }
-        &:before {
-            background-color: #F8F9FD;
-            color: #2752ff;
-            content: "Coming Soon";
-            display: inline-block;
-            font-size: 0.6rem;
-            font-weight: 700;
-            letter-spacing: 1.5px;
-            padding: 0.2rem 0.3rem;
-            margin-bottom: 0.5rem;
-            // position: absolute;
-            // right: 0;
-            text-transform: uppercase;
-            @media (max-width: 55rem) {
-                display: block;
-                margin-bottom: 0.5rem;
-                position: relative;
-                text-align: right;
-                top: 0;
-                width: 100%;
+        .jumbo-text__title {
+            &:after {
+                // background-color: #F8F9FD;
+                color: $white;
+                content: "Coming Soon";
+                display: inline-block;
+                font-family: "Helvetica Neue Light";
+                font-size: 0.6rem;
+                font-weight: 700;
+                letter-spacing: 1.5px;
+                padding: 0.2rem 0.3rem;
+                margin: 0;
+                // position: absolute;
+                // right: 0;
+                text-transform: uppercase;
+                @media (max-width: 55rem) {
+                    display: block;
+                    margin-bottom: 0.5rem;
+                    position: relative;
+                    text-align: right;
+                    top: 0;
+                    width: 100%;
+                }
             }
         }
     }
