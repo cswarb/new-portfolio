@@ -14,6 +14,7 @@
         }
     }
     &__description {
+        font-family: "Helvetica Neue Light";
         font-size: 1.1rem;
         letter-spacing: 1.05px;
         line-height: 2;
@@ -69,8 +70,9 @@
         list-style: none;
         padding: 0;
         margin: 0;
-        font-family: "Calibre Light";
-        font-family: "Helvetica Neue";
+        // font-family: "Calibre Light";
+        // font-family: "Helvetica Neue";
+        font-family: "Helvetica Neue Light";
         font-size: 1.1rem;
     }
 }
@@ -171,7 +173,8 @@
         // font-weight: 400;
         // font-size: 1.5rem;
         color: #c0c4c7;
-        font-family: Helvetica Neue;
+        // font-family: Helvetica Neue;
+        font-family: "Helvetica Neue Light";
         font-weight: 400;
         font-size: 1.2rem;
         margin: 0 0 0.1rem 0;
