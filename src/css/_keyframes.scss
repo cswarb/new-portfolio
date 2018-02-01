@@ -18,3 +18,27 @@
 		transform: translateY(-25%);
 	}
 }
+
+@keyframes fadeInCross {
+    0% {
+        opacity: 0;
+    }
+    40% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOutCross {
+    0% {
+        opacity: 1;
+    }
+    70% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
