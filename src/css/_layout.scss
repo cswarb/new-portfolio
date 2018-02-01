@@ -38,6 +38,14 @@
     &--post {
         padding: 3rem 2.5rem;
     }
+    &--long {
+        &-bottom {
+            padding-bottom: 10rem
+        }
+        &-top {
+            padding-top: 10rem;
+        }
+    }
     @media (max-width: 55rem) {
         padding: $global-section-padding-mobile;
     }

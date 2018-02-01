@@ -65,13 +65,13 @@
         }
         &--sub-content {
             max-width: 35rem;
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             color: #95989c;
             -ms-flex-item-align: end;
             align-self: flex-end;
             font-family: "Helvetica Neue";
             letter-spacing: 0.35px;
-            line-height: 1.45;
+            line-height: 1.75;
             margin: 3rem auto 0.3rem 0;
             font-weight: 400;
             @media (max-width: 55rem) {
@@ -79,7 +79,7 @@
                 align-self: flex-start;
             }
             &--post {
-                color: $blue;
+                color: #6b6d71;
                 // font-family: "Helvetica Neue Medium";
                 font-family: "Helvetica Neue Light";
                 font-size: 0.9rem;

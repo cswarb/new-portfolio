@@ -65,6 +65,9 @@
         @media (max-width: 55rem) {
             margin: 0 0 0.5rem 0;
         }
+        &--nested {
+            margin: 3rem 0 1.5rem 0;
+        }
     }
     &__list {
         list-style: none;
