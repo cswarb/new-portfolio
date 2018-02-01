@@ -67,7 +67,6 @@
         }
         .jumbo-text__title {
             &:after {
-                // background-color: #F8F9FD;
                 color: $white;
                 content: "Coming Soon";
                 display: inline-block;
@@ -77,14 +76,27 @@
                 letter-spacing: 1.5px;
                 padding: 0.2rem 0.3rem;
                 margin: 0;
-                // position: absolute;
-                // right: 0;
+                text-transform: uppercase;
+                @media (max-width: 55rem) {
+                    display: none;
+                }
+            }
+            &:before {
+                color: $white;
+                content: "Coming Soon";
+                display: none;
+                font-family: "Helvetica Neue Light";
+                font-size: 0.6rem;
+                font-weight: 700;
+                letter-spacing: 1.5px;
+                padding: 0.2rem 0.3rem;
+                margin: 0;
                 text-transform: uppercase;
                 @media (max-width: 55rem) {
                     display: block;
-                    margin-bottom: 0.5rem;
+                    margin-bottom: 0;
                     position: relative;
-                    text-align: right;
+                    text-align: left;
                     top: 0;
                     width: 100%;
                 }

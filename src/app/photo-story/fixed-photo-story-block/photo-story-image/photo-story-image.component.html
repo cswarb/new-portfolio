@@ -1,8 +1,10 @@
-<span class="post-content__image__wrapper" *ngFor="let section of sectionData">
-	<div [ngClass]="{'fadein': activeImage === section?.id + 1}" style.backgroundImage="url({{section?.imageUrl}})" class="post-content__image__content post-content__image__content--nofilter"
-	 [attr.data-author]="section?.imageAuthor">
-		<div class="post-content__image__number__wrapper--helper">
-			<span class="post-content__image__number post-content__image__number--helper" *ngFor="let content of section.content">{{content}}</span>
-		</div>
+<div *ngFor="let section of sectionData" 
+	[ngClass]="{'fadein': activeImage === section?.id + 1}" 
+	style.backgroundImage="url({{section?.imageUrl}})" 
+	class="post-content__image__content post-content__image__content--nofilter"
+	[attr.data-author]="section?.imageAuthor">
+	<div class="post-content__image__number__wrapper--helper">
+		<span class="post-content__image__number post-content__image__number--helper" 
+			*ngFor="let content of section.content">{{content}}</span>
 	</div>
-</span>
+</div>
