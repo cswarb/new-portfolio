@@ -1,0 +1,9 @@
+<div *ngFor="let section of sectionData"
+	style.backgroundImage="url({{section?.imageUrl}})" 
+	class="post-content__image__content post-content__image__content--nofilter post-content__image__content--mobile fadein"
+	[attr.data-author]="section?.imageAuthor">
+	<div class="post-content__image__number__wrapper--helper">
+		<span class="post-content__image__number post-content__image__number--helper" 
+			*ngFor="let content of section.content">{{content}}</span>
+	</div>
+</div>

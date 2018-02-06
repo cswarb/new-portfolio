@@ -11,7 +11,7 @@
 </div>
 
 <div class="container--post">
-	<article class="article__inner--post-content">
+	<article *ngIf="!isMobile()" class="article__inner--post-content">
 		<div class="left-side left-side--blank">
 			<div data-cmp-fixed-photo-block class="post-content__fixed-block--full-width" [sectionData]="post?.sections" [defaultImageUrl]="post?.imageUrl"></div>
 		</div>
@@ -23,7 +23,15 @@
 			</section>
 		</div>
 	</article>
+
+	<article *ngIf="isMobile()" class="article__inner--post-content">
+		<div class="left-side left-side--blank">
+			<div data-cmp-mobile-photo-block class="post-content__fixed-block--full-width" [sectionData]="post?.sections" [defaultImageUrl]="post?.imageUrl"></div>
+		</div>
+	</article>
 </div>
+
+
 
 <article class="article__inner post-content__final-wrapper">
 	<div class="container container--cut">
