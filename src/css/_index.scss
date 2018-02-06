@@ -29,6 +29,7 @@
         margin: 0;
         font-family: "Helvetica Neue Medium";
         flex: 2;
+        transition: color 0.3s ease-in-out;
     }
     &__content {
         font-size: 2rem;
@@ -50,7 +51,9 @@
         display: inline-flex;
         flex-flow: row nowrap;
         &:hover {
-            opacity: 0.75;
+            .jumbo-text__title { //Overwrite the dark wrapper
+                color: white!important;
+            }
         }
         @media (max-width: 55rem) {
             flex-flow: column nowrap;

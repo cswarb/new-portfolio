@@ -75,3 +75,10 @@
 .center {
     text-align: center;
 }
+
+
+.highlight {
+    &--yellow {
+        background-color: #fff710;
+    }
+}
