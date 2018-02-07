@@ -4,8 +4,21 @@
       <div *ngFor="let post of posts?.posts" class="jumbo-text" [class.jumbo-text--inactive]="!post?.status">
         <a class="jumbo-text__link" [routerLink]="post?.status ? ['/' + post?.type, post?.link] : ['/']">
           <h2 class="jumbo-text__title">{{post?.title}}</h2>
-          <!-- <p class="jumbo-text__content" [innerHTML]="post?.description"></p> -->
         </a>
       </div>
     </div>
 </div>
+
+
+<!-- <div class="container container--long-bottom">
+  <div class="article__inner">
+    <h2 class="jumbo-text__header">Projects</h2>
+    <div *ngFor="let post of posts?.posts" class="jumbo-text" [class.jumbo-text--inactive]="!post?.status">
+      <a class="jumbo-text__link" [routerLink]="post?.status ? ['/' + post?.type, post?.link] : ['/']">
+        <h2 class="jumbo-text__title">{{post?.title}}</h2>
+        <p class="jumbo-text__content" [innerHTML]="post?.description"></p>
+      </a>
+    </div>
+  </div>
+</div> -->
+
