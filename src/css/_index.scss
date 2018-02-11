@@ -23,21 +23,21 @@
     }
     &__title {
         color: #737f86;
+        flex: 2;
+        font-family: "Helvetica Neue Medium";
         font-size: 1.3rem;
         font-weight: 100;
         letter-spacing: -0.5px;
         margin: 0;
-        font-family: "Helvetica Neue Medium";
-        flex: 2;
         transition: color 0.3s ease-in-out;
     }
     &__content {
+        flex: 6;
+        font-family: "Univers";
         font-size: 2rem;
         letter-spacing: -0.8px;
         line-height: 1.25;
         margin: 0;
-        flex: 6;
-        font-family: "Univers";
         @media (max-width: 55rem) {
             font-size: 2rem;
             max-width: 100%;
@@ -45,11 +45,11 @@
     }
     &__link {
         color: $black;
+        display: flex;
+        flex-flow: row nowrap;
         position: relative;
         text-decoration: none;
         transition: opacity 0.2s ease-in-out;
-        display: inline-flex;
-        flex-flow: row nowrap;
         &:hover {
             .jumbo-text__title { //Overwrite the dark wrapper
                 color: white!important;
@@ -72,13 +72,13 @@
             &:after {
                 color: $white;
                 content: "Coming Soon";
-                display: inline-block;
+                display: block;
                 font-family: "Helvetica Neue Light";
                 font-size: 0.6rem;
                 font-weight: 700;
                 letter-spacing: 1.5px;
+                margin: 0.5rem 0 0 0;
                 padding: 0.2rem 0.3rem;
-                margin: 0;
                 text-transform: uppercase;
                 @media (max-width: 55rem) {
                     display: none;
@@ -92,8 +92,8 @@
                 font-size: 0.6rem;
                 font-weight: 700;
                 letter-spacing: 1.5px;
-                padding: 0.2rem 0.3rem;
                 margin: 0;
+                padding: 0.2rem 0.3rem;
                 text-transform: uppercase;
                 @media (max-width: 55rem) {
                     display: block;

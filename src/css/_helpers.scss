@@ -1,19 +1,19 @@
 .strikethrough {
-	text-decoration: line-through;
 	display: inline;
+	text-decoration: line-through;
 }
 
 .splitter {
 	border-bottom: 1px solid #e9ebef;
-    width: 100%;
     position: absolute;
+    width: 100%;
 }
 
 .horizontal-rule {
     background-color: transparent;
-    color: transparent;
-    border: 0;
     border-bottom: 1px solid rgba(0, 0, 0, .05);
+    border: 0;
+    color: transparent;
 }
 
 .no-margin-top {
@@ -40,13 +40,13 @@
 .underline {
     display: inline-block;
     &:before {
-        content: "";
-        width: 100%;
-        display: block;
         border: solid 1px #D5D5D5;
-        position: absolute;
         bottom: 0.5rem;
+        content: "";
+        display: block;
         left: 0;
+        position: absolute;
+        width: 100%;
     }
 }
 
@@ -55,9 +55,9 @@
 }
 
 .contrast-block {
-    display: inline-block;
     background-color: #000;
     color: #fff;
+    display: inline-block;
     padding: 0 1rem;
     text-decoration: none;
 }
