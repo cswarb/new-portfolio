@@ -1,12 +1,12 @@
 .parallax-block {
     border: 2px solid #bdc0c3;
-    padding: 15rem 3rem 3rem 3rem;
-    font-size: 2rem;
     color: #bdc0c3;
-    text-align: right;
-    margin: 5rem 10rem 10rem 10rem;
     font-family: "Univers";
+    font-size: 2rem;
     line-height: 1.4;
+    margin: 5rem 10rem 10rem 10rem;
+    padding: 15rem 3rem 3rem 3rem;
+    text-align: right;
     @media (max-width: 55rem) {
         margin: $global-section-padding-mobile;
     }
@@ -15,26 +15,29 @@
 .text_section {
     &__header {
         color: #9A9A9A;
-        font-size: 1.25rem;
-        margin: 0;
         font-family: "Calibre Light";
+        font-size: 1.25rem;
         letter-spacing: 0.6px;
         margin-bottom: 0.5rem;
+        margin: 0;
     }
     &__content {
-        margin: 0;
-        font-weight: 400;
-        color: #000;
-        font-size: 4rem;
-        line-height: 1.4;
-        letter-spacing: -0.6px;
-        z-index: 2;
         // max-width: 55%;
-        position: relative;
+        color: #000;
         font-family: "Helvetica Neue Medium";
+        font-size: 4rem;
+        font-weight: 400;
+        letter-spacing: -0.6px;
+        line-height: 1.4;
+        margin: 0;
+        max-width: 90%;
+        position: relative;
+        z-index: 2;
         &--post {
-            font-size: 3.3rem;
-            line-height: 1.25;
+            font-family: "Neue Haas Unica";
+            font-size: 4rem;
+            line-height: 1.15;
+            max-width: 75%;
         }
         // &:after {
         //     content: "";
@@ -47,40 +50,44 @@
         //     left: -13%;
         // }
         @media (max-width: 55rem) {
-            margin: 0;
             font-size: 2.5rem;
-            max-width: 100%;
             line-height: 1.2;
+            margin: 0;
+            max-width: 100%;
             &.align-right {
                 margin: 0;
             }
             &:after {
-                position: relative;
                 bottom: 0;
                 left: 0;
                 margin: 1rem 0 3rem 0;
+                position: relative;
             }
         }
         &--sub-content {
-            max-width: 35rem;
-            font-size: 1.3rem;
-            color: #95989c;
             -ms-flex-item-align: end;
+            // font-family: "Helvetica Neue";
             align-self: flex-end;
-            font-family: "Helvetica Neue";
-            letter-spacing: 0.35px;
-            line-height: 1.45;
-            margin: 1.7rem auto 0.3rem 0;
+            color: #95989c;
+            font-family: "Neue Haas Unica";
+            font-size: 1.1rem;
             font-weight: 400;
+            letter-spacing: 0.35px;
+            line-height: 1.75;
+            margin: 3rem auto 0.3rem 0;
+            max-width: 35rem;
             @media (max-width: 55rem) {
-                margin: 2rem 0 0 0;
                 align-self: flex-start;
+                margin: 2rem 0 0 0;
             }
             &--post {
-                color: $blue;
-                font-family: "Helvetica Neue Medium";
-                letter-spacing: 0;
+                // font-family: "Helvetica Neue Medium";
+                color: #6b6d71;
+                font-family: "Helvetica Neue Light";
+                font-size: 0.7rem;
+                letter-spacing: 1.1px;
                 margin: 0 auto 0 0;
+                text-transform: uppercase;
             }
         }
         &--small {
@@ -92,20 +99,20 @@
         }
     }
     &__meta {
-        margin:0;
-        text-transform: uppercase;
         color: #9A9A9A;
+        display: flex;
         font-family: $primary-font-stack;
         margin-top:2rem;
-        display: flex;
+        margin:0;
+        text-transform: uppercase;
         &__item {
-            margin: 0;
-            display: flex;
             align-items: flex-start;
+            border-bottom: 1px solid #e8e8e8;
+            display: flex;
             justify-content: flex-start;
             margin: 0 1rem;
+            margin: 0;
             text-decoration: none;
-            border-bottom: 1px solid #e8e8e8;
             &:hover {
                 border-color: #909396;
             }
@@ -113,13 +120,13 @@
                 margin-left: 0;
             }
             p {
-                margin: 0;
-                color: #b7b9bb;
-                vertical-align: middle;
                 align-self: center;
+                color: #b7b9bb;
                 line-height: 1;
+                margin: 0;
                 padding-top: 2px;
                 text-transform: lowercase;
+                vertical-align: middle;
             }
         }
     }

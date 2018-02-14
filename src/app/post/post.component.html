@@ -2,11 +2,12 @@
 	<!-- <div class="charm"></div> -->
 	<div class="full-height-section full-height-section--column full-height-section--align-top full-height-section--cut full-height-section--wide--cut">
 		<p class="text_section__content--sub-content text_section__content--sub-content--post">
-			<span>{{post?.meta?.year}} — {{post?.name}}</span>
+			<span class="highlight--yellow">{{post?.name}}</span> — {{post?.meta?.year}} — {{post?.tag}}
 		</p>
 		<h3 class="text_section__content text_section__content--post">
 			<span class="contrast-text">{{post?.title}}</span>
 		</h3>
+		<p class="text_section__content--sub-content" [innerHTML]="post?.meta?.splashText"></p>
 	</div>
 
 	<div class="full-height-section full-height-section--wide full-height-section--row full-height-section--align-top triple-block">
@@ -79,7 +80,7 @@
 					<source class="image" data-is-src-set="true" data-res="1" [attr.data-lazy-src]="image?.imageUrl" media="(min-width: 600px)">
 					<img class="image" [attr.data-lazy-src]="image?.imageUrl" [alt]="image?.title">
 				</picture>
-				<p class="post-content__image__title">{{image?.title}}</p>
+				<figcaption class="post-content__image__title">{{image?.title}}</figcaption>
 			</figure>
 		</div>
 	</div>

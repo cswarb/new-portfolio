@@ -14,22 +14,30 @@
     @media (max-width: 55rem) {
         margin: 10rem 0;
     }
+    &__header {
+        color: $white;
+        font-family: "Helvetica Neue Light";
+        font-size: 0.9rem;
+        letter-spacing: 1.1px;
+        margin: 0 0 0.5rem 0;
+    }
     &__title {
         color: #737f86;
+        flex: 2;
+        font-family: "Helvetica Neue Medium";
         font-size: 1.3rem;
         font-weight: 100;
         letter-spacing: -0.5px;
         margin: 0;
-        font-family: "Helvetica Neue Medium";
-        flex: 2;
+        transition: color 0.3s ease-in-out;
     }
     &__content {
+        flex: 6;
+        font-family: "Univers";
         font-size: 2rem;
         letter-spacing: -0.8px;
         line-height: 1.25;
         margin: 0;
-        flex: 6;
-        font-family: "Univers";
         @media (max-width: 55rem) {
             font-size: 2rem;
             max-width: 100%;
@@ -37,21 +45,22 @@
     }
     &__link {
         color: $black;
-        display: block;
+        display: flex;
+        flex-flow: row nowrap;
         position: relative;
         text-decoration: none;
         transition: opacity 0.2s ease-in-out;
-        display: flex;
-        flex-flow: row nowrap;
         &:hover {
-            opacity: 0.75;
+            .jumbo-text__title { //Overwrite the dark wrapper
+                color: white!important;
+            }
         }
         @media (max-width: 55rem) {
             flex-flow: column nowrap;
         }
     }
     &--inactive {
-        opacity: 0.8;
+        opacity: 0.6;
         // pointer-events: none;
         > .jumbo-text__link {
             color: $white;
@@ -59,26 +68,41 @@
                 cursor: not-allowed;
             }
         }
-        &:before {
-            background-color: #F8F9FD;
-            color: #2752ff;
-            content: "Coming Soon";
-            display: inline-block;
-            font-size: 0.6rem;
-            font-weight: 700;
-            letter-spacing: 1.5px;
-            padding: 0.2rem 0.3rem;
-            margin-bottom: 0.5rem;
-            // position: absolute;
-            // right: 0;
-            text-transform: uppercase;
-            @media (max-width: 55rem) {
+        .jumbo-text__title {
+            &:after {
+                color: $white;
+                content: "Coming Soon";
                 display: block;
-                margin-bottom: 0.5rem;
-                position: relative;
-                text-align: right;
-                top: 0;
-                width: 100%;
+                font-family: "Helvetica Neue Light";
+                font-size: 0.6rem;
+                font-weight: 700;
+                letter-spacing: 1.5px;
+                margin: 0.5rem 0 0 0;
+                padding: 0.2rem 0.3rem;
+                text-transform: uppercase;
+                @media (max-width: 55rem) {
+                    display: none;
+                }
+            }
+            &:before {
+                color: $white;
+                content: "Coming Soon";
+                display: none;
+                font-family: "Helvetica Neue Light";
+                font-size: 0.6rem;
+                font-weight: 700;
+                letter-spacing: 1.5px;
+                margin: 0;
+                padding: 0.2rem 0.3rem;
+                text-transform: uppercase;
+                @media (max-width: 55rem) {
+                    display: block;
+                    margin-bottom: 0;
+                    position: relative;
+                    text-align: left;
+                    top: 0;
+                    width: 100%;
+                }
             }
         }
     }

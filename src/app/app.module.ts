@@ -32,6 +32,10 @@ import { LazyLoadDirective } from "./shared/lazy-load/lazy-load.directive";
 import { PhotoStoryComponent } from "./photo-story/photo-story.component";
 import { PhotoStoryService } from "./photo-story/photo-story.service";
 import { PhotoStoryResolverService } from "./photo-story/photo-story-resolver.service";
+import { FixedPhotoStoryBlockComponent } from "./photo-story/fixed-photo-story-block/fixed-photo-story-block.component";
+import { PhotoStoryImageComponent } from "./photo-story/fixed-photo-story-block/photo-story-image/photo-story-image.component";
+import { MobilePhotoStoryBlockComponent } from "./photo-story/mobile-photo-story-block/mobile-photo-story-block.component";
+import { PhotoStoryImageMobileComponent } from "./photo-story/mobile-photo-story-block/photo-story-image/photo-story-image-mobile.component";
 
 @NgModule({
   declarations: [
@@ -48,7 +52,11 @@ import { PhotoStoryResolverService } from "./photo-story/photo-story-resolver.se
     CopyToClipboardDirective,
     ParallaxDirective,
     GetInTouchComponent,
-    LazyLoadDirective
+    LazyLoadDirective,
+    FixedPhotoStoryBlockComponent,
+    PhotoStoryImageComponent,
+    MobilePhotoStoryBlockComponent,
+    PhotoStoryImageMobileComponent
   ],
   imports: [
     BrowserAnimationsModule,

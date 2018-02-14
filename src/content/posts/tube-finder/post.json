@@ -1,7 +1,7 @@
 {
 	"type": "POST",
 	"name": "TFL Tube Finder",
-	"tag": "Design/Development Project",
+	"tag": "Design x Development Project",
 	"title": "Checking the tube status has never been better!",
 	"outbound": {
 		"alive": true,
@@ -9,7 +9,7 @@
 	},
 	"imageUrl": "/content/posts/tube-finder/img/1.png",
 	"meta": {
-		"splashText": "The TFL tube finder app was a self-initiated work. One of my goals was to use the opportunity to help me learn the new Angular 2+ framework.",
+		"splashText": "How can checking a tube status be <span class='strikethrough'>bearable</span> awesome? <span class='contrast-text'>Responsive UI, clear application flow, and built for speed.</span> These were the 3 key points I kept in mind when building my version of a tube checker",
 		"role": "A design and development project. I created the front-end, UI design, experience, and complete development including api integration",
 		"year": "2017",
 		"technologies": [
@@ -32,10 +32,6 @@
 				"name": "TFL Unified API"
 			}
 		]
-	},
-	"introduction": {
-		"title": "How can checking a tube status be sublime? Responsive UI, clear application flow, and built for speed. These were the 3 key points I kept in mind when building my version of a tube checker",
-		"content": ""
 	},
 	"sections": [
 		{
