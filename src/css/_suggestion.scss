@@ -16,7 +16,7 @@
         padding: $global-section-padding-mobile;    
     }
     &:before {
-        background-color: $blue;//#e8d91c;
+        background-color: $bright-yellow;//#e8d91c;
         content: "";
         display: block;
         height: 100%;
@@ -28,14 +28,14 @@
     }
     &:hover {
         &:before {
-            background-color: darken($blue, 1%);
-            color: $white;
+            background-color: darken($bright-yellow, 3%);
+            color: $black;
         }
         .suggestion__item:after {
             opacity: 0.6;
         }
         .suggestion__item {
-            color: $white;
+            color: $black;
         }
     }
     &__item {
