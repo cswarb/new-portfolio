@@ -8,13 +8,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
 
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/sha1.js"></script> -->
     <script>
+        // var ciphertext = CryptoJS.SHA1('hello');
+        var t = function(u) {
+            var g = "64278231-1";
+            return function() {
+                return u + "-" + g;
+            };
+        };
+
+        var c = new t("UA");
+
         (function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
         })(window,document,"script","https://www.google-analytics.com/analytics.js","ga");
-
-        ga("create", "UA-64278231-1", "auto");
+        ga("create", c(), "auto");
         //ga("send", "pageview");
     </script>
 

@@ -11,7 +11,7 @@
 		{
 			"title": "Watch Icons.",
 			"status": false,
-			"description": "— The case-work, movement finishing, and level of complexity are all <span class='contrast-text'>textbook</span> examples of classic top-tier hand craftsmanship.",
+			"description": "— The case-work, movement finishing, and level of complexity are all <span class='contrast-text'>textbook</span> examples of classic top-tier hand craftsmanship",
 			"imageUrl": "/content/posts/watch-icons/img/1.jpg",
 			"link": "watch-icons",
 			"type": "post"
@@ -19,14 +19,14 @@
 		{
 			"title": "Chris Makes Web.",
 			"status": false,
-			"description": "Making something for youself requires a lot of patience, time + effort.",
+			"description": "Making something for youself requires a lot of patience, time + effort",
 			"imageUrl": "/content/posts/chris-makes-web/img/1.jpg",
 			"link": "chris-makes-web",
 			"type": "post"
 		},
 		{
 			"title": "Elliott & Cooper.",
-			"status": false,
+			"status": true,
 			"description": "Property management made simple",
 			"imageUrl": "/content/posts/elliott-cooper/img/1.jpg",
 			"link": "elliott-cooper",
