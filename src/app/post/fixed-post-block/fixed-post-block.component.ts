@@ -67,7 +67,7 @@ export class FixedPostBlockComponent implements OnChanges, OnInit {
 			this.anchorPointEndElement = document.getElementById("scroll-anchor-ref-end");
 			this.anchorPointStart = this.getOffset(this.anchorPointStartElement);
 			this.anchorPointEnd = this.getOffset(this.anchorPointEndElement);
-		}, 0);
+		}, 100);
 	}
 
 	public initialiseAnchor(): void {
