@@ -60,7 +60,7 @@
 	</article>
 </div>
 
-<article class="article__inner post-content__final-wrapper">
+<article *ngIf="post?.finalThoughts" class="article__inner post-content__final-wrapper">
 	<div class="container container--cut">
 		<div class="post-content__final-wrapper__thoughts">
 			<!-- <h5 class="post-content__final-wrapper__thoughts__title">Final Thoughts</h5> -->
@@ -72,7 +72,7 @@
 </article>
 
 <div class="container container--cut">
-	<div class="flex-area">
+	<div *ngIf="post?.images && !!(post?.images.length > 0)" class="flex-area">
 		<div class="flex">
 			<figure class="post-content__image-meta" *ngFor="let image of post?.images">
 				<picture data-lazy-load class="lazyimage">
