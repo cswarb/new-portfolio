@@ -96,8 +96,17 @@
 
 .post-content {
     &__intro {
-        background: #f9f9f9;
         padding: 7rem 5rem;
+        &:before {
+            content: "";
+            top: 12rem;
+            left: 10rem;
+            position: absolute;
+            width: 200%;
+            height: 75%;
+            padding: 7rem 5rem;
+            background: #f9f9f9;
+        }
     }
     &__wrapper {
         height: auto;
