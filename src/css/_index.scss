@@ -8,6 +8,11 @@
     margin: 0 auto;
     max-width: 70rem;
     position: relative;
+    &:not(.jumbo-text--inactive):hover {
+        .jumbo-text__title, .jumbo-text__content {
+            text-decoration: underline;
+        }
+    }
     &:not(:first-of-type) {
         margin: 20rem auto;
     }

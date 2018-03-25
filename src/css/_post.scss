@@ -95,6 +95,10 @@
 // }
 
 .post-content {
+    &__intro {
+        background: #f9f9f9;
+        padding: 7rem 5rem;
+    }
     &__wrapper {
         height: auto;
         margin-bottom: 15rem;
@@ -260,6 +264,16 @@
         font-size: 1rem;
         margin-top: 5rem;
         text-align: left;
+        &:after {
+            content: "";
+            background-image: url("/assets/img/cursor-filled.svg");
+            background-size: 1.3rem;
+            width: 1.3rem;
+            height: 1.3rem;
+            display: inline-block;
+            margin: 0rem 0.4rem -0.3rem 0.4rem;
+            position: relative;
+        }
         &--inactive {
             pointer-events: none;
             text-decoration: line-through;
