@@ -143,7 +143,7 @@
         &__thoughts {
             margin: 0 auto;
             max-width: 60rem;
-            text-align: center;
+            text-align: left;
             &__title {
                 color: #ced3d6;
                 display: inline-block;
@@ -268,7 +268,7 @@
     }
     &__link {
         color: #000;
-        display: block;
+        display: inline-block;
         font-family: "Helvetica Neue Medium";
         font-size: 1rem;
         margin-top: 5rem;
