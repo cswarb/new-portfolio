@@ -57,7 +57,7 @@
         transition: opacity 0.2s ease-in-out;
         &:hover {
             .jumbo-text__title { //Overwrite the dark wrapper
-                color: white!important;
+                color: white;
             }
         }
         @media (max-width: 55rem) {

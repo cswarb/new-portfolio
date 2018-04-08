@@ -86,7 +86,7 @@
                 font-family: "UUC";
                 font-family: "Helvetica Neue";
                 font-family: "GMW";
-                font-family: "GMWR";
+                // font-family: "GMWR";
                 font-size: 1.2rem;
                 letter-spacing: 1.1px;
                 line-height: 1.5;
@@ -94,7 +94,8 @@
                 text-transform: uppercase;
                 
                 // background-color: #104fff;
-                background-color: #fff710;;
+                background-color: #fff710;
+                background-color: $mid-grey;
                 // color: #ffffff;
                 color: #000000;
                 padding: 0rem 0.4rem;
@@ -103,6 +104,9 @@
                 // bottom: 15rem;
                 // max-width: 25rem;
                 // position: absolute;
+                background-image: linear-gradient(to left, #ff0844 0%, #ffb199 100%);
+                background-size: 200%;
+                animation: animateGradient 5s infinite both;
             }
         }
         &--small {

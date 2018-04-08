@@ -7,6 +7,9 @@ import { Component, OnInit } from "@angular/core";
 	styleUrls: ["./navigation.component.scss"]
 })
 export class NavigationComponent implements OnInit {
+	public date: any = {
+		year: new Date().getFullYear()
+	}
 
 	constructor() { }
 
