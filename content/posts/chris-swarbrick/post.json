@@ -4,8 +4,8 @@
 	"tag": "Design x Development Project",
 	"title": "Highly configurable and flexible portfolio website",
 	"outbound": {
-		"alive": false,
-		"url": ""
+		"alive": true,
+		"url": "https://github.com/cswarb/new-portfolio"
 	},
 	"imageUrl": "/content/posts/chris-swarbrick/img/1.png",
 	"meta": {
@@ -65,5 +65,36 @@
 		}
 	],
 	"finalThoughts": "Working on my own site allowed me to devote a lot of care and attention to the small details of the UI and UX. It was a fun experience whenever I had to develop a new component or service, knowing that I could invest the time to make it perfect. However, looking back, having no fixed time constraints meant design and development phases took longer than they should have. Had I set specific deadlines for goals, I could have accelerated the development time by focusing on the exact requirements of the project.",
-	"images": []
+	"images": [
+		{
+			"title": "Typography & contrast",
+			"imageUrl": "./content/posts/chris-swarbrick/img/1.png",
+			"imageUrl2x": "./content/posts/chris-swarbrick/img/1-2x.png"
+		},
+		{
+			"title": "Layout",
+			"imageUrl": "./content/posts/chris-swarbrick/img/2.png",
+			"imageUrl2x": "./content/posts/chris-swarbrick/img/2-2x.png"
+		},
+		{
+			"title": "Story component",
+			"imageUrl": "./content/posts/chris-swarbrick/img/3.png",
+			"imageUrl2x": "./content/posts/chris-swarbrick/img/3-2x.png"
+		},
+		{
+			"title": "Performance",
+			"imageUrl": "./content/posts/chris-swarbrick/img/4.png",
+			"imageUrl2x": "./content/posts/chris-swarbrick/img/4-2x.png"
+		},
+		{
+			"title": "Code Example 1",
+			"imageUrl": "./content/posts/chris-swarbrick/img/5.png",
+			"imageUrl2x": "./content/posts/chris-swarbrick/img/5-2x.png"
+		},
+		{
+			"title": "Code Example 2",
+			"imageUrl": "./content/posts/chris-swarbrick/img/6.png",
+			"imageUrl2x": "./content/posts/chris-swarbrick/img/6-2x.png"
+		}
+	]
 }
