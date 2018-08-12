@@ -1,19 +1,19 @@
 {
 	"posts": [
 		{
-			"title": "TFL Tube Finder.",
-			"status": true,
-			"description": "How can checking a tube status be <span class='strikethrough'>bearable</span> awesome? <span class='contrast-text'>Responsive UI, clear application flow, and built for speed.</span> These were the 3 key points I kept in mind when building my version of a tube checker",
-			"imageUrl": "/content/posts/tube-finder/img/1.jpg",
-			"link": "tube-finder",
-			"type": "post"
-		},
-		{
 			"title": "Chris Swarbrick Portfolio",
 			"status": true,
 			"description": "Making something for youself requires a lot of patience, time + effort",
 			"imageUrl": "/content/posts/chris-swarbrick/img/1.jpg",
 			"link": "chris-swarbrick",
+			"type": "post"
+		},
+		{
+			"title": "TFL Tube Finder.",
+			"status": true,
+			"description": "How can checking a tube status be <span class='strikethrough'>bearable</span> awesome? <span class='contrast-text'>Responsive UI, clear application flow, and built for speed.</span> These were the 3 key points I kept in mind when building my version of a tube checker",
+			"imageUrl": "/content/posts/tube-finder/img/1.jpg",
+			"link": "tube-finder",
 			"type": "post"
 		},
 		{
