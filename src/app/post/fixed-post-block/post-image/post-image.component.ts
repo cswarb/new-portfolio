@@ -46,7 +46,7 @@ export class PostImageComponent implements OnInit, OnChanges {
 
     ngOnInit() {
         this._RouterTriggerService.getTriggerState().subscribe((isRouterAnimationComplete: boolean) => {
-            this.createImageObject();
+            isRouterAnimationComplete && this.createImageObject();
         });
     }
 
@@ -97,7 +97,7 @@ export class PostImageComponent implements OnInit, OnChanges {
         }
     }
 
-    public vhToPixel(multiplier: number): number {
+    public vhToPixel(multiplier?: number): number {
         return (window.innerHeight / 100) * (multiplier ? multiplier : 1);
     }
 

@@ -1,0 +1,68 @@
+{
+	"type": "POST",
+	"name": "Chris Swarbrick",
+	"tag": "Design x Development Project",
+	"title": "Highly configurable and flexible portfolio website",
+	"outbound": {
+		"alive": false,
+		"url": ""
+	},
+	"imageUrl": "/content/posts/chris-swarbrick/img/1.png",
+	"meta": {
+		"splashText": "",
+		"role": "A carefully crafted design and development project. Designed and developed by myself over the course of around 6 months, and continually improved on.",
+		"year": "2018",
+		"technologies": [
+			{
+				"name": "Angular 4"
+			},
+			{
+				"name": "HTML"
+			},
+			{
+				"name": "SASS"
+			},
+			{
+				"name": "Sketch"
+			},
+			{
+				"name": "Git"
+			}
+		]
+	},
+	"sections": [
+		{
+			"id": 0,
+			"imageUrl": "./content/posts/chris-swarbrick/img/1.jpg",
+			"imageAuthor": "@noahbuscher",
+			"title": "UI + UX",
+			"content": [
+				"The goals for my portfolio site were to showcase my work as a story given both text and image content, give equal importance to desktop and mobile platforms, and to push my technical and creative skills to produce something to be proud of.",
+				"I initially started designing the site by gathering an abundance of inspiration from around the web, to study and evaluate others portfolio websites. Websites like Dribbble, Behance, Typewolf, and Awwwards proved vital in allowing me to explore. I also investigated other types of mediums such as typography, poster design, and photography.",
+				"Having gathered up hundreds of images, I started sketching small components that would allow me to piece together a coherent design. I then moved into Sketch to quickly develop these concepts into rough designs.",
+				"The design of the site is something I'm particularly proud of, and draws on elements of Swiss design. There is a focus on minimalism through the use of typgography and negative space."
+			]
+		},
+		{
+			"id": 1,
+			"imageUrl": "./content/posts/chris-swarbrick/img/2.jpg",
+			"imageAuthor": "@impatrickt",
+			"title": "Technical Architecture + Implementation",
+			"content": [
+				"To have the flexibility that I needed for dynamic content, I knew I needed to focus on a configuration first approach. Almost all components feature some kind of configuration file behind them, with the post/listing pages themselves being purely driven by a JSON document, which has been structured by a Typescript model. This in turn would limit the amount of components I created and sped up development.",
+				"Each component is responsive, and the grid is re-organised wherever the flow breaks to make it suitable for the viewport. I have taken special care to include responsive images, which will serve the correct resolution and size for a given device."
+			] 
+		},
+		{
+			"id": 2,
+			"imageUrl": "./content/posts/chris-swarbrick/img/3.jpg",
+			"imageAuthor": "@lucamicheli",
+			"title": "Highlights",
+			"content": [
+				"One of the highlights of the site in my opinion is the Story component which switches the fixed imagery in the left column on scroll, whilst keeping in sync with the content on the right column. The design gives the feel of a magazine layout, but allows the content to read like a story. It was a very difficult component to develop from both an architecure and implementation standpoint, as it has to combine events from the Router, Window events, and respond to breakpoints that switch content and style dynamically."
+			] 
+		}
+	],
+	"finalThoughts": "Working on my own site allowed me to devote a lot of care and attention to the small details of the UI and UX. It was a fun experience whenever I had to develop a new component or service, knowing that I could invest the time to make it perfect. However, looking back, having no fixed time constraints meant design and development phases took longer than they should have. Had I set specific deadlines for goals, I could have accelerated the development time by focusing on the exact requirements of the project.",
+	"images": []
+}

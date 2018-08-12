@@ -1,5 +1,4 @@
 import { Component, OnInit } from "@angular/core";
-import { ENGINE_METHOD_DIGESTS } from "constants";
 
 @Component({
   selector: "[data-cmp-suggestion]",
