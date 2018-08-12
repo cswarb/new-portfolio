@@ -1,15 +1,16 @@
-import { Component, Directive, ElementRef, HostListener, Input, HostBinding, OnInit, AfterViewInit } from "@angular/core";
+import { Component, Directive, ElementRef, HostListener, Input, HostBinding, OnInit, AfterViewInit, OnChanges, AfterViewChecked } from "@angular/core";
 import { DOCUMENT } from "@angular/platform-browser";
 import { Post, Section } from "../post.model";
 import { ImageData } from "./image.model";
 import { RouterTriggerService } from "../../shared/router-trigger/router-trigger.service";
+import { ActivatedRoute, Router, RouterEvent, NavigationEnd } from "@angular/router";
 
 @Component({
   selector: "[data-cmp-fixed-block]",
   templateUrl: "./fixed-post-block.component.html",
   styleUrls: ["./fixed-post-block.component.scss"]
 })
-export class FixedPostBlockComponent  {
+export class FixedPostBlockComponent implements OnChanges, OnInit {
 
 	private anchorPointStartElement;
 	private anchorPointStart;
@@ -44,18 +45,34 @@ export class FixedPostBlockComponent  {
 
 	constructor(
 		private element: ElementRef,
-		private _RouterTriggerService: RouterTriggerService
+		private _RouterTriggerService: RouterTriggerService,
+		private router: Router
 	) {
+		
+	}
+
+	ngOnInit() {
 		this._RouterTriggerService.getTriggerState().subscribe((isRouterAnimationComplete: boolean) => {
-            this.anchorPointStartElement = document.getElementById("scroll-anchor-ref");
+			this.anchorPointStartElement = document.getElementById("scroll-anchor-ref");
 			this.anchorPointEndElement = document.getElementById("scroll-anchor-ref-end");
 			this.anchorPointStart = this.getOffset(this.anchorPointStartElement);
 			this.anchorPointEnd = this.getOffset(this.anchorPointEndElement);
-        });
+		});
+	}
+
+	ngOnChanges() {
+		//Wait for dom to re-render
+		setTimeout(() => {
+			this.anchorPointStartElement = document.getElementById("scroll-anchor-ref");
+			this.anchorPointEndElement = document.getElementById("scroll-anchor-ref-end");
+			this.anchorPointStart = this.getOffset(this.anchorPointStartElement);
+			this.anchorPointEnd = this.getOffset(this.anchorPointEndElement);
+		}, 100);
 	}
 
 	public initialiseAnchor(): void {
-		if(!this.anchorPointStart) return;
+		if (!this.anchorPointStart || !this.anchorPointEnd) return;
+
 		if(window.scrollY >= (this.anchorPointStart.top - this.vhToPixel(5))) {
 			this.setState("fixed");
 			// this.anchorProps["width"] = this.pxString(this.anchorPointStartElement.offsetWidth);

@@ -1,6 +1,14 @@
 {
 	"posts": [
 		{
+			"title": "Chris Swarbrick Portfolio",
+			"status": true,
+			"description": "Making something for youself requires a lot of patience, time + effort",
+			"imageUrl": "/content/posts/chris-swarbrick/img/1.jpg",
+			"link": "chris-swarbrick",
+			"type": "post"
+		},
+		{
 			"title": "TFL Tube Finder.",
 			"status": true,
 			"description": "How can checking a tube status be <span class='strikethrough'>bearable</span> awesome? <span class='contrast-text'>Responsive UI, clear application flow, and built for speed.</span> These were the 3 key points I kept in mind when building my version of a tube checker",
@@ -9,27 +17,19 @@
 			"type": "post"
 		},
 		{
-			"title": "Watch Icons.",
-			"status": false,
-			"description": "— The case-work, movement finishing, and level of complexity are all <span class='contrast-text'>textbook</span> examples of classic top-tier hand craftsmanship.",
-			"imageUrl": "/content/posts/watch-icons/img/1.jpg",
-			"link": "watch-icons",
-			"type": "post"
-		},
-		{
-			"title": "Chris Makes Web.",
-			"status": false,
-			"description": "Making something for youself requires a lot of patience, time + effort.",
-			"imageUrl": "/content/posts/chris-makes-web/img/1.jpg",
-			"link": "chris-makes-web",
-			"type": "post"
-		},
-		{
 			"title": "Elliott & Cooper.",
-			"status": false,
+			"status": true,
 			"description": "Property management made simple",
 			"imageUrl": "/content/posts/elliott-cooper/img/1.jpg",
 			"link": "elliott-cooper",
+			"type": "post"
+		},
+		{
+			"title": "Watch Icons.",
+			"status": false,
+			"description": "— The case-work, movement finishing, and level of complexity are all <span class='contrast-text'>textbook</span> examples of classic top-tier hand craftsmanship",
+			"imageUrl": "/content/posts/watch-icons/img/1.jpg",
+			"link": "watch-icons",
 			"type": "post"
 		}
 	]

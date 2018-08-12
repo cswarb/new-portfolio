@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, HostListener, AfterViewInit, trigger, transition, style, animate } from "@angular/core";
+import { Component, OnInit, Input, HostListener, AfterViewInit, trigger, transition, style, animate, OnChanges } from "@angular/core";
 import { Router, ActivatedRoute } from "@angular/router";
 import { Post, Section } from "../../post.model";
 import { ImageData } from "../image.model";
@@ -19,7 +19,7 @@ import { RouterTriggerService } from "../../../shared/router-trigger/router-trig
   ],
   styleUrls: ["./post-image.component.scss"]
 })
-export class PostImageComponent {
+export class PostImageComponent implements OnInit, OnChanges {
 
     private images: ImageData[] = [];
     private activeImage: number = 1;
@@ -38,12 +38,20 @@ export class PostImageComponent {
     }
 
     constructor(
-        private router: ActivatedRoute,
-        private _RouterTriggerService: RouterTriggerService
+        private route: ActivatedRoute,
+        private _RouterTriggerService: RouterTriggerService,
     ) {
+        
+    }
+
+    ngOnInit() {
         this._RouterTriggerService.getTriggerState().subscribe((isRouterAnimationComplete: boolean) => {
-            this.createImageObject();
+            isRouterAnimationComplete && this.createImageObject();
         });
+    }
+
+    ngOnChanges() {
+        this.createImageObject();
     }
 
     public createImageObject(): void {
@@ -89,7 +97,7 @@ export class PostImageComponent {
         }
     }
 
-    public vhToPixel(multiplier: number): number {
+    public vhToPixel(multiplier?: number): number {
         return (window.innerHeight / 100) * (multiplier ? multiplier : 1);
     }
 

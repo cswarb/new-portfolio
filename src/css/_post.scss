@@ -95,6 +95,23 @@
 // }
 
 .post-content {
+    &__intro {
+        padding: 7rem 5rem;
+        &:before {
+            content: "";
+            top: 12rem;
+            left: 10rem;
+            position: absolute;
+            width: 200%;
+            height: 75%;
+            padding: 7rem 5rem;
+            background: #f9f9f9;
+            // background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+            // background-image: linear-gradient(to left, #ff0844 0%, #ffb199 100%);
+            background-size: 200%;    
+            animation: animateGradient 15s infinite both;
+        }
+    }
     &__wrapper {
         height: auto;
         margin-bottom: 15rem;
@@ -117,7 +134,7 @@
         // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007db9e8', endColorstr='#f8f9fd',GradientType=0 );
         align-items: flex-start;
         background-color: #fafafb;
-        display: flex;
+        background-color: #fbf9f9;
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
@@ -130,7 +147,7 @@
         &__thoughts {
             margin: 0 auto;
             max-width: 60rem;
-            text-align: center;
+            text-align: left;
             &__title {
                 color: #ced3d6;
                 display: inline-block;
@@ -152,6 +169,7 @@
             &__content {
                 color: #7a7c82;
                 color: $blue;
+                color: #ff0844;
                 font-family: "Helvetica Neue Medium";
                 font-size: 1.5rem;
                 letter-spacing: 0;
@@ -255,11 +273,21 @@
     }
     &__link {
         color: #000;
-        display: block;
+        display: inline-block;
         font-family: "Helvetica Neue Medium";
         font-size: 1rem;
         margin-top: 5rem;
         text-align: left;
+        &:not(.post-content__link--inactive):after {
+            content: "";
+            background-image: url("/assets/img/cursor-filled.svg");
+            background-size: 1.3rem;
+            width: 1.3rem;
+            height: 1.3rem;
+            display: inline-block;
+            margin: 0rem 0.4rem -0.3rem 0.4rem;
+            position: relative;
+        }
         &--inactive {
             pointer-events: none;
             text-decoration: line-through;
@@ -466,7 +494,7 @@
 }
 
 .lazyimage {
-    background-color: $blue;
+    background-color: $yellow;
     display: block;
     min-height: 20rem;
     opacity: 0;

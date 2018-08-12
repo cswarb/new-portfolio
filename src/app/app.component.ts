@@ -3,6 +3,7 @@ import { ActivatedRoute, Router, NavigationEnd } from "@angular/router";
 import { RollTop } from "./router-animation";
 import { trigger, transition } from "@angular/animations";
 import { RouterTriggerService } from "./shared/router-trigger/router-trigger.service";
+declare var ga: Function;
 
 @Component({
     moduleId: module.id,
@@ -22,7 +23,9 @@ export class AppComponent implements OnInit {
   	private route: ActivatedRoute,
     private router: Router,
     private _RouterTriggerService: RouterTriggerService
-  ) {}
+  ) {
+
+  }
 
   animationComplete($event) {
       this._RouterTriggerService.trigger(true);
@@ -34,13 +37,17 @@ export class AppComponent implements OnInit {
   }
 
   public ngOnInit(): void {
-    this.router.events.subscribe((val) => {
+	  this.router.events.subscribe((routerEvent: ActivatedRoute) => {
         //Can't seem to subscribe to custom data from router so this will have to do for now
-        if(val instanceof NavigationEnd && (val.url === "/about-contact" || val.url === "/index" || val.url === "/")) {
-          this.darkTheme = true;
-        } else {
-          this.darkTheme = false;
-        };
+		if(routerEvent instanceof NavigationEnd) {
+			ga("set", "page", routerEvent.urlAfterRedirects);
+			ga("send", "pageview");
+			if (routerEvent.url === "/about-contact" || routerEvent.url === "/index" || routerEvent.url === "/") {
+				this.darkTheme = true;
+			} else {
+				this.darkTheme = false;
+			};
+		}
     });
   }
 

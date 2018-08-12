@@ -17,8 +17,25 @@
     	.jumbo-text a p, .text_section__content {
 			color: #75777B;
     	}
-    	.social__email, .triple-block__header, .triple-block__title, .full-height-section .title__item, .full-height-section__header, .social__title, .active, .nav__list_item__link:hover, .nav__title, .text_section__email, .contrast-text, .full-height__section .title__item, .full-height__section__header {
+    	.jumbo-text__link:hover .jumbo-text__title, .social__email, .triple-block__header, .triple-block__title, .full-height-section .title__item, .full-height-section__header, .social__title, .active, .nav__list_item__link:hover, .nav__title, .text_section__email, .contrast-text, .full-height__section .title__item, .full-height__section__header {
     		color: #fff;
+    	}
+    	.text_section__content:after, .active {
+    		border-color: #fff;
+    	}
+    }
+    &.muted {
+    	background-color: $mid-grey;
+    	.nav__list_item__link,
+    	.jumbo-text a h2 {
+    		// color: #656c6f;
+    		color: $black;
+    	}
+    	.jumbo-text__link:hover .jumbo-text__title, .jumbo-text a p, .text_section__content {
+			color: $black;
+    	}
+    	.social__email, .triple-block__header, .triple-block__title, .full-height-section .title__item, .full-height-section__header, .social__title, .active, .nav__list_item__link:hover, .nav__title, .text_section__email, .contrast-text, .full-height__section .title__item, .full-height__section__header {
+    		color: #a6acb3;
     	}
     	.text_section__content:after, .active {
     		border-color: #fff;
