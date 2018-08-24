@@ -22,7 +22,10 @@
     	}
     	.text_section__content:after, .active {
     		border-color: #fff;
-    	}
+        }
+        .post-content__intro:before {
+            background-color: #000;
+        }
     }
     &.muted {
     	background-color: $mid-grey;

@@ -1,0 +1,30 @@
+.photo-story {
+    &__image {
+        margin: 0;
+        &-title {
+            align-items: center;
+            align-self: flex-end;
+            color: #c0c4c7;
+            display: flex;
+            flex: 3;
+            font-family: "Helvetica Neue";
+            font-size: 0.8rem;
+            font-weight: 400;
+            justify-content: flex-start;
+            letter-spacing: 1.2px;
+            line-height: 1.8;
+            margin: 1rem 0 0.25rem 0;
+            text-transform: uppercase;
+        }
+    }
+    &__content {
+        color: #000000;
+        flex: 1;
+        font-family: "Helvetica Neue";
+        font-size: 1.6rem;
+        letter-spacing: -0.6px;
+        line-height: 1.4;
+        margin: 0 0 5rem 0;
+        max-width: 75%;
+    }
+}

@@ -81,28 +81,43 @@
 	"images": [
 		{
 			"title": "Photo 1",
-			"imageUrl": "./content/photo-story/elliott-cooper/img/1.png",
-			"imageUrl2x": "./content/photo-story/elliott-cooper/img/1-2x.png"
+			"imageUrl": "./content/photo-story/elliott-cooper/img/1.jpg",
+			"imageUrl2x": "./content/photo-story/elliott-cooper/img/1.jpg",
+			"content": [
+				"Creating the app up to this point took a few months of my spare time, and in my opinion turned out well from a design and development perspective. It allowed me to develop my skills in Angular 2 + 4, and also develop my knowledge of component based development methodologies. If I were to do it again, I'd put more of a focus on developing more re-usable and generic components — an example being the auto-complete component."
+			]
 		},
 		{
 			"title": "Photo 2",
-			"imageUrl": "./content/photo-story/elliott-cooper/img/2.png",
-			"imageUrl2x": "./content/photo-story/elliott-cooper/img/2-2x.png"
+			"imageUrl": "./content/photo-story/elliott-cooper/img/2.jpg",
+			"imageUrl2x": "./content/photo-story/elliott-cooper/img/2.jpg",
+			"content": [
+				"Creating the app up to this point took a few months of my spare time, and in my opinion turned out well from a design and development perspective. It allowed me to develop my skills in Angular 2 + 4, and also develop my knowledge of component based development methodologies. If I were to do it again, I'd put more of a focus on developing more re-usable and generic components — an example being the auto-complete component."
+			]
 		},
 		{
 			"title": "Photo 3",
-			"imageUrl": "./content/photo-story/elliott-cooper/img/3.png",
-			"imageUrl2x": "./content/photo-story/elliott-cooper/img/3-2x.png"
+			"imageUrl": "./content/photo-story/elliott-cooper/img/3.jpg",
+			"imageUrl2x": "./content/photo-story/elliott-cooper/img/3.jpg",
+			"content": [
+				"Creating the app up to this point took a few months of my spare time, and in my opinion turned out well from a design and development perspective. It allowed me to develop my skills in Angular 2 + 4, and also develop my knowledge of component based development methodologies. If I were to do it again, I'd put more of a focus on developing more re-usable and generic components — an example being the auto-complete component."
+			]
 		},
 		{
 			"title": "Photo 4",
-			"imageUrl": "./content/photo-story/elliott-cooper/img/4.png",
-			"imageUrl2x": "./content/photo-story/elliott-cooper/img/4-2x.png"
+			"imageUrl": "./content/photo-story/elliott-cooper/img/4.jpg",
+			"imageUrl2x": "./content/photo-story/elliott-cooper/img/4.jpg",
+			"content": [
+				"Creating the app up to this point took a few months of my spare time, and in my opinion turned out well from a design and development perspective. It allowed me to develop my skills in Angular 2 + 4, and also develop my knowledge of component based development methodologies. If I were to do it again, I'd put more of a focus on developing more re-usable and generic components — an example being the auto-complete component."
+			]
 		},
 		{
 			"title": "Photo 5",
-			"imageUrl": "./content/photo-story/elliott-cooper/img/5.png",
-			"imageUrl2x": "./content/photo-story/elliott-cooper/img/5-2x.png"
+			"imageUrl": "./content/photo-story/elliott-cooper/img/5.jpg",
+			"imageUrl2x": "./content/photo-story/elliott-cooper/img/5.jpg",
+			"content": [
+				"Creating the app up to this point took a few months of my spare time, and in my opinion turned out well from a design and development perspective. It allowed me to develop my skills in Angular 2 + 4, and also develop my knowledge of component based development methodologies. If I were to do it again, I'd put more of a focus on developing more re-usable and generic components — an example being the auto-complete component."
+			]
 		}
 	]
 }
