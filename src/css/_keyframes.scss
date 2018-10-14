@@ -54,3 +54,42 @@
         background-position: 0 50%;
     }
 }
+
+
+@keyframes blob {
+    0% {
+        top: 5rem;
+        left: 10rem;
+        border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
+        width: 60rem;
+        height: 60rem;
+    }
+    25% {
+        top: 8rem;
+        left: 10rem;
+        border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
+        width: 56rem;
+        height: 54rem;
+    }
+    50% {
+        top: 10rem;
+        left: 10rem;
+        border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
+        width: 60rem;
+        height: 53rem;
+    }
+    75% {
+        top: 9rem;
+        left: 10rem;
+        border-radius: 60% 30% 30% 60% / 60% 40% 60% 40%;
+        width: 54rem;
+        height: 54rem;
+    }
+    100% {
+        top: 5rem;
+        left: 10rem;
+        border-radius: 70% 30% 30% 70% / 60% 40% 60% 40%;
+        width: 60rem;
+        height: 60rem;
+    }
+}

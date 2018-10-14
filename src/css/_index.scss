@@ -28,13 +28,19 @@
     }
     &__title {
         color: #737f86;
-        flex: 2;
         font-family: "Helvetica Neue Medium";
         font-size: 1.3rem;
         font-weight: 100;
         letter-spacing: -0.5px;
-        margin: 0;
+        margin: 0 0 0.5rem 0;
         transition: color 0.3s ease-in-out;
+        &__container {
+            flex: 2;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: flex-start;
+            align-items: baseline;
+        }
     }
     &__content {
         flex: 6;
