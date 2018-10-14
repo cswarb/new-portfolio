@@ -6,7 +6,8 @@
 			"description": "Making something for youself requires a lot of patience, time + effort",
 			"imageUrl": "/content/posts/chris-swarbrick/img/1.jpg",
 			"link": "chris-swarbrick",
-			"type": "post"
+			"type": "post",
+			"isNew": true
 		},
 		{
 			"title": "TFL Tube Finder.",
@@ -14,7 +15,8 @@
 			"description": "How can checking a tube status be <span class='strikethrough'>bearable</span> awesome? <span class='contrast-text'>Responsive UI, clear application flow, and built for speed.</span> These were the 3 key points I kept in mind when building my version of a tube checker",
 			"imageUrl": "/content/posts/tube-finder/img/1.jpg",
 			"link": "tube-finder",
-			"type": "post"
+			"type": "post",
+			"isNew": true
 		},
 		{
 			"title": "Elliott & Cooper.",
@@ -22,7 +24,8 @@
 			"description": "Property management made simple",
 			"imageUrl": "/content/posts/elliott-cooper/img/1.jpg",
 			"link": "elliott-cooper",
-			"type": "post"
+			"type": "post",
+			"isNew": false
 		},
 		{
 			"title": "Watch Icons.",
@@ -30,7 +33,8 @@
 			"description": "— The case-work, movement finishing, and level of complexity are all <span class='contrast-text'>textbook</span> examples of classic top-tier hand craftsmanship",
 			"imageUrl": "/content/posts/watch-icons/img/1.jpg",
 			"link": "watch-icons",
-			"type": "post"
+			"type": "post",
+			"isNew": false
 		}
 	]
 }
