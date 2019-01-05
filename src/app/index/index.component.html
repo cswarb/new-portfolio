@@ -10,7 +10,7 @@
 </div> -->
 
 <div class="container container--long-bottom">
-    <div class="container jumbo-text article__inner" *ngFor="let post of posts?.posts" [class.jumbo-text--inactive]="!post?.status">
+    <div class="jumbo-text article__inner" *ngFor="let post of posts?.posts" [class.jumbo-text--inactive]="!post?.status">
       <a class="row jumbo-text__link" [routerLink]="post?.status ? ['/' + post?.type, post?.link] : ['/']">
         <div class="col-lg-3 justify-content-start">
           <div class="jumbo-text__title__container">

@@ -59,7 +59,8 @@
         padding: 3rem 2.5rem;
     }
     &--space {
-        padding: 3rem 0;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
     }
     &--long {
         &-bottom {
@@ -138,7 +139,8 @@
         }
     }
     &__inner {
-        margin: 10rem 0;
+        margin-top: 10rem;
+        margin-bottom: 10rem;
         &--alt {
             margin: 0;
             .jumbo-text {
