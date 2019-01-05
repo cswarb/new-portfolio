@@ -1,6 +1,15 @@
 {
 	"posts": [
 		{
+			"title": "Aircal",
+			"status": false,
+			"description": "A highly <span class='contrast-text'>configurable</span> and <span class='contrast-text'>lightweight Angular 4+ date range plugin</span>",
+			"imageUrl": "/content/posts/chris-swarbrick/img/1.jpg",
+			"link": "chris-swarbrick",
+			"type": "post",
+			"isNew": false
+		},
+		{
 			"title": "Chris Swarbrick Portfolio",
 			"status": true,
 			"description": "Making something for youself requires a lot of patience, time + effort",
