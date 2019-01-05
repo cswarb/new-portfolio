@@ -1,10 +1,11 @@
 .pill {
     animation: animateGradient 5s infinite both;
-    background-color: red;
-    background-image: -webkit-gradient(linear, right top, left top, from(#ff0844), to(#ffb199));
-    background-image: linear-gradient(to left, #ff0844 30%, #ffb199 100%);
+    background-color: #ff0844;
+    background-color: #1faf7a;
+    // background-image: -webkit-gradient(linear, right top, left top, from(#ff0844), to(#ffb199));
+    // background-image: linear-gradient(to left, #ff0844 30%, #ffb199 100%);
     background-size: 200%;
-    border-radius: 2px;
+    border-radius: 25px;
     color: white;
     display: inline-block;
     font-family: "Helvetica Neue";

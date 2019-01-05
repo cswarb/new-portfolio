@@ -16,3 +16,14 @@ $global-section-padding-mobile: 2rem;
 
 $global-large-padding: 17.5rem 5rem;
 $global-jumbo-padding: 12.5rem 6rem;
+$global-jumbo-padding-tb: 12.5rem 0;
+
+$container-max-widths: (
+  xl: 1100px
+);
+
+$grid-breakpoints: (
+  xl: 1200px
+);
+
+@import "~bootstrap/scss/bootstrap-grid";

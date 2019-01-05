@@ -17,7 +17,7 @@
     	.jumbo-text a p, .text_section__content {
 			color: #75777B;
     	}
-    	.jumbo-text__link:hover .jumbo-text__title, .social__email, .triple-block__header, .triple-block__title, .full-height-section .title__item, .full-height-section__header, .social__title, .active, .nav__list_item__link:hover, .nav__title, .text_section__email, .contrast-text, .full-height__section .title__item, .full-height__section__header {
+    	.jumbo-text__link:hover .jumbo-text__title, .social__email, .list__header, .list__title, .full-height-section .title__item, .full-height-section__header, .social__title, .active, .nav__list_item__link:hover, .nav__title, .text_section__email, .contrast-text, .full-height__section .title__item, .full-height__section__header {
     		color: #fff;
     	}
     	.text_section__content:after, .active {
@@ -37,7 +37,7 @@
     	.jumbo-text__link:hover .jumbo-text__title, .jumbo-text a p, .text_section__content {
 			color: $black;
     	}
-    	.social__email, .triple-block__header, .triple-block__title, .full-height-section .title__item, .full-height-section__header, .social__title, .active, .nav__list_item__link:hover, .nav__title, .text_section__email, .contrast-text, .full-height__section .title__item, .full-height__section__header {
+    	.social__email, .list__header, .list__title, .full-height-section .title__item, .full-height-section__header, .social__title, .active, .nav__list_item__link:hover, .nav__title, .text_section__email, .contrast-text, .full-height__section .title__item, .full-height__section__header {
     		color: #a6acb3;
     	}
     	.text_section__content:after, .active {
@@ -47,16 +47,19 @@
 }
 
 .container {
-	padding: $global-section-padding;
-    position: relative;
-    z-index: 1;
-    display: block;
-    width: 100%;
+	// padding: $global-section-padding;
+    // position: relative;
+    // z-index: 1;
+    // display: block;
+    // width: 100%;
     &--cut {
         padding-top: 0;
     }
     &--post {
         padding: 3rem 2.5rem;
+    }
+    &--space {
+        padding: 3rem 0;
     }
     &--long {
         &-bottom {
@@ -159,15 +162,15 @@
 }
 
 .full-height-section {
-    align-items: center;
+    // align-items: center;
     background-color: transparent;
-    display: flex;
-    flex-flow: row nowrap;
+    // display: flex;
+    // flex-flow: row nowrap;
     height: auto;
-    justify-content: flex-start;
+    // justify-content: flex-start;
     margin: 0;
     min-height: 100vh;
-    padding: $global-jumbo-padding;
+    padding: $global-jumbo-padding-tb;
     position: relative;
     @media (max-width: 55rem) {
         padding: 3rem 2.5rem;

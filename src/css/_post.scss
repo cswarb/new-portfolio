@@ -1,7 +1,7 @@
-.triple-block {
+.list {
     &__title {
         color: #35363a;
-        flex: 5;
+        // flex: 5;
         font-family: "Helvetica Neue Medium";
         font-size: 2.3rem;
         font-weight: 400;
@@ -13,25 +13,28 @@
         }
     }
     &__description {
-        color: #9d9fa5;
-        font-family: "Helvetica Neue Light";
-        font-size: 1.1rem;
-        letter-spacing: 1.05px;
-        line-height: 2;
+        // color: #9d9fa5;
+        // font-family: "Helvetica Neue Light";
+        // font-size: 1.1rem;
+        // letter-spacing: 1.05px;
+        // line-height: 2;
     }
     &__item {
         // font-family: "Calibre Light";
         color: #9d9fa5;
-        flex: 3;
-        font-size: 1.3rem;
+        // flex: 3;
+        font-size: 1.1rem;
         letter-spacing: 1.05px;
-        line-height: 2.4;
+        line-height: 1.5;
         list-style: none;
-        margin: 0 3rem;
-        margin: 1.1rem 3rem 0 0;
+        margin: 0;
         text-align: left;
+        margin: 0 0 1rem 0;
         @media (max-width: 55rem) {
-            margin: 5rem 0;
+            line-height: 1;
+        }
+        &__content {
+            margin: 0;
         }
     }
     &__content {
@@ -98,7 +101,7 @@
 
 .post-content {
     &__intro {
-        padding: 7rem 5rem;
+        padding: 7rem 0;
         &:before {
             content: "";
             top: 12rem;
