@@ -14,46 +14,45 @@
 		<!-- <p class="text_section__content--sub-content" [innerHTML]="post?.meta?.splashText"></p> -->
 	</div>
 
-	<div class="container">
-		<div class="row">
-			<div class="col-md-5">
-				<section class="list__content">
-					<header>
-						<h6 class="list__header">Details</h6>
-					</header>
-					<ul class="list__list">
-						<li class="list__item">
-							<p class="list__item__content">{{post?.meta?.role}}</p>
-						</li>
-					</ul>
-				</section>
-			</div>
-			<div class="col-md">
-				<section class="list__content">
-					<header>
-						<h6 class="list__header">Year</h6>
-					</header>
-					<ul class="list__list">
-						<li class="list__item">
-							<p class="list__item__content">{{post?.meta?.year}}</p>
-						</li>
-					</ul>
-				</section>
-			</div>
-			<div class="col-md">
-				<section class="list__content">
-					<header>
-						<h6 class="list__header">Technologies Used</h6>
-					</header>
-					<ul class="list__list">
-						<li class="list__item" *ngFor="let technology of post?.meta?.technologies">
-							<p class="list__item__content">{{technology?.name}}</p>
-						</li>
-					</ul>
-				</section>
-			</div>
+	<div class="row">
+		<div class="col-md-5">
+			<section class="list__content">
+				<header>
+					<h6 class="list__header">Details</h6>
+				</header>
+				<ul class="list__list">
+					<li class="list__item">
+						<p class="list__item__content">{{post?.meta?.role}}</p>
+					</li>
+				</ul>
+			</section>
+		</div>
+		<div class="col-md">
+			<section class="list__content">
+				<header>
+					<h6 class="list__header">Year</h6>
+				</header>
+				<ul class="list__list">
+					<li class="list__item">
+						<p class="list__item__content">{{post?.meta?.year}}</p>
+					</li>
+				</ul>
+			</section>
+		</div>
+		<div class="col-md">
+			<section class="list__content">
+				<header>
+					<h6 class="list__header">Technologies Used</h6>
+				</header>
+				<ul class="list__list">
+					<li class="list__item" *ngFor="let technology of post?.meta?.technologies">
+						<p class="list__item__content">{{technology?.name}}</p>
+					</li>
+				</ul>
+			</section>
 		</div>
 	</div>
+	
 </div>
 
 <div class="container--post">

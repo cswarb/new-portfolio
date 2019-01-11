@@ -24,7 +24,8 @@
     &__content {
         // max-width: 55%;
         color: #000;
-        font-family: "Helvetica Neue Medium";
+        // font-family: "Helvetica Neue Medium";
+        font-family: "GMW";
         font-size: 3.1rem;
         font-weight: 400;
         letter-spacing: -0.6px;
@@ -34,7 +35,8 @@
         position: relative;
         z-index: 2;
         &--post {
-            font-family: "Neue Haas Unica";
+            // font-family: "Neue Haas Unica";
+            font-family: "GMW";
             font-size: 4rem;
             line-height: 1.15;
             max-width: 75%;
@@ -93,7 +95,7 @@
                 margin: 0 auto 1rem 0;
                 text-transform: uppercase;
                 // background-color: #104fff;
-                background-color: #fff710;
+                // background-color: #fff710;
                 // background-color: $mid-grey;
                 // color: #ffffff;
                 color: #000000;
