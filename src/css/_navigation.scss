@@ -19,6 +19,8 @@
         margin: 0 0 0.45rem 0;
         overflow: hidden;
         position: relative;
+        opacity: 0;
+        animation: fadeInDown 1s ease-in-out forwards;
         @media (max-width: 55rem) {
             font-size: 1rem;
         }
@@ -32,6 +34,8 @@
         }
     }
     &__sub-title {
+        opacity: 0;
+        animation: fadeInDown 1s ease-in-out 0.5s forwards;
         // color: #9e9e9e;
         color: #75777B;
         font-size: 0.95rem;
@@ -81,6 +85,9 @@
                 font-family: "Univers";
                 position: relative;
                 text-decoration: none;
+                opacity: 0;
+                display: inline-block;
+                animation: fadeInDown 1s ease-in-out 1s forwards;
                 transition: color 0.3s ease-in-out;
                 z-index: 1;
                 &:hover {
