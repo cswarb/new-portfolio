@@ -5,7 +5,7 @@
 	"title": "Highly configurable and lightweight date range plugin for Angular. Designed for both users and developers.",
 	"outbound": {
 		"alive": true,
-		"url": "https//www.npmjs.com/package/ngx-aircal"
+		"url": "https://www.npmjs.com/package/ngx-aircal"
 	},
 	"imageUrl": "/content/posts/ngx-aircal/img/1.png",
 	"meta": {
