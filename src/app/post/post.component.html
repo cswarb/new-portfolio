@@ -77,7 +77,7 @@
 		<div class="right-side">
 			<section *ngFor="let section of post?.sections" class="post-content__wrapper">
 				<h4 class="post-content__title">{{section?.title}}</h4>
-				<p class="post-content__paragraph">{{section?.content}}</p>
+				<p class="post-content__paragraph" *ngFor="let content of section?.content">{{content}} <br/></p>
 			</section>
 		</div>
 	</article>

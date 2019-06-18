@@ -61,7 +61,7 @@
 			"content": [
 				"I identified key points in all 3 areas that I thought I believed I could improve upon. Starting with the experience, I identified that user affordances could be improved on in terms of the clickable area of the date. This can prove to be a large pain point for users with lower levels of co-ordination.",
 				"I also identified missing features that could dramatically improve the speed at which users can select large date ranges. The ability to quick-set the month and year allows the user a great deal of flexibility.",
-				"A significant development I identified which I had not considered previously was to allow the option use use a single or dual picker design. Whilst I had the calendar respond to smaller devices by rendering in a single column layout, the single picker gave developers flexibility, and made selecting smaller date ranges less of a congnitive overhead for the user."
+				"A significant development I identified which I had not considered previously was to allow the option to use a single or dual picker design. Whilst I had the calendar respond to smaller devices by rendering in a single column layout, the single picker gave developers flexibility, and made selecting smaller date ranges less of a congnitive overhead for the user."
 			]
 		},
 		{
@@ -70,8 +70,8 @@
 			"imageAuthor": "@nico_frey",
 			"title": "Developer experience, technical architecture + implementation",
 			"content": [
-				"Taking a configuration first approach is a good approach for any plugin. This style of architecture allowed me to easily add options, separate features for testing, and made it familiar for developers to use. There are 35 configurable options at the time of writing ranging from user experience to design tweaks.",
-				"I decided to use a date parsing library (date-fns) to help with date manipulation. I chose it because of its functional design, and lightweight size. Having not gone down this route would have added onto the development time, and the libraries on offer such as date-fns and moment offer so many features that I felt it would be best not to re-invent the wheel.",
+				"Taking a configuration first approach is a good approach for any plugin. This style of architecture allowed me to easily add options, separate features for testing, and made it familiar for developers to use. There are 35 configurable options at the time of writing, ranging from user experience to design tweaks.",
+				"I decided to use a date parsing library (date-fns) to help with date manipulation. I chose it because of its functional design, and lightweight size. Having not gone down this route would have added on to the development time, and the libraries on offer such as date-fns and moment offer so many features that I felt it would be best not to re-invent the wheel.",
 				"Making the plugin open source and hosting the package on npm made it easy to push continuous updates, and mark major milestone in the development of the plugin. Any major issues could also be identified and reported by the community."
 			]
 		},
@@ -81,7 +81,7 @@
 			"imageAuthor": "@tomcoe",
 			"title": "Maintenance and deployment",
 			"content": [
-				"The site is deploying on npm using Travis CI. I felt this was a useful skill to add to my repertoire, and underestimated the learning curve involved in chaining all the scripts and system together. However, it is now configured to run all unit tests, build and deploy to npm through a tagged commit that is pushed to the repo."
+				"The site is deploying on npm using Travis CI. I felt this was a useful skill to add to my repertoire. I underestimated the learning curve involved in chaining all the scripts and system together. However, it is now configured to run all unit tests, build and deploy to npm through a tagged commit that is pushed to the repo."
 			]
 		}
 	],
