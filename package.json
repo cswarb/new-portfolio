@@ -8,7 +8,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "deploy": "ng build --aot && echo \"www.chrisswarbrick.co.uk\" > ./dist/CNAME && npx angular-cli-ghpages"
   },
   "private": true,
   "dependencies": {

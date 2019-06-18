@@ -2,12 +2,12 @@
 	"posts": [
 		{
 			"title": "Aircal",
-			"status": false,
-			"description": "A highly <span class='contrast-text'>configurable</span> and <span class='contrast-text'>lightweight Angular 4+ date range plugin</span>",
+			"status": true,
+			"description": "<span class='contrast-text'>Configuration first</span> and <span class='contrast-text'>lightweight Angular 4+ date range plugin</span>",
 			"imageUrl": "/content/posts/chris-swarbrick/img/1.jpg",
-			"link": "chris-swarbrick",
+			"link": "ngx-aircal",
 			"type": "post",
-			"isNew": false
+			"isNew": true
 		},
 		{
 			"title": "Chris Swarbrick Portfolio",
@@ -25,7 +25,7 @@
 			"imageUrl": "/content/posts/tube-finder/img/1.jpg",
 			"link": "tube-finder",
 			"type": "post",
-			"isNew": true
+			"isNew": false
 		},
 		{
 			"title": "Elliott & Cooper.",

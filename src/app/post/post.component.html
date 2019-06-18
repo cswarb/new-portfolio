@@ -14,9 +14,9 @@
 		<!-- <p class="text_section__content--sub-content" [innerHTML]="post?.meta?.splashText"></p> -->
 	</div>
 
-	<div class="container">
-		<div class="row">
-			<div class="col-md-5">
+	<div class="row">
+		<div class="col-md-5">
+			<section class="list__content">
 				<header>
 					<h6 class="list__header">Details</h6>
 				</header>
@@ -25,33 +25,34 @@
 						<p class="list__item__content">{{post?.meta?.role}}</p>
 					</li>
 				</ul>
-			</div>
-			<div class="col-md">
-				<section class="list__content">
-					<header>
-						<h6 class="list__header">Year</h6>
-					</header>
-					<ul class="list__list">
-						<li class="list__item">
-							<p class="list__item__content">{{post?.meta?.year}}</p>
-						</li>
-					</ul>
-				</section>
-			</div>
-			<div class="col-md">
-				<section class="list__content">
-					<header>
-						<h6 class="list__header">Technologies Used</h6>
-					</header>
-					<ul class="list__list">
-						<li class="list__item" *ngFor="let technology of post?.meta?.technologies">
-							<p class="list__item__content">{{technology?.name}}</p>
-						</li>
-					</ul>
-				</section>
-			</div>
+			</section>
+		</div>
+		<div class="col-md">
+			<section class="list__content">
+				<header>
+					<h6 class="list__header">Year</h6>
+				</header>
+				<ul class="list__list">
+					<li class="list__item">
+						<p class="list__item__content">{{post?.meta?.year}}</p>
+					</li>
+				</ul>
+			</section>
+		</div>
+		<div class="col-md">
+			<section class="list__content">
+				<header>
+					<h6 class="list__header">Technologies Used</h6>
+				</header>
+				<ul class="list__list">
+					<li class="list__item" *ngFor="let technology of post?.meta?.technologies">
+						<p class="list__item__content">{{technology?.name}}</p>
+					</li>
+				</ul>
+			</section>
 		</div>
 	</div>
+	
 </div>
 
 <div class="container--post">
@@ -76,7 +77,7 @@
 		<div class="right-side">
 			<section *ngFor="let section of post?.sections" class="post-content__wrapper">
 				<h4 class="post-content__title">{{section?.title}}</h4>
-				<p class="post-content__paragraph">{{section?.content}}</p>
+				<p class="post-content__paragraph" *ngFor="let content of section?.content">{{content}} <br/></p>
 			</section>
 		</div>
 	</article>

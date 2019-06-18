@@ -31,8 +31,9 @@
     }
     &__title {
         color: #737f86;
-        font-family: "Helvetica Neue Medium";
-        font-size: 1.3rem;
+        // font-family: "Helvetica Neue Medium";
+        font-family: "GMW";
+        font-size: 1.5rem;
         font-weight: 100;
         letter-spacing: -0.5px;
         margin: 0 0 0.5rem 0;
@@ -47,8 +48,8 @@
     }
     &__content {
         // flex: 6;
-        font-family: "Univers";
-        font-size: 1.6rem;
+        font-family: "GMW";
+        font-size: 2rem;
         letter-spacing: -0.8px;
         line-height: 1.25;
         margin: 0;

@@ -21,17 +21,17 @@
     }
     &__item {
         // font-family: "Calibre Light";
-        color: #9d9fa5;
+        color: #6f7075;
         // flex: 3;
         font-size: 1.1rem;
         letter-spacing: 1.05px;
-        line-height: 1.5;
+        line-height: 1.8;
         list-style: none;
         margin: 0;
         text-align: left;
         margin: 0 0 1rem 0;
         @media (max-width: 55rem) {
-            line-height: 1;
+            // line-height: 1;
         }
         &__content {
             margin: 0;
@@ -44,16 +44,13 @@
         letter-spacing: 1.05px;
         line-height: 2.4;
         list-style: none;
-        margin: 0 3rem;
-        margin: 1.1rem 3rem 0 0;
+        margin: 0;
         text-align: left;
         @media (max-width: 55rem) {
             &:not(:first-of-type) {
                 margin-top: 4rem;
             }
-        }
-        &--prime {
-            flex: 10;
+            margin-bottom: 3rem;
         }
     }
     &__header {
@@ -74,7 +71,8 @@
     &__list {
         // font-family: "Calibre Light";
         // font-family: "Helvetica Neue";
-        font-family: "Helvetica Neue Light";
+        // font-family: "Helvetica Neue Light";
+        font-family: "Neue Haas Unica";
         font-size: 1.1rem;
         list-style: none;
         margin: 0;
@@ -121,6 +119,10 @@
             // width: 45rem;
             // height: 45rem;
             animation: blob 40s infinite both ease-in-out;
+            @media (max-width: 55rem) {
+                top: -10rem;
+                left: 9rem;
+            }
         }
     }
     &__wrapper {
@@ -162,7 +164,8 @@
             &__title {
                 color: #ced3d6;
                 display: inline-block;
-                font-family: "TF Opicular Bold";
+                // font-family: "TF Opicular Bold";
+                font-family: "GMW";
                 letter-spacing: 2.7px;
                 margin: 0 0 1rem 0;
                 text-transform: uppercase;
@@ -180,8 +183,9 @@
             &__content {
                 color: #7a7c82;
                 color: $blue;
-                color: #ff0844;
-                font-family: "Helvetica Neue Medium";
+                // color: #ff0844;
+                // font-family: "Helvetica Neue Medium";
+                font-family: "GMW";
                 font-size: 1.5rem;
                 letter-spacing: 0;
                 line-height: 1.6;
@@ -204,7 +208,8 @@
         color: #c0c4c7;
         display: flex;
         flex: 3;
-        font-family: "Helvetica Neue Light";
+        // font-family: "Helvetica Neue Light";
+        font-family: "GMWR";
         font-size: 1.2rem;
         font-weight: 400;
         justify-content: flex-start;
@@ -265,7 +270,8 @@
         // line-height: 1.2;
         color: #000000;
         flex: 1;
-        font-family: "Helvetica Neue";
+        // font-family: "Helvetica Neue";
+        font-family: "GMW";
         font-size: 1.2rem;
         font-size: 2.1rem;
         letter-spacing: -0.6px;
@@ -285,7 +291,8 @@
     &__link {
         color: #000;
         display: inline-block;
-        font-family: "Helvetica Neue Medium";
+        // font-family: "Helvetica Neue Medium";
+        font-family: "GMW";
         font-size: 1rem;
         margin-top: 5rem;
         text-align: left;
@@ -312,7 +319,6 @@
     &__image-meta {
         flex: 1;
         margin: 0;
-        margin: 1rem;
         min-width: calc(50% - 2rem);
         position: relative;
         text-align: center;
@@ -379,7 +385,8 @@
         }
         &__title {
             color: #000;
-            font-family: "Helvetica Neue Medium";
+            // font-family: "Helvetica Neue Medium";
+            font-family: "GMW";
             font-size: 1.2rem;
             letter-spacing: 0.1px;
             margin: 0.5rem 0 2rem 0;
@@ -507,7 +514,11 @@
 .lazyimage {
     background-color: $yellow;
     display: block;
-    min-height: 20rem;
+    border: 1px solid #f1f2f3;
+    -webkit-box-shadow: 0px 22px 38px -32px rgba(0,0,0,0.32);
+    -moz-box-shadow: 0px 22px 38px -32px rgba(0,0,0,0.32);
+    box-shadow: 0px 22px 38px -32px rgba(0,0,0,0.32);
+    // min-height: 20rem;
     opacity: 0;
     transition: opacity 1s ease-in-out;
     width: 100%;
