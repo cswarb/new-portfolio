@@ -3,10 +3,15 @@ import { ActivatedRoute, Router, NavigationEnd } from "@angular/router";
 import { RollTop } from "./router-animation";
 import { trigger, transition } from "@angular/animations";
 import { RouterTriggerService } from "./shared/router-trigger/router-trigger.service";
-declare var ga: Function;
+import { filter, map, Observable, tap } from "rxjs";
+
+declare global {
+  interface Window {
+    ga: Function;
+  }
+}
 
 @Component({
-    moduleId: module.id,
     selector: "[data-cmp-root]",
     templateUrl: "./app.component.html",
     styleUrls: ["./app.component.scss"],
@@ -17,38 +22,36 @@ declare var ga: Function;
     ]
 })
 export class AppComponent implements OnInit {
-  public darkTheme = false;
+  public darkTheme$!: Observable<boolean>;
 
   constructor(
   	private route: ActivatedRoute,
     private router: Router,
     private _RouterTriggerService: RouterTriggerService
-  ) {
+  ) {}
 
-  }
-
-  animationComplete($event) {
+  animationComplete($event: any) {
       this._RouterTriggerService.trigger(true);
   }
 
-  getState(outlet) {
+  getState(outlet: any) {
     const animation = outlet.activatedRouteData["animation"] || {};
     return animation["value"] || null;
   }
 
   public ngOnInit(): void {
-	  this.router.events.subscribe((routerEvent: ActivatedRoute) => {
-        //Can't seem to subscribe to custom data from router so this will have to do for now
-		if(routerEvent instanceof NavigationEnd) {
-			ga("set", "page", routerEvent.urlAfterRedirects);
-			ga("send", "pageview");
-			if (routerEvent.url === "/about-contact" || routerEvent.url === "/index" || routerEvent.url === "/") {
-				this.darkTheme = true;
-			} else {
-				this.darkTheme = false;
-			};
-		}
-    });
+    this.darkTheme$ = this.router.events.pipe(
+      filter((routerEvent: any) => routerEvent instanceof NavigationEnd),
+      // tap((routerEvent: any) => {
+      //   window.ga("set", "page", routerEvent.urlAfterRedirects);
+      //   window.ga("send", "pageview");
+      // }),
+      map((routerEvent: any) => {
+        if (routerEvent.url === "/about-contact" || routerEvent.url === "/index" || routerEvent.url === "/") {
+          return true;
+        };
+        return false;
+    }));
   }
 
   public onDeactivate(): void {

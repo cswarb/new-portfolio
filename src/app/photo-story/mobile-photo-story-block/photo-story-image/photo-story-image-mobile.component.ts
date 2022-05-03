@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, HostListener, AfterViewInit, trigger, transition, style, animate } from "@angular/core";
+import { Component, OnInit, Input, HostListener, AfterViewInit } from "@angular/core";
 import { Router, ActivatedRoute } from "@angular/router";
 import { Post, Section } from "../../../post/post.model";
 import { ImageData } from "../../../post/fixed-post-block/image.model";

@@ -1,6 +1,5 @@
 import { Injectable } from "@angular/core";
 import { Resolve, ActivatedRoute, ActivatedRouteSnapshot } from "@angular/router";
-
 import { PhotoStoryService } from "./photo-story.service";
 
 @Injectable()
@@ -12,7 +11,8 @@ export class PhotoStoryResolverService implements Resolve<any> {
 	) {}
 
 	resolve(route: ActivatedRouteSnapshot) {
-		return this._PhotoStoryService.getPhotoStory(route.paramMap.get("id"));
+		const id = route.paramMap.get("id") as string;
+		return this._PhotoStoryService.getPhotoStory(id);
 	}
 
 }

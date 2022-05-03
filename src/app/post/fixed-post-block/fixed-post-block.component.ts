@@ -1,9 +1,7 @@
-import { Component, Directive, ElementRef, HostListener, Input, HostBinding, OnInit, AfterViewInit, OnChanges, AfterViewChecked } from "@angular/core";
-import { DOCUMENT } from "@angular/platform-browser";
-import { Post, Section } from "../post.model";
-import { ImageData } from "./image.model";
+import { Component, ElementRef, HostListener, Input, OnInit, OnChanges } from "@angular/core";
+import { Section } from "../post.model";
 import { RouterTriggerService } from "../../shared/router-trigger/router-trigger.service";
-import { ActivatedRoute, Router, RouterEvent, NavigationEnd } from "@angular/router";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "[data-cmp-fixed-block]",
@@ -12,11 +10,11 @@ import { ActivatedRoute, Router, RouterEvent, NavigationEnd } from "@angular/rou
 })
 export class FixedPostBlockComponent implements OnChanges, OnInit {
 
-	private anchorPointStartElement;
-	private anchorPointStart;
-	private anchorPointEndElement;
-	private anchorPointEnd;
-	private anchorStartRef;
+	private anchorPointStartElement: any;
+	private anchorPointStart: any;
+	private anchorPointEndElement: any;
+	private anchorPointEnd: any;
+	private anchorStartRef: any;
 	
 	public anchorProps = {
 		"width": "",
@@ -24,7 +22,7 @@ export class FixedPostBlockComponent implements OnChanges, OnInit {
 	};
 
 	public state: string = "";
-	@Input() defaultImageUrl: string = "";
+	@Input() defaultImageUrl: undefined | string = "";
 	@Input() sectionData: Section[] = [];
 
 	@HostListener("window:scroll", ["$event"])

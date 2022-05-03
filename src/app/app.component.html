@@ -1,5 +1,6 @@
-<div class="wrapper" [class.dark]="darkTheme" [@routerTransition]="getState(outlet)" (@routerTransition.done)="animationComplete($event)">
+<div class="wrapper" [class.dark]="darkTheme$ | async" [@routerTransition]="getState(outlet)" (@routerTransition.done)="animationComplete($event)">
 	<div data-cmp-navigation></div>
 	<router-outlet #outlet="outlet" (deactivate)="onDeactivate()"></router-outlet>
 </div>
+
 <div data-cmp-suggestion></div>

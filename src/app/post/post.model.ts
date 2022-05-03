@@ -44,4 +44,5 @@ export class Section {
 export class Images {
 	"title": string;
 	"imageUrl": string;
+	"content": string;
 }

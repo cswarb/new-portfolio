@@ -1,8 +1,9 @@
-import { Component, OnInit, Input, HostListener, AfterViewInit, trigger, transition, style, animate, OnChanges } from "@angular/core";
+import { Component, OnInit, Input, HostListener, OnChanges } from "@angular/core";
 import { Router, ActivatedRoute } from "@angular/router";
 import { Post, Section } from "../../post.model";
 import { ImageData } from "../image.model";
 import { RouterTriggerService } from "../../../shared/router-trigger/router-trigger.service";
+import { animate, style, transition, trigger } from "@angular/animations";
 
 @Component({
   selector: "[data-cmp-post-image]",
@@ -21,9 +22,9 @@ import { RouterTriggerService } from "../../../shared/router-trigger/router-trig
 })
 export class PostImageComponent implements OnInit, OnChanges {
 
-    private images: ImageData[] = [];
-    private activeImage: number = 1;
-    private activeNumber: string = "01";
+    images: ImageData[] = [];
+    activeImage: number = 1;
+    activeNumber: string = "01";
     @Input() sectionData: Section[] = [];
 
     @HostListener("window:scroll", ["$event"])
@@ -61,7 +62,7 @@ export class PostImageComponent implements OnInit, OnChanges {
         let images = Array.from(document.querySelectorAll("[data-image-trigger]"));
         //Create an object based off the NodeList data we can use later on
         for(var i = 0; i < images.length; i++) {
-            let image = images[i];
+            let image: any = images[i];
             this.images.push(
                 new ImageData(
                     i+1,
@@ -73,7 +74,7 @@ export class PostImageComponent implements OnInit, OnChanges {
     }
 
     public initialiseImageSwitching() {
-        let newImage = null;
+        let newImage: any = null;
         this.images.forEach((image: ImageData) => {
             //Check the offset
             if(window.scrollY >= (image.offsetTop - this.vhToPixel(50))) {

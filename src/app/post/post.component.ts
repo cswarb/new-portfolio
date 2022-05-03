@@ -1,5 +1,5 @@
-import { Component, OnInit, HostListener, OnChanges } from "@angular/core";
-import { Router, ActivatedRoute } from "@angular/router";
+import { Component, OnInit, HostListener } from "@angular/core";
+import { ActivatedRoute } from "@angular/router";
 import { Post } from "./post.model";
 
 @Component({
@@ -22,7 +22,7 @@ export class PostComponent implements OnInit {
 		//Subscribe to new data changes
 		this.route.data.subscribe((params) => {
 			window.scrollTo(0, 0);
-			this.post = params.post;
+			this.post = params['post'];
 			this.isMobile();
 		});
 		

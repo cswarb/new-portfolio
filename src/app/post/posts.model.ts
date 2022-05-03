@@ -9,4 +9,5 @@ export class PostLoop {
 	"imageUrl": string;
 	"link": string;
 	"type": string;
+	"isNew": boolean;
 }

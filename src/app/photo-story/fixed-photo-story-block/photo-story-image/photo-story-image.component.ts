@@ -1,8 +1,9 @@
-import { Component, OnInit, Input, HostListener, AfterViewInit, trigger, transition, style, animate } from "@angular/core";
+import { Component, OnInit, Input, HostListener, AfterViewInit } from "@angular/core";
 import { Router, ActivatedRoute } from "@angular/router";
 import { Post, Section } from "../../../post/post.model";
 import { ImageData } from "../../../post/fixed-post-block/image.model";
 import { RouterTriggerService } from "../../../shared/router-trigger/router-trigger.service";
+import { trigger, transition, style, animate } from "@angular/animations";
 
 @Component({
     selector: "[data-cmp-photo-story-image]",
@@ -20,10 +21,9 @@ import { RouterTriggerService } from "../../../shared/router-trigger/router-trig
   styleUrls: ["./photo-story-image.component.scss"]
 })
 export class PhotoStoryImageComponent {
-
     private images: ImageData[] = [];
-    private activeImage: number = 1;
-    private activeNumber: string = "01";
+    activeImage: number = 1;
+    activeNumber: string = "01";
     @Input() sectionData: Section[] = [];
 
     @HostListener("window:scroll", ["$event"])
@@ -53,7 +53,7 @@ export class PhotoStoryImageComponent {
         let images = Array.from(document.querySelectorAll("[data-image-trigger]"));
         //Create an object based off the NodeList data we can use later on
         for(var i = 0; i < images.length; i++) {
-            let image = images[i];
+            let image: any = images[i];
             this.images.push(
                 new ImageData(
                     i+1,
@@ -65,7 +65,7 @@ export class PhotoStoryImageComponent {
     }
 
     public initialiseImageSwitching() {
-        let newImage = null;
+        let newImage: any = null;
         this.images.forEach((image: ImageData) => {
             //Check the offset
             if(window.scrollY >= (image.offsetTop - this.vhToPixel(50))) {

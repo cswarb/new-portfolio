@@ -42,8 +42,6 @@ export class SuggestionComponent implements OnInit {
 			case (this.dateHours > 17 && this.dateHours < 21):
 				tod = "sunset";
 				break;
-			case (this.dateHours > 21 && this.dateHours < 5):
-				tod = "night";
 			default:
 				tod = "default";
 				break;

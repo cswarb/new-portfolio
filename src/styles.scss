@@ -1,20 +1,21 @@
-@import "vars";
-@import "keyframes";
-@import "base";
-@import "fonts";
-@import "layout";
+/* You can add global styles to this file, and also import other style files */
+@import "./css/vars";
+@import "./css/keyframes";
+@import "./css/base";
+@import "./css/fonts";
+@import "./css/layout";
 
 //page components
-@import "loading";
-@import "pill";
-@import "about";
-@import "index";
-@import "post";
-@import "photo-story";
-@import "suggestion";
+@import "./css/loading";
+@import "./css/pill";
+@import "./css/about";
+@import "./css/index";
+@import "./css/post";
+@import "./css/photo-story";
+@import "./css/suggestion";
 
-@import "icons";
-@import "navigation";
-@import "social";
+@import "./css/icons";
+@import "./css/navigation";
+@import "./css/social";
 
-@import "helpers";
+@import "./css/helpers";

@@ -1,5 +1,4 @@
 import { Injectable } from "@angular/core";
-import { Http, Response, URLSearchParams } from "@angular/http";
 import { HttpHeaders } from '@angular/common/http';
 
 @Injectable()

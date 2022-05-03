@@ -101,6 +101,7 @@
     &__intro {
         padding: 7rem 0;
         &:before {
+            z-index: -1;
             content: "";
             top: 12rem;
             left: 10rem;
@@ -205,12 +206,12 @@
         // font-weight: 400;
         align-items: center;
         align-self: flex-end;
-        color: #c0c4c7;
+        color: #737260;
         display: flex;
         flex: 3;
         // font-family: "Helvetica Neue Light";
         font-family: "GMWR";
-        font-size: 1.2rem;
+        font-size: 0.8rem;
         font-weight: 400;
         justify-content: flex-start;
         letter-spacing: 1.2px;
@@ -268,14 +269,14 @@
         // font-family: "Univers";
         // font-size: 1.2rem;
         // line-height: 1.2;
-        color: #000000;
+        color: #4d4d4d;
         flex: 1;
         // font-family: "Helvetica Neue";
         font-family: "GMW";
         font-size: 1.2rem;
-        font-size: 2.1rem;
-        letter-spacing: -0.6px;
-        line-height: 1.2;
+        font-size: 1.5rem;
+        letter-spacing: -0.4px;
+        line-height: 1.5;
         margin: 0 0 2.5rem 0;
         &--medium {
             font-size: 1.5rem;

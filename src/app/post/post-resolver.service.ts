@@ -12,7 +12,8 @@ export class PostResolverService implements Resolve<any> {
 	) {}
 
 	resolve(route: ActivatedRouteSnapshot) {
-		return this._PostService.getPost(route.paramMap.get("id"));
+		const id = route.paramMap.get("id") as string;
+		return this._PostService.getPost(id);
 	}
 
 }

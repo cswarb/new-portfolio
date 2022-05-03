@@ -1,5 +1,5 @@
 <div *ngFor="let section of sectionData" 
-	[ngClass]="{'fadein': activeImage === section?.id + 1}" 
+	[ngClass]="{'fadein': activeImage === section.id + 1}" 
 	style.backgroundImage="url({{section?.imageUrl}})" 
 	class="post-content__image__content post-content__image__content--nofilter"
 	[attr.data-author]="section?.imageAuthor">

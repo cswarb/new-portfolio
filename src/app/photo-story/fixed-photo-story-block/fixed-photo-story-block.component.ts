@@ -1,7 +1,5 @@
 import { Component, Directive, ElementRef, HostListener, Input, HostBinding, OnInit, AfterViewInit } from "@angular/core";
-import { DOCUMENT } from "@angular/platform-browser";
 import { Post, Section } from "../../post/post.model";
-import { ImageData } from "../../post/fixed-post-block/image.model";
 import { RouterTriggerService } from "../../shared/router-trigger/router-trigger.service";
 
 @Component({
@@ -11,11 +9,11 @@ import { RouterTriggerService } from "../../shared/router-trigger/router-trigger
 })
 export class FixedPhotoStoryBlockComponent  {
 
-	private anchorPointStartElement;
-	private anchorPointStart;
-	private anchorPointEndElement;
-	private anchorPointEnd;
-	private anchorStartRef;
+	private anchorPointStartElement: any;
+	private anchorPointStart: any;
+	private anchorPointEndElement: any;
+	private anchorPointEnd: any;
+	private anchorStartRef: any;
 	
 	public anchorProps = {
 		"width": "",

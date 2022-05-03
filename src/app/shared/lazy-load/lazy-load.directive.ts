@@ -1,6 +1,4 @@
-import { Directive, OnInit, ElementRef, HostListener } from "@angular/core";
-import { AfterViewInit } from "@angular/core/src/metadata/lifecycle_hooks";
-import { Element } from "@angular/compiler";
+import { Directive, OnInit, ElementRef, AfterViewInit } from "@angular/core";
 
 @Directive({
 	selector: "[data-lazy-load]"
@@ -30,7 +28,7 @@ export class LazyLoadDirective implements OnInit, AfterViewInit {
 	public inViewCallback(): void {
 		if (this.isInViewport(this.imageContainer)) {
 			if (!this.images.length) return;
-			this.images.forEach(image => {
+			this.images.forEach((image: any) => {
 				//Set the image src
 				let src = image.dataset["lazySrc"];
 				let isSrcSet = image.dataset["isSrcSet"];

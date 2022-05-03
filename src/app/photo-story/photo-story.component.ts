@@ -8,7 +8,6 @@ import { Post } from "../post/post.model";
   styleUrls: ["./photo-story.component.scss"]
 })
 export class PhotoStoryComponent implements OnInit {
-
 	public post: Post = new Post();
 
 	@HostListener("window:resize", ["$event"])

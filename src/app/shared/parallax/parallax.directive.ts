@@ -1,11 +1,11 @@
 import { Directive, AfterViewInit, OnDestroy, ElementRef } from "@angular/core";
-import * as Rellax from "Rellax";
+import * as Rellax from "rellax";
 
 @Directive({
   selector: "[data-cmp-parallax]"
 })
 export class ParallaxDirective implements AfterViewInit, OnDestroy {
-	private rellax = null;
+	private rellax: any;
 	private opts = {
 		"speed": 3.5,
 		"center": true,
@@ -23,7 +23,7 @@ export class ParallaxDirective implements AfterViewInit, OnDestroy {
 	}
 
 	private getClassList(element: ElementRef): string {
-		let classes = [];
+		let classes: any = [];
 		this.element.nativeElement.classList.forEach((elementClass: string) => {
 			classes.push(elementClass);
 		});

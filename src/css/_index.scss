@@ -9,8 +9,9 @@
     // margin: 0 auto;
     margin-top: 0;
     margin-bottom: 0;
-    max-width: 70rem;
+    max-width: 55rem;
     position: relative;
+    margin: 0 auto;
     &:not(.jumbo-text--inactive):hover {
         .jumbo-text__title, .jumbo-text__content {
             text-decoration: underline;

@@ -8,8 +8,7 @@ import { Posts, PostLoop } from "../post/posts.model";
   styleUrls: ["./index.component.scss"]
 })
 export class IndexComponent implements OnInit {
-
-	public posts: Posts;
+	public posts!: Posts;
 
 	constructor(
 		private route: ActivatedRoute,
@@ -20,7 +19,7 @@ export class IndexComponent implements OnInit {
 		this.posts = this.route.snapshot.data["posts"];
 	}
 
-	public getPost(post): void {
+	public getPost(post: any): void {
 		if(post.status) {
 			this.router.navigate(["/post/", post.link]);
 		};

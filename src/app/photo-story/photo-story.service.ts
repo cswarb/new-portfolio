@@ -1,9 +1,8 @@
 import { Injectable } from "@angular/core";
-import { Http, Response, URLSearchParams, Headers } from "@angular/http";
 import { HttpClient } from "@angular/common/http";
 import { HeadersService } from "../shared/headers/headers.service";
 import { AppConstants } from "../app.constants";
-import "rxjs/add/operator/toPromise";
+import { Observable } from "rxjs";
 
 @Injectable()
 export class PhotoStoryService {
@@ -14,17 +13,10 @@ export class PhotoStoryService {
 		private _HeadersService: HeadersService
 	) {}
 
-	getPhotoStory(postId: string): Promise<any> {
+	getPhotoStory(postId: string): Observable<any> {
 		return this._Http
 			.get(this._AppConstants.BASE_URL + this._AppConstants.PHOTO_STORY_CONTENT_DIR + postId + "/post.json", {
 				headers: this._HeadersService.getHeaders()
-			})
-			.toPromise()
-			.then((response: any) => {
-				return Promise.resolve(response);
-			})
-			.catch((error: any) => {
-				return Promise.reject(error);
 			});
 	}
 

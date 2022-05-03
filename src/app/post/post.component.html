@@ -58,7 +58,7 @@
 <div class="container--post">
 	<article *ngIf="!isMobile()" class="flex-area article__inner--post-content">
 		<div class="left-side left-side--blank">
-			<div data-cmp-fixed-block class="post-content__fixed-block" [sectionData]="post?.sections" [defaultImageUrl]="post?.imageUrl"></div>
+			<div data-cmp-fixed-block class="post-content__fixed-block" [sectionData]="post.sections" [defaultImageUrl]="post.imageUrl"></div>
 		</div>
 		<div class="right-side">
 			<section 
@@ -97,11 +97,11 @@
 </article>
 
 <div class="container container--cut">
-	<div *ngIf="post?.images && !!(post?.images.length > 0)" class="row">
+	<div *ngIf="post && post.images && !!(post.images.length > 0)" class="row">
 		<div class="col-lg-12">
 			<figure class="post-content__image-meta" *ngFor="let image of post?.images">
 				<picture data-lazy-load class="lazyimage">
-					<source class="image" data-is-src-set="true" data-res="2" [attr.data-lazy-src]="image?.imageUrl2x" media="(min-width: 1200px)">
+					<!-- <source class="image" data-is-src-set="true" data-res="2" [attr.data-lazy-src]="image?.imageUrl2x" media="(min-width: 1200px)"> -->
 					<source class="image" data-is-src-set="true" data-res="1" [attr.data-lazy-src]="image?.imageUrl" media="(min-width: 600px)">
 					<img class="image" [attr.data-lazy-src]="image?.imageUrl" [alt]="image?.title">
 				</picture>
