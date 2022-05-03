@@ -1,0 +1,111 @@
+{
+	"type": "POST",
+	"name": "Aircal (ngx-aircal)",
+	"tag": "Design x Development Project",
+	"title": "Highly configurable and lightweight date range plugin for Angular. Designed for both users and developers.",
+	"outbound": {
+		"alive": true,
+		"url": "https://www.npmjs.com/package/ngx-aircal"
+	},
+	"imageUrl": "/content/posts/ngx-aircal/img/1.png",
+	"meta": {
+		"splashText": "",
+		"role": "Developed by myself over around 3 months.",
+		"year": "2019",
+		"technologies": [
+			{
+				"name": "Angular 5"
+			},
+			{
+				"name": "HTML"
+			},
+			{
+				"name": "SASS"
+			},
+			{
+				"name": "Node JS"
+			},
+			{
+				"name": "Npm"
+			},
+			{
+				"name": "Karma and Jasmine"
+			},
+			{
+				"name": "Sketch"
+			},
+			{
+				"name": "Git"
+			},
+			{
+				"name": "Travis CI"
+			}
+		]
+	},
+	"sections": [
+		{
+			"id": 0,
+			"imageUrl": "./content/posts/ngx-aircal/img/1.jpg",
+			"imageAuthor": "@esteejanssens",
+			"title": "State of play",
+			"content": [
+				"Frustrated by current date range solutions on offer, I set about creating a plugin to solve multiple design and development issues.",
+				"I began by evaluating some of the most popular date plugins available, such as jQuery date range picker, Bootstrap datepicker, and Air datepicker amongst others. I evaluated the design, user experience, and developer experience of each to see what the benchmark was for date pickers."
+			]
+		},
+		{
+			"id": 1,
+			"imageUrl": "./content/posts/ngx-aircal/img/2.jpg",
+			"imageAuthor": "@euwars",
+			"title": "User experience",
+			"content": [
+				"I identified key points in all 3 areas that I thought I believed I could improve upon. Starting with the experience, I identified that user affordances could be improved on in terms of the clickable area of the date. This can prove to be a large pain point for users with lower levels of co-ordination.",
+				"I also identified missing features that could dramatically improve the speed at which users can select large date ranges. The ability to quick-set the month and year allows the user a great deal of flexibility.",
+				"A significant development I identified which I had not considered previously was to allow the option to use a single or dual picker design. Whilst I had the calendar respond to smaller devices by rendering in a single column layout, the single picker gave developers flexibility, and made selecting smaller date ranges less of a congnitive overhead for the user."
+			]
+		},
+		{
+			"id": 2,
+			"imageUrl": "./content/posts/ngx-aircal/img/3.jpg",
+			"imageAuthor": "@nico_frey",
+			"title": "Developer experience, technical architecture + implementation",
+			"content": [
+				"Taking a configuration first approach is a good approach for any plugin. This style of architecture allowed me to easily add options, separate features for testing, and made it familiar for developers to use. There are 35 configurable options at the time of writing, ranging from user experience to design tweaks.",
+				"I decided to use a date parsing library (date-fns) to help with date manipulation. I chose it because of its functional design, and lightweight size. Having not gone down this route would have added on to the development time, and the libraries on offer such as date-fns and moment offer so many features that I felt it would be best not to re-invent the wheel.",
+				"Making the plugin open source and hosting the package on npm made it easy to push continuous updates, and mark major milestone in the development of the plugin. Any major issues could also be identified and reported by the community."
+			]
+		},
+		{
+			"id": 3,
+			"imageUrl": "./content/posts/ngx-aircal/img/4.jpg",
+			"imageAuthor": "@tomcoe",
+			"title": "Maintenance and deployment",
+			"content": [
+				"The site is deploying on npm using Travis CI. I felt this was a useful skill to add to my repertoire. I underestimated the learning curve involved in chaining all the scripts and system together. However, it is now configured to run all unit tests, build and deploy to npm through a tagged commit that is pushed to the repo."
+			]
+		}
+	],
+	"finalThoughts": "The plugin has been relatively successful - getting around 50+ downloads each week on average. I will continue to develop the features and design of the calendar so it remains a good option for other people to use in their projects.",
+	"images": [
+		{
+			"title": "Open calendar",
+			"imageUrl": "./content/posts/ngx-aircal/img/5.png",
+			"imageUrl2x": "./content/posts/ngx-aircal/img/5-2x.png"
+		},
+		{
+			"title": "Year selection",
+			"imageUrl": "./content/posts/ngx-aircal/img/6.png",
+			"imageUrl2x": "./content/posts/ngx-aircal/img/6-2x.png"
+		},
+		{
+			"title": "Highlighted dates",
+			"imageUrl": "./content/posts/ngx-aircal/img/7.png",
+			"imageUrl2x": "./content/posts/ngx-aircal/img/7-2x.png"
+		},
+		{
+			"title": "Grid",
+			"imageUrl": "./content/posts/ngx-aircal/img/8.png",
+			"imageUrl2x": "./content/posts/ngx-aircal/img/8-2x.png"
+		}
+	]
+}
