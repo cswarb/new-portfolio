@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "np": {
+    "new-portfolio": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/np",
+            "outputPath": "dist/new-portfolio",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -74,10 +74,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "np:build:production"
+              "browserTarget": "new-portfolio:build:production"
             },
             "development": {
-              "browserTarget": "np:build:development"
+              "browserTarget": "new-portfolio:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -85,7 +85,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "np:build"
+            "browserTarget": "new-portfolio:build"
           }
         },
         "test": {
@@ -105,9 +105,12 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
   },
-  "defaultProject": "np"
+  "defaultProject": "new-portfolio"
 }
